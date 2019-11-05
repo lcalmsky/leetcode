@@ -6,11 +6,12 @@ import java.util.Set;
 public class Solution {
     public int lengthOfLongestSubstring(String s) {
         Set<Character> seen = new HashSet<>();
+        char[] charArray = s.toCharArray();
         int max = 0, start = 0, end = 0;
         while (start < s.length() && end < s.length()) {
-            if (seen.contains(s.charAt(end))) seen.remove(s.charAt(start++));
+            if (seen.contains(charArray[end])) seen.remove(charArray[start++]);
             else {
-                seen.add(s.charAt(end++));
+                seen.add(charArray[end++]);
                 max = Math.max(max, end - start);
             }
         }
