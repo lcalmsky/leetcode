@@ -29,8 +29,8 @@ class Solution {
         Collections.reverse(list1);
         Collections.reverse(list2);
 
-        int i1 = Integer.valueOf(list1.stream().map(String::valueOf).collect(Collectors.joining()));
-        int i2 = Integer.valueOf(list2.stream().map(String::valueOf).collect(Collectors.joining()));
+        int i1 = Integer.parseInt(list1.stream().map(String::valueOf).collect(Collectors.joining()));
+        int i2 = Integer.parseInt(list2.stream().map(String::valueOf).collect(Collectors.joining()));
 
         int sum = i1 + i2;
 
