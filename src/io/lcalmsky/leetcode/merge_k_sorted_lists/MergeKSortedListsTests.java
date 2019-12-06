@@ -1,5 +1,6 @@
 package io.lcalmsky.leetcode.merge_k_sorted_lists;
 
+import java.util.PriorityQueue;
 import java.util.StringJoiner;
 
 public class MergeKSortedListsTests {
@@ -17,45 +18,30 @@ public class MergeKSortedListsTests {
     }
 
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode result = new ListNode(0);
-        ListNode head = result;
-        ListNode tmp = null;
-        int min, minIdx = 0;
-        while (anyNonNull(lists)) {
-            min = Integer.MAX_VALUE;
-            for (int i = 0; i < lists.length; i++) {
-                tmp = lists[i];
-                if (tmp != null) {
-                    if (tmp.val < min) {
-                        min = tmp.val;
-                        minIdx = i;
-                    }
-                }
-            }
-            head.next = lists[minIdx];
-            lists[minIdx] = lists[minIdx].next;
-            head = head.next;
-        }
+        if (lists == null || lists.length == 0)
+            return null;
 
-        addNonNull(head, lists);
+        PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>((l1, l2) -> l1.val - l2.val);
 
-        return result.next;
-    }
+        ListNode head = new ListNode(0);
+        ListNode p = head;
 
-    private void addNonNull(ListNode head, ListNode[] lists) {
         for (ListNode list : lists) {
-            if (list != null) {
-                head.next = list;
-                return;
-            }
+            if (list != null)
+                queue.offer(list);
         }
-    }
 
-    private boolean anyNonNull(ListNode[] lists) {
-        for (ListNode list : lists) {
-            if (list != null) return true;
+        while (!queue.isEmpty()) {
+            ListNode n = queue.poll();
+            p.next = n;
+            p = p.next;
+
+            if (n.next != null)
+                queue.offer(n.next);
         }
-        return false;
+
+        return head.next;
+
     }
 }
 
