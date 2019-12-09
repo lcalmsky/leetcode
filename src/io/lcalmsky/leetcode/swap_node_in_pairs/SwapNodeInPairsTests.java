@@ -13,25 +13,24 @@ public class SwapNodeInPairsTests {
     }
 
     public ListNode swapPairs(ListNode head) {
-        ListNode result = new ListNode(0);
-        ListNode p = result;
-        ListNode tmp1 = new ListNode(0);
-        ListNode tmp2 = new ListNode(0);
-        while (head != null) {
-            tmp2 = head;
-            tmp1 = head.next;
-            p = tmp2;
-            p.next = tmp1;
+        if (head == null || head.next == null) return head;
 
-            tmp1.next = new ListNode(head.val);
-            head = head.next;
-            p.next = tmp1;
+        ListNode result = new ListNode(0);
+        result.next = head;
+        ListNode p = result;
+
+        ListNode tmp1;
+        ListNode tmp2;
+        while (p.next != null && p.next.next != null) {
+            tmp1 = p;
             p = p.next;
-            tmp1 = new ListNode(head.val);
-            head = head.next;
-            p.next = tmp1;
-            p = p.next;
+            tmp1.next = p.next;
+
+            tmp2 = p.next.next;
+            p.next.next = p;
+            p.next = tmp2;
         }
+
         return result.next;
     }
 }
