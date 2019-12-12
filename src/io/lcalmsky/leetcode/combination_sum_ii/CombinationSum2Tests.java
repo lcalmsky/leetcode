@@ -1,6 +1,8 @@
 package io.lcalmsky.leetcode.combination_sum_ii;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class CombinationSum2Tests {
     public static void main(String[] args) {
@@ -11,15 +13,17 @@ public class CombinationSum2Tests {
 
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
 
-        Set<List<Integer>> result = new HashSet<>();
+        List<List<Integer>> result = new ArrayList<>();
         List<Integer> list = new ArrayList<>();
 
-        helper(Arrays.stream(candidates).sorted().toArray(), 0, target, 0, list, result);
+        Arrays.sort(candidates);
+
+        helper(candidates, 0, target, 0, list, result);
 
         return new ArrayList<>(result);
     }
 
-    private void helper(int[] candidates, int start, int target, int sum, List<Integer> list, Set<List<Integer>> result) {
+    private void helper(int[] candidates, int start, int target, int sum, List<Integer> list, List<List<Integer>> result) {
         if (sum > target) {
             return;
         }
@@ -29,10 +33,14 @@ public class CombinationSum2Tests {
             return;
         }
 
+        int prev = -1;
         for (int i = start; i < candidates.length; i++) {
-            list.add(candidates[i]);
-            helper(candidates, i + 1, target, sum + candidates[i], list, result);
-            list.remove(list.size() - 1);
+            if (prev != candidates[i]) {
+                list.add(candidates[i]);
+                helper(candidates, i + 1, target, sum + candidates[i], list, result);
+                list.remove(list.size() - 1);
+                prev = candidates[i];
+            }
         }
     }
 }
