@@ -1,7 +1,7 @@
 package io.lcalmsky.leetcode.permutations_ii;
 
 import java.util.ArrayList;
-import java.util.LinkedHashSet;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -12,12 +12,12 @@ public class PermutationsIITests {
     }
 
     public List<List<Integer>> permuteUnique(int[] nums) {
-        Set<List<Integer>> result = new LinkedHashSet<>();
+        List<List<Integer>> result = new ArrayList<>();
         helper(0, nums, result);
         return new ArrayList<>(result);
     }
 
-    private void helper(int start, int[] nums, Set<List<Integer>> result) {
+    private void helper(int start, int[] nums, List<List<Integer>> result) {
         if (start == nums.length - 1) {
             List<Integer> list = new ArrayList<>();
             for (int num : nums) {
@@ -26,7 +26,9 @@ public class PermutationsIITests {
             result.add(list);
             return;
         }
+        Set<Integer> set = new HashSet<>();
         for (int i = start; i < nums.length; i++) {
+            if (!set.add(nums[i])) continue;
             swap(nums, i, start);
             helper(start + 1, nums, result);
             swap(nums, i, start);
