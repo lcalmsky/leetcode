@@ -13,7 +13,7 @@ import java.util.stream.Collectors;
  * ListNode(int x) { val = x; }
  * }
  */
-class Solution {
+class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         List<Integer> list1 = new ArrayList<>();
         while (l1.next != null) {
@@ -62,7 +62,7 @@ class Solution {
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
 
-        System.out.println(new Solution().addTwoNumbers(l1, l2));
+        System.out.println(new AddTwoNumbers().addTwoNumbers(l1, l2));
     }
 }
 
