@@ -46,7 +46,8 @@ public class AddTwoNumbersTests {
 
         // then
         assertAll(
-                () -> assertEquals(10, result.val)
+                () -> assertEquals(0, result.val),
+                () -> assertEquals(1, result.next.val)
         );
 
         // log

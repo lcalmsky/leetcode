@@ -10,7 +10,7 @@ package io.lcalmsky.leetcode.add_two_numbers;
  */
 public class AddTwoNumbers {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
-        ListNode p1 = l1, p2 = l2, head = null, prev = null, curr = null;
+        ListNode p1 = l1, p2 = l2, head = null, prev = null, curr;
         short c = 0;
         while (p1 != null || p2 != null) {
             c += p1 != null ? p1.val : 0;
@@ -22,6 +22,7 @@ public class AddTwoNumbers {
             prev = curr;
             if (p1 != null) p1 = p1.next;
             if (p2 != null) p2 = p2.next;
+            if (c > 0) curr.next = new ListNode(c);
         }
 
         return head;
