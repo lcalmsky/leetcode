@@ -5,11 +5,11 @@ The path part of each problem's uri is the same as the branch name, which is con
 
 ex)
 ```
-url: https://leetcode.com/problems/wildcard-matching
-branch: feature/wildcard-matching
-package: wildcard_matching
-class: WildcardMatchingTests
+url     https://leetcode.com/problems/wildcard-matching
+branch  feature/wildcard-matching
+package io.lcalmsky.leetcode.wildcard_matching
+class   io.lcalmsky.leetcode.wildcard_matching.WildcardMatching
+test    io.lcalmsky.leetcode.wildcard_matching.WildcardMatchingTests
 ```
 
 There is an analysis (README.md) in the package for each problem to solve the algorithm.
-> _currently rarely exists but will be continue to add_
