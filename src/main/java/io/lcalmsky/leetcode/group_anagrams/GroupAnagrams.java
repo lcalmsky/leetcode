@@ -7,7 +7,6 @@ public class GroupAnagrams {
     public List<List<String>> groupAnagrams(String[] strs) {
 
         Map<String, List<String>> listMap = new LinkedHashMap<>();
-        Set<String> set = new LinkedHashSet<>();
         char[] charArray;
         List<String> list;
         String s;
@@ -15,7 +14,7 @@ public class GroupAnagrams {
             charArray = str.toCharArray();
             Arrays.sort(charArray);
             s = new String(charArray);
-            if (set.add(s)) {
+            if (!listMap.containsKey(s)) {
                 list = new ArrayList<>();
                 list.add(str);
                 listMap.put(s, list);
