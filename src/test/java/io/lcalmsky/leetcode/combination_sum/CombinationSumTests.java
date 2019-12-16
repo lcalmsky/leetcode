@@ -43,7 +43,7 @@ public class CombinationSumTests {
     }
 
     @Test
-    @DisplayName("([2, 3, 5], 8) -> [[2, 2, 2, 2], [2, 3, 3], [3, 5]")
+    @DisplayName("([2, 3, 5], 8) -> [[2, 2, 2, 2], [2, 3, 3], [3, 5]]")
     public void givenArray_whenCombination_thenCorrect_case2() {
         // given
         int[] array = new int[]{2, 3, 5};
