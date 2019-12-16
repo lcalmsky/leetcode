@@ -1,7 +1,12 @@
-### Summary
+### Overview
 Solve the algorithm problems <a href="leetcode.com">leetcode.com</a> provided.
 
-The path part of each problem's uri is the same as the branch name, which is converted to the snake case to be used as the package name, and which is converted to the upper camel case + "Tests" to be used for a class name.
+The conventions used in the project are:
+
+- branch: last path of leetcode problem url
+- package: converting last path of leetcode problem url to snake case
+- class: converting last path of leetcode problem url to upper camel case
+- test: classname + "Tests"
 
 ex)
 ```
