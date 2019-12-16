@@ -17,4 +17,6 @@ class   io.lcalmsky.leetcode.wildcard_matching.WildcardMatching
 test    io.lcalmsky.leetcode.wildcard_matching.WildcardMatchingTests
 ```
 
-There is an analysis (README.md) in the package for each problem to solve the algorithm.
+> An analysis file (README.md) is being added to each package to solve algorithm problems.
+> 
+> JUnit 5 is being applied.
