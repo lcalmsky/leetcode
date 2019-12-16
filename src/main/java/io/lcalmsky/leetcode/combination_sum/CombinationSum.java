@@ -3,12 +3,7 @@ package io.lcalmsky.leetcode.combination_sum;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CombinationSumTests {
-    public static void main(String[] args) {
-        CombinationSumTests c = new CombinationSumTests();
-        System.out.println(c.combinationSum(new int[]{2, 3, 6, 7}, 7));
-        System.out.println(c.combinationSum(new int[]{2, 3, 5}, 8));
-    }
+public class CombinationSum {
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> result = new ArrayList<>();
