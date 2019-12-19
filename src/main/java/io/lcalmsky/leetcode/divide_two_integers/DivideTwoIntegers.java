@@ -1,16 +1,6 @@
-package io.lcalmsky.leetcode.devide_two_integers;
+package io.lcalmsky.leetcode.divide_two_integers;
 
-public class DevideTwoIntegersTests {
-    public static void main(String[] args) {
-        DevideTwoIntegersTests devideTwoIntegersTests = new DevideTwoIntegersTests();
-        System.out.println(devideTwoIntegersTests.divide(10, 3));
-        System.out.println(devideTwoIntegersTests.divide(7, -3));
-        System.out.println(devideTwoIntegersTests.divide(-1, -1));
-        System.out.println(devideTwoIntegersTests.divide(-2147483648, -1));
-        System.out.println(devideTwoIntegersTests.divide(-2147483648, 1));
-        System.out.println(devideTwoIntegersTests.divide(-2147483647, 2));
-    }
-
+public class DivideTwoIntegers {
     public int divide(int dividend, int divisor) {
         //handle special cases
         if (divisor == 0) return Integer.MAX_VALUE;
