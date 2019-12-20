@@ -5,10 +5,10 @@ public class SpiralMatrix2 {
 
         int[][] matrix = new int[n][n];
 
-        int cnt = 1, left = 0, right = n - 1, top = 0, bottom = n - 1;
+        int cnt = 1, leftTop = 0, right = n - 1, top = 0, bottom = n - 1;
 
         while (cnt <= n * n) {
-            for (int i = left; i <= right; i++) {
+            for (int i = leftTop; i <= right; i++) {
                 matrix[top][i] = cnt++;
             }
             top++;
@@ -20,17 +20,17 @@ public class SpiralMatrix2 {
 
             if (bottom < top) break;
 
-            for (int i = right; i >= left; i--) {
+            for (int i = right; i >= leftTop; i--) {
                 matrix[bottom][i] = cnt++;
             }
             bottom--;
 
-            if (right < left) break;
+            if (right < leftTop) break;
 
             for (int i = bottom; i >= top; i--) {
-                matrix[i][left] = cnt++;
+                matrix[i][leftTop] = cnt++;
             }
-            left++;
+            leftTop++;
         }
 
         return matrix;
