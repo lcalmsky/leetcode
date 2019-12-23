@@ -2,15 +2,7 @@ package io.lcalmsky.leetcode.first_missing_positive;
 
 import java.util.Arrays;
 
-public class FirstMissingPositiveTests {
-    public static void main(String[] args) {
-        FirstMissingPositiveTests firstMissingPositiveTests = new FirstMissingPositiveTests();
-        System.out.println(firstMissingPositiveTests.firstMissingPositive(new int[]{1, 2, 0}));
-        System.out.println(firstMissingPositiveTests.firstMissingPositive(new int[]{3, 4, -1, 1}));
-        System.out.println(firstMissingPositiveTests.firstMissingPositive(new int[]{7, 8, 9, 11, 12}));
-        System.out.println(firstMissingPositiveTests.firstMissingPositive(new int[]{0, 1, 1, 2, 2}));
-    }
-
+public class FirstMissingPositives {
     public int firstMissingPositive(int[] nums) {
 
         if (nums == null || nums.length == 0) return 1;
