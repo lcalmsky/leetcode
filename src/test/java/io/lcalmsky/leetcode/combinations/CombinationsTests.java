@@ -1,11 +1,11 @@
 package io.lcalmsky.leetcode.combinations;
 
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 public class CombinationsTests {
@@ -20,6 +20,11 @@ public class CombinationsTests {
                         Arrays.asList(1, 2),
                         Arrays.asList(1, 3),
                         Arrays.asList(1, 4)
+                )),
+                () -> test(3, 2, Arrays.asList(
+                        Arrays.asList(1, 2),
+                        Arrays.asList(1, 3),
+                        Arrays.asList(2, 3)
                 ))
         );
     }
@@ -30,6 +35,6 @@ public class CombinationsTests {
         List<List<Integer>> actual = combinations.combine(givenN, givenK);
 
         // then
-        Assertions.assertThat(actual).containsAll(expected);
+        assertThat(actual).containsAll(expected);
     }
 }
