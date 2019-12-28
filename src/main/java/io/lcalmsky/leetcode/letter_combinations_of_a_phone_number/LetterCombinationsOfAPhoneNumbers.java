@@ -2,13 +2,7 @@ package io.lcalmsky.leetcode.letter_combinations_of_a_phone_number;
 
 import java.util.*;
 
-public class LetterCombinationsOfAPhoneNumberTests {
-    public static void main(String[] args) {
-        LetterCombinationsOfAPhoneNumberTests letterCombinationsOfAPhoneNumberTests = new LetterCombinationsOfAPhoneNumberTests();
-        System.out.println(letterCombinationsOfAPhoneNumberTests.letterCombinations("234"));
-        System.out.println(letterCombinationsOfAPhoneNumberTests.letterCombinations(""));
-    }
-
+public class LetterCombinationsOfAPhoneNumbers {
     public List<String> letterCombinations(String digits) {
 
         if (digits.isEmpty()) return Collections.emptyList();
