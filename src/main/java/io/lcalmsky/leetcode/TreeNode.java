@@ -1,7 +1,6 @@
 package io.lcalmsky.leetcode;
 
-import java.util.Objects;
-import java.util.StringJoiner;
+import java.util.*;
 
 public class TreeNode {
     public int val;
@@ -10,6 +9,45 @@ public class TreeNode {
 
     public TreeNode(int x) {
         val = x;
+    }
+
+    public static TreeNode of(Integer... array) {
+        if (array == null || array.length == 0) throw new IllegalArgumentException();
+
+        Queue<TreeNode> treeNodeQueue = new LinkedList<>();
+        Queue<Integer> integerQueue = new LinkedList<>();
+        for (int i = 1; i < array.length; i++) integerQueue.offer(array[i]);
+
+        TreeNode treeNode = new TreeNode(array[0]);
+        treeNodeQueue.offer(treeNode);
+
+        while (!integerQueue.isEmpty()) {
+            Integer leftVal = integerQueue.poll();
+            Integer rightVal = integerQueue.isEmpty() ? null : integerQueue.poll();
+            TreeNode current = treeNodeQueue.poll();
+            if (leftVal != null) {
+                TreeNode left = new TreeNode(leftVal);
+                assert current != null;
+                current.left = left;
+                treeNodeQueue.offer(left);
+            }
+            if (rightVal != null) {
+                TreeNode right = new TreeNode(rightVal);
+                assert current != null;
+                current.right = right;
+                treeNodeQueue.offer(right);
+            }
+        }
+        return treeNode;
+    }
+
+
+    private static void makeTreeNode(TreeNode root, Integer[] integers, int start) {
+        if (root == null || start == integers.length) return;
+        root.left = Optional.ofNullable(integers[start++]).map(TreeNode::new).orElse(null);
+        root.right = Optional.ofNullable(integers[start++]).map(TreeNode::new).orElse(null);
+        makeTreeNode(root.left, integers, start);
+        makeTreeNode(root.right, integers, start);
     }
 
     @Override
