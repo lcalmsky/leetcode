@@ -1,6 +1,9 @@
 package io.lcalmsky.leetcode;
 
-import java.util.*;
+import java.util.LinkedList;
+import java.util.Objects;
+import java.util.Queue;
+import java.util.StringJoiner;
 
 public class TreeNode {
     public int val;
@@ -39,15 +42,6 @@ public class TreeNode {
             }
         }
         return treeNode;
-    }
-
-
-    private static void makeTreeNode(TreeNode root, Integer[] integers, int start) {
-        if (root == null || start == integers.length) return;
-        root.left = Optional.ofNullable(integers[start++]).map(TreeNode::new).orElse(null);
-        root.right = Optional.ofNullable(integers[start++]).map(TreeNode::new).orElse(null);
-        makeTreeNode(root.left, integers, start);
-        makeTreeNode(root.right, integers, start);
     }
 
     @Override
