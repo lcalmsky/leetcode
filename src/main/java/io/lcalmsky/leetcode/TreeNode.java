@@ -38,7 +38,6 @@ public class TreeNode {
                 treeNodeQueue.offer(right);
             }
         }
-        print(treeNode);
         return treeNode;
     }
 
@@ -51,7 +50,7 @@ public class TreeNode {
                 .toString();
     }
 
-    private static void print(TreeNode treeNode) {
+    public static void print(TreeNode treeNode) {
         BTreePrinter.printNode(treeNode);
     }
 
