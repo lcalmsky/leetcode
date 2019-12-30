@@ -1,5 +1,6 @@
 package io.lcalmsky.leetcode.add_two_numbers;
 
+import io.lcalmsky.leetcode.ListNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 

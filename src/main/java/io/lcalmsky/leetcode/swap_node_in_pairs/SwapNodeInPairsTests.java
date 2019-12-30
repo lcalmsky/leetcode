@@ -1,6 +1,6 @@
 package io.lcalmsky.leetcode.swap_node_in_pairs;
 
-import java.util.StringJoiner;
+import io.lcalmsky.leetcode.ListNode;
 
 public class SwapNodeInPairsTests {
     public static void main(String[] args) {
@@ -32,22 +32,5 @@ public class SwapNodeInPairsTests {
         }
 
         return result.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", ListNode.class.getSimpleName() + "[", "]")
-                .add("val=" + val)
-                .add("next=" + next)
-                .toString();
     }
 }

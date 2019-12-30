@@ -1,5 +1,6 @@
 package io.lcalmsky.leetcode.remove_duplicates_from_sorted_list;
 
+import io.lcalmsky.leetcode.ListNode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertAll;

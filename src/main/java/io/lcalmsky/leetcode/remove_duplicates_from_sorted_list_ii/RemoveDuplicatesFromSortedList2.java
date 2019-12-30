@@ -1,6 +1,6 @@
 package io.lcalmsky.leetcode.remove_duplicates_from_sorted_list_ii;
 
-import java.util.Objects;
+import io.lcalmsky.leetcode.ListNode;
 
 public class RemoveDuplicatesFromSortedList2 {
     public ListNode deleteDuplicates(ListNode head) {
@@ -18,28 +18,5 @@ public class RemoveDuplicatesFromSortedList2 {
             } else p = p.next;
         }
         return temp.next;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof ListNode)) return false;
-        ListNode listNode = (ListNode) o;
-        return val == listNode.val &&
-                Objects.equals(next, listNode.next);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(val, next);
     }
 }

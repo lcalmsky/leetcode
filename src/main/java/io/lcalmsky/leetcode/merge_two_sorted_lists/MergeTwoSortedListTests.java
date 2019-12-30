@@ -1,6 +1,6 @@
 package io.lcalmsky.leetcode.merge_two_sorted_lists;
 
-import java.util.StringJoiner;
+import io.lcalmsky.leetcode.ListNode;
 
 public class MergeTwoSortedListTests {
     public static void main(String[] args) {
@@ -31,23 +31,5 @@ public class MergeTwoSortedListTests {
         else head.next = l2;
 
         return result.next;
-    }
-
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", ListNode.class.getSimpleName() + "[", "]")
-                .add("val=" + val)
-                .add("next=" + next)
-                .toString();
     }
 }

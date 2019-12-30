@@ -1,7 +1,9 @@
 package io.lcalmsky.leetcode.merge_k_sorted_lists;
 
+import io.lcalmsky.leetcode.ListNode;
+
+import java.util.Comparator;
 import java.util.PriorityQueue;
-import java.util.StringJoiner;
 
 public class MergeKSortedListsTests {
     public static void main(String[] args) {
@@ -21,7 +23,7 @@ public class MergeKSortedListsTests {
         if (lists == null || lists.length == 0)
             return null;
 
-        PriorityQueue<ListNode> queue = new PriorityQueue<ListNode>((l1, l2) -> l1.val - l2.val);
+        PriorityQueue<ListNode> queue = new PriorityQueue<>(Comparator.comparingInt(l -> l.val));
 
         ListNode head = new ListNode(0);
         ListNode p = head;
@@ -42,22 +44,5 @@ public class MergeKSortedListsTests {
 
         return head.next;
 
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", ListNode.class.getSimpleName() + "[", "]")
-                .add("val=" + val)
-                .add("next=" + next)
-                .toString();
     }
 }

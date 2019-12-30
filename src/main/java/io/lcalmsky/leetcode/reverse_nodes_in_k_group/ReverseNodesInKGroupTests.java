@@ -1,6 +1,6 @@
 package io.lcalmsky.leetcode.reverse_nodes_in_k_group;
 
-import java.util.StringJoiner;
+import io.lcalmsky.leetcode.ListNode;
 
 public class ReverseNodesInKGroupTests {
     public static void main(String[] args) {
@@ -43,22 +43,5 @@ public class ReverseNodesInKGroupTests {
             curr = last.next;
         }
         return last;
-    }
-}
-
-class ListNode {
-    int val;
-    ListNode next;
-
-    ListNode(int x) {
-        val = x;
-    }
-
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", ListNode.class.getSimpleName() + "[", "]")
-                .add("val=" + val)
-                .add("next=" + next)
-                .toString();
     }
 }
