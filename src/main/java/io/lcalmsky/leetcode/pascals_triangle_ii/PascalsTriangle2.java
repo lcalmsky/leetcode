@@ -1,7 +1,6 @@
 package io.lcalmsky.leetcode.pascals_triangle_ii;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -20,8 +19,6 @@ public class PascalsTriangle2 {
                 arr[i][j] = arr[i - 1][j] + arr[i][j - 1];
             }
         }
-
-        System.out.println(Arrays.deepToString(arr));
 
         List<Integer> row = new ArrayList<>();
 
