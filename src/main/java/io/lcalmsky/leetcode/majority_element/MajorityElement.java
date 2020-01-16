@@ -1,13 +1,20 @@
 package io.lcalmsky.leetcode.majority_element;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class MajorityElement {
     public int majorityElement(int[] nums) {
-        int major = nums.length / 2 + 1;
-        Map<Integer, Integer> countMap = new HashMap<>();
-        for (int num : nums) countMap.put(num, countMap.getOrDefault(num, 0) + 1);
-        return countMap.keySet().stream().filter(k -> countMap.get(k) >= major).findFirst().orElse(-1);
+        int result = 0, count = 0;
+
+        for (int num : nums) {
+            if (count == 0) {
+                result = num;
+                count = 1;
+            } else if (result == num) {
+                count++;
+            } else {
+                count--;
+            }
+        }
+
+        return result;
     }
 }
