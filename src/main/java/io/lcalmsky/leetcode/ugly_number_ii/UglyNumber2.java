@@ -1,31 +1,24 @@
 package io.lcalmsky.leetcode.ugly_number_ii;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class UglyNumber2 {
     public int nthUglyNumber(int n) {
-        if (n <= 0) return 0;
+        int[] dp = new int[n];
+        dp[0] = 1;
 
-        List<Integer> list = new ArrayList<>();
-        list.add(1);
+        int m2 = 0, m3 = 0, m5 = 0;
 
-        int i = 0, j = 0, k = 0;
+        for (int i = 1; i < n; i++) {
+            int a = dp[m2] * 2;
+            int b = dp[m3] * 3;
+            int c = dp[m5] * 5;
 
-        while (list.size() < n) {
-            int m2 = list.get(i) * 2;
-            int m3 = list.get(j) * 3;
-            int m5 = list.get(k) * 5;
+            dp[i] = Math.min(a, Math.min(b, c));
 
-            int min = Math.min(m2, Math.min(m3, m5));
-            list.add(min);
-            if (min == m2) i++;
-            if (min == m3) j++;
-            if (min == m5) k++;
+            if (dp[i] == a) m2++;
+            if (dp[i] == b) m3++;
+            if (dp[i] == c) m5++;
         }
 
-        System.out.println(list);
-
-        return list.get(list.size() - 1);
+        return dp[n - 1];
     }
 }
