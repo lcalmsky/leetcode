@@ -29,7 +29,6 @@ public class MaximumProductOfWordLength {
         for (int i = 0; i < words.length; ++i) {
             char[] array = words[i].toCharArray();
             for (char c : array) marks[i] |= 1 << (c - 'a');
-
         }
         for (int i = 0; i < marks.length; i++) {
             if (words[i].length() * words[i].length() <= max) break;
@@ -41,5 +40,9 @@ public class MaximumProductOfWordLength {
             }
         }
         return max;
+    }
+
+    public static void main(String[] args) {
+        new MaximumProductOfWordLength().maxProduct(new String[]{"abcw"});
     }
 }
