@@ -103,3 +103,5 @@ max = Math.max(16, words[1].length * words[2].length)
     = 16
 words[2] * words[2] = 16, max = 16, break!
 ```
+
+>단어 길이로 정렬했으므로 더 이상 확인할 필요가 없다.
