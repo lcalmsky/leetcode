@@ -67,7 +67,7 @@ marks[5] = 63
 
 위와 같은 결과를 얻게 된다.
 
-marks 배열에 비트 시프트와 '|' 연산자를 통해 구한 값들은 가지고 두 값의 공통 부분이 없을 때 각 단어의 길이를 곱해 max 값을 구한다.
+marks 배열에 비트 시프트와 '|' 연산자를 통해 구한 값들은 가지고 두 값의 공통 부분이 없을 때('&' 의 결과가 0이 아닐 때) 각 단어의 길이를 곱해 max 값을 구한다.
 
 ```
 for i in range (0, marks.length)
@@ -80,10 +80,11 @@ for i in range (0, marks.length)
                 // 33554435 & 4194311 = 3 => continue
             when j = 2
                 // 16416 & 4194311 = 0
-                    max = Math.max(max, words[0].length * words[2].length)
-                    max = Math.max(0, 4 * 3 = 12) = 12 
-                    break
-        }
+                max = Math.max(max, words[0].length * words[2].length)
+                max = Math.max(0, 4 * 3 = 12) = 12 
+                break
+    when i = 1
+        ...
 ```
 
 위와 같은 방식으로 중복을 포함하지 않는 단어들의 길이를 곱해 max 값을 갱신해나가면 원하는 값을 얻을 수 있다.
