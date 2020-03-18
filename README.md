@@ -19,4 +19,3 @@ test    io.lcalmsky.leetcode.wildcard_matching.WildcardMatchingTests
 
 > An analysis file (README.md) is being added to each package to solve algorithm problems.
 > 
-> JUnit 5 is being applied.
