@@ -18,3 +18,6 @@ test    io.lcalmsky.leetcode.wildcard_matching.WildcardMatchingTests
 ```
 
 > An analysis file (README.md) is being added to each package to solve algorithm problems.
+
+### problems
+- (Add binary)[https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/add_binary]
