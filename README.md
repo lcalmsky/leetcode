@@ -10,7 +10,7 @@ The conventions used in the project are:
 
 ex)
 ```
-url     https://leetcode.com/problems/*wildcard-matching*
+url     https://leetcode.com/problems/<b>wildcard-matching</b>
 branch  feature/*wildcard-matching*
 package io.lcalmsky.leetcode.*wildcard_matching*
 class   io.lcalmsky.leetcode.wildcard_matching.*WildcardMatching*
