@@ -10,11 +10,11 @@ The conventions used in the project are:
 
 ex)
 ```
-url     https://leetcode.com/problems/***wildcard-matching***
-branch  feature/***wildcard-matching***
-package io.lcalmsky.leetcode.***wildcard_matching***
-class   io.lcalmsky.leetcode.wildcard_matching.***WildcardMatching***
-test    io.lcalmsky.leetcode.wildcard_matching.***WildcardMatchingTests***
+url     https://leetcode.com/problems/ ***wildcard-matching***
+branch  feature/ ***wildcard-matching***
+package io.lcalmsky.leetcode. ***wildcard_matching***
+class   io.lcalmsky.leetcode.wildcard_matching. ***WildcardMatching***
+test    io.lcalmsky.leetcode.wildcard_matching. ***WildcardMatchingTests***
 ```
 
 > An analysis file (README.md) is being added to each package to solve algorithm problems.
