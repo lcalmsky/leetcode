@@ -9,13 +9,13 @@ The conventions used in the project are:
 - test: classname + "Tests"
 
 ex)
-```
-url     https://leetcode.com/problems/wildcard-matching
-branch  feature/wildcard-matching
-package io.lcalmsky.leetcode.wildcard_matching
-class   io.lcalmsky.leetcode.wildcard_matching.WildcardMatching
-test    io.lcalmsky.leetcode.wildcard_matching.WildcardMatchingTests
-```
+<pre><code>
+url     https://leetcode.com/problems/<b>wildcard-matching</b>
+branch  feature/<b>wildcard-matching</b>
+package io.lcalmsky.leetcode.<b>wildcard_matching</b>
+class   io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatching</b>
+test    io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatchingTests</b>
+</code></pre>
 
 > An analysis file (README.md) is being added to each package to solve algorithm problems.
 
