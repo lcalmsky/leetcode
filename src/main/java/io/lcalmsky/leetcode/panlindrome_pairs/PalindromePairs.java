@@ -1,7 +1,6 @@
 package io.lcalmsky.leetcode.panlindrome_pairs;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * <pre>
@@ -21,38 +20,48 @@ import java.util.List;
  */
 public class PalindromePairs {
     public List<List<Integer>> palindromePairs(String[] words) {
-
-        List<List<Integer>> results = new ArrayList<>();
-        List<Integer> list = new ArrayList<>();
+        if (words == null || words.length < 2) return Collections.emptyList();
+        List<List<Integer>> result = new ArrayList<>();
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < words.length; i++) map.put(words[i], i);
 
         for (int i = 0; i < words.length; i++) {
-            for (int j = i + 1; j < words.length; j++) {
-                addListIfPalindrome(results, j, list, i, combineWord(words[i], words[j]));
-                addListIfPalindrome(results, i, list, j, combineWord(words[j], words[i]));
+            String s = words[i];
+            for (int k = 0; k <= s.length(); k++) {
+                String left = s.substring(0, k);
+                String right = s.substring(k);
+                if (isPalindrome(left)) {
+                    String reversedRight = new StringBuilder(right).reverse().toString();
+                    if (map.containsKey(reversedRight) && map.get(reversedRight) != i) {
+                        List<Integer> l = new ArrayList<>();
+                        l.add(map.get(reversedRight));
+                        l.add(i);
+                        result.add(l);
+                    }
+                }
+                if (isPalindrome(right)) {
+                    String reversedLeft = new StringBuilder(left).reverse().toString();
+                    if (map.containsKey(reversedLeft)
+                            && map.get(reversedLeft) != i
+                            && right.length() != 0) {
+                        List<Integer> l = new ArrayList<>();
+                        l.add(i);
+                        l.add(map.get(reversedLeft));
+                        result.add(l);
+                    }
+                }
             }
         }
 
-        return results;
+        return result;
     }
 
-    private void addListIfPalindrome(List<List<Integer>> results, int i, List<Integer> list, int j, String word) {
-        if (isPalindrome(word)) {
-            list.add(j);
-            list.add(i);
-            results.add(new ArrayList<>(list));
-            list.clear();
-        }
-    }
+    public boolean isPalindrome(String s) {
+        int i = 0;
+        int j = s.length() - 1;
 
-    private String combineWord(String word1, String word2) {
-        return String.format("%s%s", word1, word2);
-    }
+        while (i <= j) if (s.charAt(i++) != s.charAt(j--)) return false;
 
-    private boolean isPalindrome(String word) {
-        int left = 0, right = word.length() - 1;
-        while (left < right) {
-            if (word.charAt(left++) != word.charAt(right--)) return false;
-        }
         return true;
     }
 }
