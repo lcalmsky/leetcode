@@ -32,10 +32,9 @@ public class TopKFrequentElements {
 
         for (int i : nums) map.put(i, map.getOrDefault(i, 0) + 1);
 
-        List<Integer> results = map.keySet().stream()
+        return map.keySet().stream()
                 .sorted((o1, o2) -> Integer.compare(map.get(o2), map.get(o1)))
+                .limit(k)
                 .collect(Collectors.toList());
-
-        return results.subList(0, k);
     }
 }
