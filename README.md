@@ -17,8 +17,6 @@ class   io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatching</b>
 test    io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatchingTests</b>
 </code></pre>
 
-> An analysis file (README.md) is being added to each package to solve algorithm problems.
-
 ### List of Problems
 - [Add Binary](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/add_binary)
 - [Add Digits](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/add_digits)
