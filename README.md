@@ -17,7 +17,7 @@ class   io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatching</b>
 test    io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatchingTests</b>
 </code></pre>
 
-### List of Problems
+### List of problems
 - [Add Binary](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/add_binary)
 - [Add Digits](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/add_digits)
 - [Add Two Numbers](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/add_two_numbers)
