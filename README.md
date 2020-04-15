@@ -179,3 +179,4 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatchingTests</b>
 - [Word Pattern](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/word_pattern)
 - [Word Search](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/word_search)
 - [Zigzag Conversion](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zigzag_conversion)
+
