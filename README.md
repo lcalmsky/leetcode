@@ -2,7 +2,6 @@
 Solve the algorithm problems <a href="leetcode.com">leetcode.com</a> provides.
 
 The conventions used in the project are:
-
 - branch: last path of leetcode problem url
 - package: converting last path of leetcode problem url to snake case
 - class: converting last path of leetcode problem url to upper camel case
@@ -15,7 +14,7 @@ branch  feature/<b>wildcard-matching</b>
 package io.lcalmsky.leetcode.<b>wildcard_matching</b>
 class   io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatching</b>
 test    io.lcalmsky.leetcode.<b>wildcard_matching.WildcardMatchingTests</b>
-</code></pre>
+</code></pre> 
 
 ### List of problems
 - [Add Binary](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/add_binary)
