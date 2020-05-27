@@ -1,7 +1,6 @@
 package io.lcalmsky.leetcode.minimum_genetic_mutation;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * <pre>
@@ -51,30 +50,33 @@ import java.util.Queue;
  */
 public class MinimumGeneticMutation {
     public int minMutation(String start, String end, String[] bank) {
-        int count = 0;
-        if (start.length() != end.length()) return -1;
-        Queue<String> q = new LinkedList<>();
-        q.add(start);
-        while (!q.isEmpty()) {
-            Queue<String> temp = new LinkedList<>();
-            while (!q.isEmpty()) {
-                String tmp = q.poll();
-                if (tmp.equals(end)) return count;
-                for (String s : bank) {
-                    if (mutation(tmp, s) == 1) {
-                        temp.add(s);
+        Queue<String> queue = new LinkedList<>();
+        int steps = 0;
+        Set<String> bankSet = new HashSet<>(Arrays.asList(bank));
+        queue.offer(start);
+        bankSet.remove(start);
+        char[] gene = new char[]{'A', 'C', 'G', 'T'};
+        while (!queue.isEmpty()) {
+            steps++;
+            int size = queue.size();
+            for (int k = 0; k < size; k++) {
+                char[] curr = queue.poll().toCharArray();
+                for (int i = 0; i < curr.length; i++) {
+                    char ori = curr[i];
+                    for (char c : gene) {
+                        if (c == ori) continue;
+                        curr[i] = c;
+                        String mutated = new String(curr);
+                        if (bankSet.contains(mutated)) {
+                            if (mutated.equals(end)) return steps;
+                            queue.offer(mutated);
+                            bankSet.remove(mutated);
+                        }
                     }
+                    curr[i] = ori;
                 }
             }
-            q = temp;
-            count++;
         }
         return -1;
-    }
-
-    public int mutation(String s1, String s2) {
-        int count = 0;
-        for (int i = 0; i < s1.length(); i++) if (s1.charAt(i) != s2.charAt(i)) count++;
-        return count;
     }
 }
