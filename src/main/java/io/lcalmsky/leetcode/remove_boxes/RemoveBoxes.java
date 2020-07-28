@@ -42,6 +42,7 @@ public class RemoveBoxes {
             return mem[left][right][k];
         }
 
+
         while (right > left && boxes[right] == boxes[right - 1]) {
             right--;
             k++;
