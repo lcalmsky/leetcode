@@ -53,6 +53,8 @@ import java.util.List;
  *  ["",  "3", "", "",  "", "", "", "",  "",  "",  "",  "",  "", "", ""]
  *  ["4", "",  "", "",  "", "", "", "",  "",  "",  "",  "",  "", "", ""]]
  * </pre>
+ * Runtime: 7 ms, faster than 13.39% of Java online submissions for Print Binary Tree.
+ * Memory Usage: 39.4 MB, less than 93.92% of Java online submissions for Print Binary Tree.
  */
 public class PrintBinaryTree {
     public List<List<String>> printTree(TreeNode root) {
