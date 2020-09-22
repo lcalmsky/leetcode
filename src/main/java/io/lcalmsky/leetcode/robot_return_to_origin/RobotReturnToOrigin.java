@@ -59,10 +59,10 @@ class AnotherSolution {
         int x = 0;
         int y = 0;
 
-        for (int i = 0; i < moves.length(); i++) {
-            if (moves.charAt(i) == 'U') y++;
-            else if (moves.charAt(i) == 'D') y--;
-            else if (moves.charAt(i) == 'R') x++;
+        for (char c : moves.toCharArray()) {
+            if (c == 'U') y++;
+            else if (c == 'D') y--;
+            else if (c == 'R') x++;
             else x--;
         }
 
