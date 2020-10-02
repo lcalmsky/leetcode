@@ -7,7 +7,6 @@ The conventions used in the project are:
 - class: converting last path of leetcode problem url to upper camel case
 - test: classname + "Tests"
 
-
 ex)
 <pre><code>
 url     https://leetcode.com/problems/<b>wildcard-matching</b>
