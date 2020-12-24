@@ -1,3 +1,12 @@
+# leetcode
+---
+> Repository for leetcode
+
+![Bintray](https://img.shields.io/badge/language-java%2F8-orange)
+![Bintray](https://img.shields.io/badge/build-gradle-yellowgreen)
+![Bintray](https://img.shields.io/badge/test-junit5-blue)
+
+
 ### Overview
 Solve the algorithm problems <a href="leetcode.com">leetcode.com</a> provides.
 
