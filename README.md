@@ -1,5 +1,4 @@
 # leetcode
----
 > Repository for leetcode
 
 ![Bintray](https://img.shields.io/badge/language-java%2F8-orange)
