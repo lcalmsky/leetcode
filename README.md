@@ -15,8 +15,7 @@ The conventions used in the project are:
 - test: SolutionTest.java
 
 ex)
-<pre><code>
-url     https://leetcode.com/problems/<b>wildcard-matching</b>
+<pre><code>url     https://leetcode.com/problems/<b>wildcard-matching</b>
 branch  feature/<b>wildcard-matching</b>
 package io.lcalmsky.leetcode.<b>wildcard_matching</b>
 class   io.lcalmsky.leetcode.<b>wildcard_matching.Solution</b>
@@ -24,7 +23,7 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 </code></pre>
 
 ### List of problems- [Listnode.java](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/ListNode.java)
-- [Readmelinkmaker.java](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/ReadMeLinkMaker.java)
+- [Readmemaker.java](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/ReadmeMaker.java)
 - [Treenode.java](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/TreeNode.java)
 - [24Game](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/_24_game)
 - [AccountsMerge](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/accounts_merge)
@@ -339,3 +338,4 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 - [WordSearch](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/word_search)
 - [ZerooneMatrix](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zeroone_matrix)
 - [ZigzagConversion](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zigzag_conversion)
+version)

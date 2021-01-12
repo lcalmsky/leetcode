@@ -28,7 +28,7 @@ public class ReadmeMaker {
                 "- test: SolutionTest.java\n" +
                 "\n" +
                 "ex)\n" +
-                "<pre><code>\n" +
+                "<pre><code>" +
                 "url     https://leetcode.com/problems/<b>wildcard-matching</b>\n" +
                 "branch  feature/<b>wildcard-matching</b>\n" +
                 "package io.lcalmsky.leetcode.<b>wildcard_matching</b>\n" +
