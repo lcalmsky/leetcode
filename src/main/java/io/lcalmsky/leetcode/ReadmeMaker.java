@@ -1,7 +1,5 @@
 package io.lcalmsky.leetcode;
 
-import com.google.common.base.CaseFormat;
-
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
@@ -36,13 +34,15 @@ public class ReadmeMaker {
                 "test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>\n" +
                 "</code></pre>\n" +
                 "\n" +
-                "### List of problems");
+                "### List of problems\n");
         File file = new File("/Users/a1101243/git-repo/leetcode/src/main/java/io/lcalmsky/leetcode");
         String[] list = file.list();
         Arrays.sort(list);
         for (String f : list) {
-            String title = CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.UPPER_CAMEL, f);
-            sb.append(String.format("- [%s](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/%s)\n", title, f));
+            if (!f.endsWith(".java")) {
+                String title = f.replace('_', ' ').trim();
+                sb.append(String.format("- [%s](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/%s)\n", title, f));
+            }
         }
         System.out.println(sb.toString());
         Files.write(Paths.get("README.md"), sb.toString().getBytes(), StandardOpenOption.WRITE);
