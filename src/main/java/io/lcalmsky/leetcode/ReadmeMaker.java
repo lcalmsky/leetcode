@@ -10,7 +10,7 @@ import java.util.Arrays;
 public class ReadmeMaker {
     public static void main(String[] args) throws IOException {
         StringBuilder sb = new StringBuilder("# leetcode\n" +
-                "> Repository for leetcode\n" +
+                "> Repository for source codes of leetcode\n" +
                 "\n" +
                 "![Bintray](https://img.shields.io/badge/language-java%2F8-orange)\n" +
                 "![Bintray](https://img.shields.io/badge/build-gradle-yellowgreen)\n" +

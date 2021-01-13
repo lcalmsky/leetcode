@@ -1,5 +1,5 @@
 # leetcode
-> Repository for leetcode
+> Repository for source codes of leetcode
 
 ![Bintray](https://img.shields.io/badge/language-java%2F8-orange)
 ![Bintray](https://img.shields.io/badge/build-gradle-yellowgreen)
@@ -336,7 +336,6 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 - [word search](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/word_search)
 - [zeroone matrix](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zeroone_matrix)
 - [zigzag conversion](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zigzag_conversion)
-
-- [word search](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/word_search)
+(https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/word_search)
 - [zeroone matrix](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zeroone_matrix)
 - [zigzag conversion](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zigzag_conversion)
