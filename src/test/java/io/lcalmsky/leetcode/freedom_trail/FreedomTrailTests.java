@@ -15,7 +15,7 @@ public class FreedomTrailTests {
 
     private void test(String ring, String key, int expected) {
         // when
-        FreedomTrail freedomTrail = new FreedomTrail();
+        Solution freedomTrail = new Solution();
         int actual = freedomTrail.findRotateSteps(ring, key);
 
         // then

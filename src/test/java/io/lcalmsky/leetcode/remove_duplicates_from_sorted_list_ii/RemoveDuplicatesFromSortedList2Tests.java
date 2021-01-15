@@ -38,7 +38,7 @@ public class RemoveDuplicatesFromSortedList2Tests {
 
     private void test(ListNode given, ListNode expected) {
         // when
-        RemoveDuplicatesFromSortedList2 removeDuplicatesFromSortedList2 = new RemoveDuplicatesFromSortedList2();
+        Solution removeDuplicatesFromSortedList2 = new Solution();
         ListNode actual = removeDuplicatesFromSortedList2.deleteDuplicates(given);
 
         // then

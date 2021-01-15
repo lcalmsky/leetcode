@@ -15,7 +15,7 @@ class DeleteOperationForTwoStringsTest {
 
     private void test(String s1, String s2, int expected) {
         // when
-        DeleteOperationForTwoStrings deleteOperationForTwoStrings = new DeleteOperationForTwoStrings();
+        Solution deleteOperationForTwoStrings = new Solution();
         int actual = deleteOperationForTwoStrings.minDistance(s1, s2);
 
         // then

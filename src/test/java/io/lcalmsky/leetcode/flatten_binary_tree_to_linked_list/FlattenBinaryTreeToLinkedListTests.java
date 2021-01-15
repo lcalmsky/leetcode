@@ -19,7 +19,7 @@ public class FlattenBinaryTreeToLinkedListTests {
 
     private void test(TreeNode given, TreeNode expected) {
         // when
-        FlattenBinaryTreeToLinkedList flattenBinaryTreeToLinkedList = new FlattenBinaryTreeToLinkedList();
+        Solution flattenBinaryTreeToLinkedList = new Solution();
         flattenBinaryTreeToLinkedList.flatten(given);
 
         // then

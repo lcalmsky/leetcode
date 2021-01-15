@@ -17,7 +17,7 @@ public class PalindromeLinkedListTests {
 
     private void test(ListNode given, boolean expected) {
         // when
-        PalindromeLinkedList palindromeLinkedList = new PalindromeLinkedList();
+        Solution palindromeLinkedList = new Solution();
         boolean actual = palindromeLinkedList.isPalindrome(given);
 
         // then

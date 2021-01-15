@@ -17,7 +17,7 @@ class MaximumProductOfThreeNumbersTest {
 
     private void test(int[] given, int expected) {
         // when
-        MaximumProductOfThreeNumbers maximumProductOfThreeNumbers = new MaximumProductOfThreeNumbers();
+        Solution maximumProductOfThreeNumbers = new Solution();
         int actual = maximumProductOfThreeNumbers.maximumProduct(given);
 
         // then

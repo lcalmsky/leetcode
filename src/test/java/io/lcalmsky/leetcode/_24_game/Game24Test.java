@@ -16,7 +16,7 @@ class Game24Test {
 
     private void test(int[] given, boolean expected) {
         // when
-        Game24 game24 = new Game24();
+        Solution game24 = new Solution();
         boolean actual = game24.judgePoint24(given);
 
         // then

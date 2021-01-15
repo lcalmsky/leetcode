@@ -14,11 +14,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class CombinationSumTests {
 
-    private CombinationSum combinationSum;
+    private Solution combinationSum;
 
     @BeforeEach
     public void init() {
-        combinationSum = new CombinationSum();
+        combinationSum = new Solution();
     }
 
 

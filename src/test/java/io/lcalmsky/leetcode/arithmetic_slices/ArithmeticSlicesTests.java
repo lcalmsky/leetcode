@@ -15,7 +15,7 @@ public class ArithmeticSlicesTests {
 
     private void test(int[] given, int expected) {
         // when
-        ArithmeticSlices arithmeticSlices = new ArithmeticSlices();
+        Solution arithmeticSlices = new Solution();
         int actual = arithmeticSlices.numberOfArithmeticSlices(given);
 
         // then

@@ -16,7 +16,7 @@ class MaximumBinaryTreeTest {
 
     private void test(int[] given, TreeNode expected) {
         // when
-        MaximumBinaryTree maximumBinaryTree = new MaximumBinaryTree();
+        Solution maximumBinaryTree = new Solution();
         TreeNode actual = maximumBinaryTree.constructMaximumBinaryTree(given);
 
         // then

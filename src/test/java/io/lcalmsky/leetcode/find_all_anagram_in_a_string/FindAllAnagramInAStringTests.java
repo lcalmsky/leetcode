@@ -19,7 +19,7 @@ public class FindAllAnagramInAStringTests {
 
     private void test(String s, String p, List<Integer> expected) {
         // when
-        FindAllAnagramInAString findAllAnagramInAString = new FindAllAnagramInAString();
+        Solution findAllAnagramInAString = new Solution();
         List<Integer> actual = findAllAnagramInAString.findAnagrams(s, p);
 
         // then

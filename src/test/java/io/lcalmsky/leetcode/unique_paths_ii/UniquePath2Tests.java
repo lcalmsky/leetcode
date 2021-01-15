@@ -19,7 +19,7 @@ public class UniquePath2Tests {
 
     private void test(int[][] given, int expected) {
         // when
-        UniquePath2 uniquePath2 = new UniquePath2();
+        Solution uniquePath2 = new Solution();
         int actual = uniquePath2.uniquePathWithObstacles(given);
 
         // then

@@ -16,7 +16,7 @@ public class ConvertSortedArrayToBinarySearchTreeTests {
 
     private void test(int[] given, TreeNode expected) {
         // when
-        ConvertSortedArrayToBinarySearchTree convertSortedArrayToBinarySearchTree = new ConvertSortedArrayToBinarySearchTree();
+        Solution convertSortedArrayToBinarySearchTree = new Solution();
         TreeNode actual = convertSortedArrayToBinarySearchTree.sortedArrayToBST(given);
 
         // then

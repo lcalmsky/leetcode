@@ -18,7 +18,7 @@ public class ValidAnagramTests {
 
     private void test(String s, String t, boolean expected) {
         // when
-        ValidAnagram validAnagram = new ValidAnagram();
+        Solution validAnagram = new Solution();
         boolean actual = validAnagram.isAnagram(s, t);
 
         // then

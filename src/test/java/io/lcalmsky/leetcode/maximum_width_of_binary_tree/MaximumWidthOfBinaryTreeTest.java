@@ -18,7 +18,7 @@ class MaximumWidthOfBinaryTreeTest {
 
     private void test(TreeNode given, int expected) {
         // when
-        MaximumWidthOfBinaryTree maximumWidthOfBinaryTree = new MaximumWidthOfBinaryTree();
+        Solution maximumWidthOfBinaryTree = new Solution();
         int actual = maximumWidthOfBinaryTree.widthOfBinaryTree(given);
 
         // then

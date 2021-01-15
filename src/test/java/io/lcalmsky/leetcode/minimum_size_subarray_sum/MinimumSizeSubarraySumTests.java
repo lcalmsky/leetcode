@@ -15,7 +15,7 @@ public class MinimumSizeSubarraySumTests {
 
     private void test(int s, int[] nums, int expected) {
         // when
-        MinimumSizeSubarraySum minimumSizeSubarraySum = new MinimumSizeSubarraySum();
+        Solution minimumSizeSubarraySum = new Solution();
         int actual = minimumSizeSubarraySum.minSubArrayLen(s, nums);
 
         // then

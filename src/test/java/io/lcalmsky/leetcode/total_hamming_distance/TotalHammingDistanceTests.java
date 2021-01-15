@@ -15,7 +15,7 @@ public class TotalHammingDistanceTests {
 
     private void test(int[] given, int expected) {
         // when
-        TotalHammingDistance totalHammingDistance = new TotalHammingDistance();
+        Solution totalHammingDistance = new Solution();
         int actual = totalHammingDistance.totalHammingDistance(given);
 
         // then

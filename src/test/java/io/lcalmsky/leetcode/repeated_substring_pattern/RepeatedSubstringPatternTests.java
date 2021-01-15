@@ -17,7 +17,7 @@ public class RepeatedSubstringPatternTests {
 
     private void test(String given, boolean expected) {
         // when
-        RepeatedSubstringPattern repeatedSubstringPattern = new RepeatedSubstringPattern();
+        Solution repeatedSubstringPattern = new Solution();
         boolean actual = repeatedSubstringPattern.repeatedSubstringPattern(given);
 
         // then

@@ -16,7 +16,7 @@ public class CountPrimesTests {
 
     private void test(int given, int expected) {
         // when
-        CountPrimes countPrimes = new CountPrimes();
+        Solution countPrimes = new Solution();
         int actual = countPrimes.countPrimes(given);
 
         // then

@@ -18,7 +18,7 @@ public class ExcelSheetColumnTitleTests {
 
     private void test(int given, String expected) {
         // when
-        ExcelSheetColumnTitle excelSheetColumnTitle = new ExcelSheetColumnTitle();
+        Solution excelSheetColumnTitle = new Solution();
         String actual = excelSheetColumnTitle.convertToTitle(given);
 
         // then

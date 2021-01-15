@@ -18,7 +18,7 @@ public class ValidateBinarySearchTreeTests {
 
     private void test(TreeNode given, boolean expected) {
         // when
-        ValidateBinarySearchTree validateBinarySearchTree = new ValidateBinarySearchTree();
+        Solution validateBinarySearchTree = new Solution();
         boolean actual = validateBinarySearchTree.isValidBST(given);
 
         // then

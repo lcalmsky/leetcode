@@ -15,7 +15,7 @@ public class LongestIncreasingSubsequenceTests {
 
     private void test(int[] given, int expected) {
         // when
-        LongestIncreasingSubsequence longestIncreasingSubsequence = new LongestIncreasingSubsequence();
+        Solution longestIncreasingSubsequence = new Solution();
         int actual = longestIncreasingSubsequence.lengthOfLIS(given);
 
         // then

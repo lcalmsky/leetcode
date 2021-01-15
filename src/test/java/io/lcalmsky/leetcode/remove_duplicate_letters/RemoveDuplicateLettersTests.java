@@ -16,7 +16,7 @@ public class RemoveDuplicateLettersTests {
 
     private void test(String given, String expected) {
         // when
-        RemoveDuplicateLetters removeDuplicateLetters = new RemoveDuplicateLetters();
+        Solution removeDuplicateLetters = new Solution();
         String actual = removeDuplicateLetters.removeDuplicateLetters(given);
 
         // then

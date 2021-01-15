@@ -16,7 +16,7 @@ public class ReverseStringTests {
 
     private void test(char[] given, char[] expected) {
         // when
-        ReverseString reverseString = new ReverseString();
+        Solution reverseString = new Solution();
         reverseString.reverseString(given);
 
         // then

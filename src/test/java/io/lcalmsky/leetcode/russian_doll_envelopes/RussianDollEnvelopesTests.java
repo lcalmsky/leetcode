@@ -20,7 +20,7 @@ public class RussianDollEnvelopesTests {
 
     private void test(int[][] given, int expected) {
         // when
-        RussianDollEnvelopes russianDollEnvelopes = new RussianDollEnvelopes();
+        Solution russianDollEnvelopes = new Solution();
         int actual = russianDollEnvelopes.maxEnvelopes(given);
 
         // then

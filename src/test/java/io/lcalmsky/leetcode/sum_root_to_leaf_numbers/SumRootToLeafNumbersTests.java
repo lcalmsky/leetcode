@@ -17,7 +17,7 @@ public class SumRootToLeafNumbersTests {
 
     private void test(TreeNode given, int expected) {
         // when
-        SumRootToLeafNumbers sumRootToLeafNumbers = new SumRootToLeafNumbers();
+        Solution sumRootToLeafNumbers = new Solution();
         int actual = sumRootToLeafNumbers.sumNumbers(given);
 
         // then

@@ -16,7 +16,7 @@ class NonDecreasingArrayTest {
 
     private void test(int[] nums, boolean expected) {
         // when
-        NonDecreasingArray nonDecreasingArray = new NonDecreasingArray();
+        Solution nonDecreasingArray = new Solution();
         boolean actual = nonDecreasingArray.checkPossibility(nums);
 
         // then

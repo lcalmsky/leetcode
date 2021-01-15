@@ -16,7 +16,7 @@ public class PathSum3Tests {
 
     private void test(TreeNode given, int sum, int expected) {
         // when
-        PathSum3 pathSum3 = new PathSum3();
+        Solution pathSum3 = new Solution();
         int actual = pathSum3.pathSum(given, sum);
 
         // then

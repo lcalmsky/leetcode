@@ -19,7 +19,7 @@ public class BinaryTreePostorderTraversalTests {
 
     private void test(TreeNode given, List<Integer> expected) {
         // when
-        BinaryTreePostorderTraversal binaryTreePostorderTraversal = new BinaryTreePostorderTraversal();
+        Solution binaryTreePostorderTraversal = new Solution();
         List<Integer> actual = binaryTreePostorderTraversal.postorderTraversal(given);
 
         // then

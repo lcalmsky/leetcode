@@ -33,7 +33,7 @@ public class SpiralMatrixTests {
 
     private void test(int[][] given, List<Integer> expected) {
         // when
-        SpiralMatrix spiralMatrix = new SpiralMatrix();
+        Solution spiralMatrix = new Solution();
         List<Integer> actual = spiralMatrix.spiralOrder(given);
 
         // then

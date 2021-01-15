@@ -19,7 +19,7 @@ public class SortCharactersByFrequencyTests {
 
     private void test(String given, String... expected) {
         // when
-        SortCharactersByFrequency sortCharactersByFrequency = new SortCharactersByFrequency();
+        Solution sortCharactersByFrequency = new Solution();
         String actual = sortCharactersByFrequency.frequencySort(given);
 
         // then

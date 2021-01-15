@@ -16,7 +16,7 @@ public class IsSubsequenceTests {
 
     private void test(String s, String t, boolean expected) {
         // when
-        IsSubsequence isSubsequence = new IsSubsequence();
+        Solution isSubsequence = new Solution();
         boolean actual = isSubsequence.isSubsequence(s, t);
 
         // then

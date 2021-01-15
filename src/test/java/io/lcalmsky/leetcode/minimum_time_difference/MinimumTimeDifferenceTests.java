@@ -18,7 +18,7 @@ public class MinimumTimeDifferenceTests {
 
     private void test(List<String> given, int expected) {
         // when
-        MinimumTimeDifference minimumTimeDifference = new MinimumTimeDifference();
+        Solution minimumTimeDifference = new Solution();
         int actual = minimumTimeDifference.findMinDifference(given);
 
         // then

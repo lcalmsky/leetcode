@@ -18,7 +18,7 @@ public class CountOfSmallerNumbersAfterSelfTests {
 
     private void test(int[] given, List<Integer> expected) {
         // when
-        CountOfSmallerNumbersAfterSelf countOfSmallerNumbersAfterSelf = new CountOfSmallerNumbersAfterSelf();
+        Solution countOfSmallerNumbersAfterSelf = new Solution();
         List<Integer> actual = countOfSmallerNumbersAfterSelf.countSmaller(given);
 
         // then

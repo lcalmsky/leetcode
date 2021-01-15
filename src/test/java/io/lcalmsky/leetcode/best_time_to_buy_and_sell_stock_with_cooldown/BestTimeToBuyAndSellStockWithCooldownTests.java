@@ -15,7 +15,7 @@ public class BestTimeToBuyAndSellStockWithCooldownTests {
 
     private void test(int[] given, int expected) {
         // when
-        BestTimeToBuyAndSellStockWithCooldown bestTimeToBuyAndSellStockWithCooldown = new BestTimeToBuyAndSellStockWithCooldown();
+        Solution bestTimeToBuyAndSellStockWithCooldown = new Solution();
         int actual = bestTimeToBuyAndSellStockWithCooldown.maxProfit(given);
 
         // then

@@ -18,7 +18,7 @@ public class LexicographicalNumbersTests {
 
     private void test(int given, List<Integer> expected) {
         // given
-        LexicographicalNumbers lexicographicalNumbers = new LexicographicalNumbers();
+        Solution lexicographicalNumbers = new Solution();
         List<Integer> actual = lexicographicalNumbers.lexicalOrder(given);
 
         // then

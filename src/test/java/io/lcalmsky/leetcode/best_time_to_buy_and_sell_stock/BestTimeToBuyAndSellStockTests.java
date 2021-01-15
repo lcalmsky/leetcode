@@ -18,7 +18,7 @@ public class BestTimeToBuyAndSellStockTests {
 
     private void test(int[] given, int expected) {
         // when
-        BestTimeToBuyAndSellStock bestTimeToBuyAndSellStock = new BestTimeToBuyAndSellStock();
+        Solution bestTimeToBuyAndSellStock = new Solution();
         int actual = bestTimeToBuyAndSellStock.maxProfit(given);
 
         // then

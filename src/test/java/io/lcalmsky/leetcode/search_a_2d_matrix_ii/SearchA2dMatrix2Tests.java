@@ -25,7 +25,7 @@ public class SearchA2dMatrix2Tests {
 
     private void test(int[][] matrix, int target, boolean expected) {
         // when
-        SearchA2dMatrix2 searchA2dMatrix2 = new SearchA2dMatrix2();
+        Solution searchA2dMatrix2 = new Solution();
         boolean actual = searchA2dMatrix2.searchMatrix(matrix, target);
 
         // then

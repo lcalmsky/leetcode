@@ -16,7 +16,7 @@ public class FindTheDuplicateNumberTests {
 
     private void test(int[] given, int expected) {
         // when
-        FindTheDuplicateNumber findTheDuplicateNumber = new FindTheDuplicateNumber();
+        Solution findTheDuplicateNumber = new Solution();
         int actual = findTheDuplicateNumber.findDuplicate(given);
 
         // then

@@ -16,7 +16,7 @@ public class LargestNumberTests {
 
     private void test(int[] given, String expected) {
         // when
-        LargestNumber largestNumber = new LargestNumber();
+        Solution largestNumber = new Solution();
         String actual = largestNumber.largestNumber(given);
 
         // then

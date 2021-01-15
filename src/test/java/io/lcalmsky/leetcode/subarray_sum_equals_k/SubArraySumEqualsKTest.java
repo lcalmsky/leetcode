@@ -11,7 +11,7 @@ class SubArraySumEqualsKTest {
         int[] given = {1, 1, 1};
 
         // when
-        SubArraySumEqualsK subArraySumEqualsK = new SubArraySumEqualsK();
+        Solution subArraySumEqualsK = new Solution();
         int actual = subArraySumEqualsK.subarraySum(given, 2);
 
         // then

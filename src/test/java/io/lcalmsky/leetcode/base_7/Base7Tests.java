@@ -16,7 +16,7 @@ public class Base7Tests {
 
     private void test(int given, String expected) {
         // when
-        Base7 base7 = new Base7();
+        Solution base7 = new Solution();
         String actual = base7.convertToBase7(given);
 
         // then

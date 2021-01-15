@@ -17,7 +17,7 @@ public class RecoverBinarySearchTreeTests {
 
     private void test(TreeNode given, TreeNode expected) {
         // when
-        RecoverBinarySearchTree recoverBinarySearchTree = new RecoverBinarySearchTree();
+        Solution recoverBinarySearchTree = new Solution();
         recoverBinarySearchTree.recoverTree(given);
 
         // then

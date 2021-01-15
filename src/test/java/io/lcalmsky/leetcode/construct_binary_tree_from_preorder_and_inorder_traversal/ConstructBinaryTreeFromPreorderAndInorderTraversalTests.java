@@ -13,7 +13,7 @@ public class ConstructBinaryTreeFromPreorderAndInorderTraversalTests {
 
     private void test(int[] preorder, int[] inorder, TreeNode expected) {
         // when
-        ConstructBinaryTreeFromPreorderAndInorderTraversal constructBinaryTreeFromPreorderAndInorderTraversal = new ConstructBinaryTreeFromPreorderAndInorderTraversal();
+        Solution constructBinaryTreeFromPreorderAndInorderTraversal = new Solution();
         TreeNode actual = constructBinaryTreeFromPreorderAndInorderTraversal.buildTree(preorder, inorder);
 
         // then

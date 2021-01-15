@@ -12,7 +12,7 @@ public class AddTwoNumbersTests {
     @DisplayName("243 + 564 = 708")
     public void givenTwoNumbers_whenAdd_thenCorrect() {
         // given
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        Solution addTwoNumbers = new Solution();
         ListNode l1 = new ListNode(1);
         l1.next = new ListNode(2);
         l1.next.next = new ListNode(3);
@@ -38,7 +38,7 @@ public class AddTwoNumbersTests {
     @DisplayName("5 + 5 = 10")
     public void test2() {
         // given
-        AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
+        Solution addTwoNumbers = new Solution();
         ListNode l1 = new ListNode(5);
         ListNode l2 = new ListNode(5);
 

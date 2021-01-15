@@ -16,7 +16,7 @@ public class RemoveLinkedListElementsTests {
 
     private void test(ListNode given, int val, ListNode expected) {
         // when
-        RemoveLinkedListElements removeLinkedListElements = new RemoveLinkedListElements();
+        Solution removeLinkedListElements = new Solution();
         ListNode actual = removeLinkedListElements.removeElements(given, val);
 
         // then

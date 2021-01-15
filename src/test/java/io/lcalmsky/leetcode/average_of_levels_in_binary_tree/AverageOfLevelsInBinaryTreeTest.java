@@ -19,7 +19,7 @@ class AverageOfLevelsInBinaryTreeTest {
 
     private void test(TreeNode given, List<Double> expected) {
         // when
-        AverageOfLevelsInBinaryTree averageOfLevelsInBinaryTree = new AverageOfLevelsInBinaryTree();
+        Solution averageOfLevelsInBinaryTree = new Solution();
         List<Double> actual = averageOfLevelsInBinaryTree.averageOfLevels(given);
 
         // then

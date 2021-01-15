@@ -15,7 +15,7 @@ class SetMismatchTest {
 
     private void test(int[] given, int[] expected) {
         // when
-        SetMismatch setMismatch = new SetMismatch();
+        Solution setMismatch = new Solution();
         int[] actual = setMismatch.findErrorNums(given);
 
         // then

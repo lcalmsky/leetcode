@@ -16,7 +16,7 @@ public class FirstUniqueCharacterInAStringTests {
 
     private void test(String given, int expected) {
         // when
-        FirstUniqueCharacterInAString firstUniqueCharacterInAString = new FirstUniqueCharacterInAString();
+        Solution firstUniqueCharacterInAString = new Solution();
         int actual = firstUniqueCharacterInAString.firstUniqChar(given);
 
         // then

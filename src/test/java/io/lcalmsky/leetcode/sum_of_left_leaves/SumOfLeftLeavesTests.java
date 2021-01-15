@@ -16,7 +16,7 @@ public class SumOfLeftLeavesTests {
 
     private void test(TreeNode given, int expected) {
         // when
-        SumOfLeftLeaves sumOfLeftLeaves = new SumOfLeftLeaves();
+        Solution sumOfLeftLeaves = new Solution();
         int actual = sumOfLeftLeaves.sumOfLeftLeaves(given);
 
         // then

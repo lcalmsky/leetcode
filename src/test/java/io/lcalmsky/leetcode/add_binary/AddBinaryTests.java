@@ -19,7 +19,7 @@ public class AddBinaryTests {
 
     private void test(String givenA, String givenB, String expected) {
         // when
-        AddBinary addBinary = new AddBinary();
+        Solution addBinary = new Solution();
         String actual = addBinary.addBinary(givenA, givenB);
 
         // then

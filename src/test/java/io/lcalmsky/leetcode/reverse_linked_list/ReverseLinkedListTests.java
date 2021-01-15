@@ -16,7 +16,7 @@ public class ReverseLinkedListTests {
 
     private void test(ListNode given, ListNode expected) {
         // when
-        ReverseLinkedList reverseLinkedList = new ReverseLinkedList();
+        Solution reverseLinkedList = new Solution();
         ListNode actual = reverseLinkedList.reverseList(given);
 
         // then

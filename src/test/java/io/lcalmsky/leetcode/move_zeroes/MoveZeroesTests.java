@@ -15,7 +15,7 @@ public class MoveZeroesTests {
 
     private void test(int[] given, int[] expected) {
         // when
-        MoveZeroes moveZeroes = new MoveZeroes();
+        Solution moveZeroes = new Solution();
         moveZeroes.moveZeroes(given);
 
         // then

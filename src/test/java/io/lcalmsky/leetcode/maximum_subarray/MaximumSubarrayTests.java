@@ -13,7 +13,7 @@ public class MaximumSubarrayTests {
         int[] arr = new int[]{-2, 1, -3, 4, -1, 2, 1, -5, 4};
 
         // when
-        MaximumSubarray maximumSubarray = new MaximumSubarray();
+        Solution maximumSubarray = new Solution();
         int result = maximumSubarray.maxSubArray(arr);
 
         // then
@@ -27,7 +27,7 @@ public class MaximumSubarrayTests {
         int[] arr = new int[]{1};
 
         // when
-        MaximumSubarray maximumSubarray = new MaximumSubarray();
+        Solution maximumSubarray = new Solution();
         int result = maximumSubarray.maxSubArray(arr);
 
         // then
@@ -41,7 +41,7 @@ public class MaximumSubarrayTests {
         int[] arr = new int[]{-2, 1};
 
         // when
-        MaximumSubarray maximumSubarray = new MaximumSubarray();
+        Solution maximumSubarray = new Solution();
         int result = maximumSubarray.maxSubArray(arr);
 
         // then

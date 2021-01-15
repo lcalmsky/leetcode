@@ -59,7 +59,7 @@ class SmallestRangeCoveringElementsFromKListsTest {
 
     private void test(List<List<Integer>> given, int[] expected) {
         //when
-        SmallestRangeCoveringElementsFromKLists smallestRangeCoveringElementsFromKLists = new SmallestRangeCoveringElementsFromKLists();
+        Solution smallestRangeCoveringElementsFromKLists = new Solution();
         int[] actual = smallestRangeCoveringElementsFromKLists.smallestRange(given);
 
         // then

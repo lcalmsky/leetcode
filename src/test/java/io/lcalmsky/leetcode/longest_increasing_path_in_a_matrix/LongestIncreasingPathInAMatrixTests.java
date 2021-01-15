@@ -16,7 +16,7 @@ public class LongestIncreasingPathInAMatrixTests {
 
     private void test(int[][] given, int expected) {
         // when
-        LongestIncreasingPathInAMatrix longestIncreasingPathInAMatrix = new LongestIncreasingPathInAMatrix();
+        Solution longestIncreasingPathInAMatrix = new Solution();
         int actual = longestIncreasingPathInAMatrix.longestIncreasingPath(given);
 
         // then

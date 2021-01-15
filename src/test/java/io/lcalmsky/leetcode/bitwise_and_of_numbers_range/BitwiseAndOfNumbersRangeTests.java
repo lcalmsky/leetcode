@@ -17,7 +17,7 @@ public class BitwiseAndOfNumbersRangeTests {
 
     private void test(int a, int b, int expected) {
         // when
-        BitwiseAndOfNumbersRange bitwiseAndOfNumbersRange = new BitwiseAndOfNumbersRange();
+        Solution bitwiseAndOfNumbersRange = new Solution();
         int actual = bitwiseAndOfNumbersRange.rangeBitwiseAnd(a, b);
 
         // then

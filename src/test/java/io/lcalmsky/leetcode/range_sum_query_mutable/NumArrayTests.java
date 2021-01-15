@@ -10,7 +10,7 @@ public class NumArrayTests {
         int[] given = new int[]{1, 3, 5};
 
         // when
-        NumArray numArray = new NumArray(given);
+        Solution numArray = new Solution(given);
 
         // then
         Assertions.assertEquals(9, numArray.sumRange(0, 2));

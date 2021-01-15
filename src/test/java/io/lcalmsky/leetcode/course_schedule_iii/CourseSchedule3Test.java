@@ -20,7 +20,7 @@ class CourseSchedule3Test {
 
     private void test(int[][] given, int expected) {
         // when
-        CourseSchedule3 courseSchedule3 = new CourseSchedule3();
+        Solution courseSchedule3 = new Solution();
         int actual = courseSchedule3.scheduleCourse(given);
 
         // then

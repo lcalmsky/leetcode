@@ -20,7 +20,7 @@ public class RestoreIpAddressesTests {
     }
 
     private void test(String given, List<String> expected) {
-        RestoreIpAddresses restoreIpAddresses = new RestoreIpAddresses();
+        Solution restoreIpAddresses = new Solution();
         List<String> actual = restoreIpAddresses.restoreIpAddresses(given);
 
         assertThat(actual).containsExactlyInAnyOrderElementsOf(expected);

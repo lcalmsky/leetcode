@@ -30,7 +30,7 @@ public class FindKPairsWithSmallestSumsTests {
 
     private void test(int[] nums1, int[] nums2, int k, List<List<Integer>> expected) {
         // when
-        FindKPairsWithSmallestSums findKPairsWithSmallestSums = new FindKPairsWithSmallestSums();
+        Solution findKPairsWithSmallestSums = new Solution();
         List<List<Integer>> actual = findKPairsWithSmallestSums.kSmallestPairs(nums1, nums2, k);
 
         // then

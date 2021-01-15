@@ -16,7 +16,7 @@ public class LongestRepeatingCharacterReplacementTests {
 
     private void test(String s, int k, int expected) {
         // when
-        LongestRepeatingCharacterReplacement longestRepeatingCharacterReplacement = new LongestRepeatingCharacterReplacement();
+        Solution longestRepeatingCharacterReplacement = new Solution();
         int actual = longestRepeatingCharacterReplacement.characterReplacement(s, k);
 
         // then

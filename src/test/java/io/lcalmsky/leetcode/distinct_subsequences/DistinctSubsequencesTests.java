@@ -16,7 +16,7 @@ public class DistinctSubsequencesTests {
 
     private void test(String s, String t, int expected) {
         // when
-        DistinctSubsequences distinctSubsequences = new DistinctSubsequences();
+        Solution distinctSubsequences = new Solution();
         int actual = distinctSubsequences.numDistinct(s, t);
 
         // then

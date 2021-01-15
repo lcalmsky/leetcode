@@ -19,7 +19,7 @@ class TopKFrequentWordsTest {
 
     private void test(String[] words, int k, List<String> expected) {
         // when
-        TopKFrequentWords topKFrequentWords = new TopKFrequentWords();
+        Solution topKFrequentWords = new Solution();
         List<String> actual = topKFrequentWords.topKFrequent(words, k);
 
         // then

@@ -15,7 +15,7 @@ class ReverseWordsInAString3Test {
 
     private void test(String given, String expected) {
         // when
-        ReverseWordsInAString3 reverseWordsInAString3 = new ReverseWordsInAString3();
+        Solution reverseWordsInAString3 = new Solution();
         String actual = reverseWordsInAString3.reverseWords(given);
 
         // then

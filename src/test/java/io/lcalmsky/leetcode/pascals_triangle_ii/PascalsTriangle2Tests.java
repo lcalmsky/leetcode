@@ -18,7 +18,7 @@ public class PascalsTriangle2Tests {
 
     private void test(int given, List<Integer> expected) {
         // when
-        PascalsTriangle2 pascalsTriangle2 = new PascalsTriangle2();
+        Solution pascalsTriangle2 = new Solution();
         List<Integer> actual = pascalsTriangle2.getRow(given);
 
         // then

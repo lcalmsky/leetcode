@@ -19,7 +19,7 @@ public class BinaryTreeRightSideViewTests {
 
     private void test(TreeNode given, List<Integer> expected) {
         // when
-        BinaryTreeRightSideView binaryTreeRightSideView = new BinaryTreeRightSideView();
+        Solution binaryTreeRightSideView = new Solution();
         List<Integer> actual = binaryTreeRightSideView.rightSideView(given);
 
         // then

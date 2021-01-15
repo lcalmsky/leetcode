@@ -15,7 +15,7 @@ class PartitionToKEqualSumSubsetsTest {
 
     private void test(int[] nums, int k, boolean expected) {
         // when
-        PartitionToKEqualSumSubsets partitionToKEqualSumSubsets = new PartitionToKEqualSumSubsets();
+        Solution partitionToKEqualSumSubsets = new Solution();
         boolean actual = partitionToKEqualSumSubsets.canPartitionKSubsets(nums, k);
 
         // then

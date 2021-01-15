@@ -16,7 +16,7 @@ public class MaximumGapTests {
 
     private void test(int[] given, int expected) {
         // when
-        MaximumGap maximumGap = new MaximumGap();
+        Solution maximumGap = new Solution();
         int actual = maximumGap.maximumGap(given);
 
         // then

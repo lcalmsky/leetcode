@@ -15,7 +15,7 @@ public class LongestPalindromeTests {
 
     private void test(String given, int expected) {
         // when
-        LongestPalindrome longestPalindrome = new LongestPalindrome();
+        Solution longestPalindrome = new Solution();
         int actual = longestPalindrome.longestPalindrome(given);
 
         // then

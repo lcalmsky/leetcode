@@ -16,7 +16,7 @@ public class GasStationTests {
 
     private void test(int[] gas, int[] cost, int expected) {
         // when
-        GasStation gasStation = new GasStation();
+        Solution gasStation = new Solution();
         int actual = gasStation.canCompleteCircuit(gas, cost);
 
         // then

@@ -18,7 +18,7 @@ public class SlidingWindowMaximumTests {
 
     private void test(int[] given, int k, int[] expected) {
         // when
-        SlidingWindowMaximum slidingWindowMaximum = new SlidingWindowMaximum();
+        Solution slidingWindowMaximum = new Solution();
         int[] actual = slidingWindowMaximum.maxSlidingWindow(given, k);
 
         // then

@@ -19,7 +19,7 @@ class BinaryNumberWithAlternatingBitsTest {
 
     private void test(int given, boolean expected) {
         // when
-        BinaryNumberWithAlternatingBits binaryNumberWithAlternatingBits = new BinaryNumberWithAlternatingBits();
+        Solution binaryNumberWithAlternatingBits = new Solution();
         boolean actual = binaryNumberWithAlternatingBits.hasAlternatingBits(given);
 
         // then

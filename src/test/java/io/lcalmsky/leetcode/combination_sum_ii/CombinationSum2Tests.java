@@ -31,7 +31,7 @@ public class CombinationSum2Tests {
 
     public void test(int[] given, int target, List<List<Integer>> expected) {
         // when
-        CombinationSum2 combinationSum2 = new CombinationSum2();
+        Solution combinationSum2 = new Solution();
         List<List<Integer>> actual = combinationSum2.combinationSum2(given, target);
 
         // then

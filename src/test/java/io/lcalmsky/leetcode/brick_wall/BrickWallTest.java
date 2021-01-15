@@ -25,7 +25,7 @@ class BrickWallTest {
 
     private void test(List<List<Integer>> given, int expected) {
         // when
-        BrickWall brickWall = new BrickWall();
+        Solution brickWall = new Solution();
         int actual = brickWall.leastBricks(given);
 
         // then

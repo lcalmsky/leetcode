@@ -19,7 +19,7 @@ public class IsomorphicStringsTests {
 
     private void test(String s, String t, boolean expected) {
         // when
-        IsomorphicStrings isomorphicStrings = new IsomorphicStrings();
+        Solution isomorphicStrings = new Solution();
         boolean actual = isomorphicStrings.isIsomorphic(s, t);
 
         // then

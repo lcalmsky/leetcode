@@ -19,7 +19,7 @@ public class DungeonGameTests {
 
     private void test(int[][] given, int expected) {
         // when
-        DungeonGame dungeonGame = new DungeonGame();
+        Solution dungeonGame = new Solution();
         int actual = dungeonGame.calculateMinimumHp(given);
 
         // then

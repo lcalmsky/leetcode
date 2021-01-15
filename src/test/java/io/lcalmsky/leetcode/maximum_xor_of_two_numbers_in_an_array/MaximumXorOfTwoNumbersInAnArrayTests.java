@@ -15,7 +15,7 @@ public class MaximumXorOfTwoNumbersInAnArrayTests {
 
     private void test(int[] given, int expected) {
         // when
-        MaximumXorOfTwoNumbersInAnArray maximumXorOfTwoNumbersInAnArray = new MaximumXorOfTwoNumbersInAnArray();
+        Solution maximumXorOfTwoNumbersInAnArray = new Solution();
         int actual = maximumXorOfTwoNumbersInAnArray.findMaximumXOR(given);
 
         // then

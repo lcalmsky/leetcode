@@ -16,7 +16,7 @@ public class MajorityElementTests {
 
     private void test(int[] given, int expected) {
         // when
-        MajorityElement majorityElement = new MajorityElement();
+        Solution majorityElement = new Solution();
         int actual = majorityElement.majorityElement(given);
 
         // then

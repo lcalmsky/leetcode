@@ -15,7 +15,7 @@ public class BurstBalloonsTests {
 
     private void test(int[] given, int expected) {
         // when
-        BurstBalloons burstBalloons = new BurstBalloons();
+        Solution burstBalloons = new Solution();
         int actual = burstBalloons.maxCoins(given);
 
         // then

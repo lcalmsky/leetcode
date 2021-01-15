@@ -16,7 +16,7 @@ public class ValidPerfectSquareTests {
 
     private void test(int given, boolean expected) {
         // when
-        ValidPerfectSquare validPerfectSquare = new ValidPerfectSquare();
+        Solution validPerfectSquare = new Solution();
         boolean actual = validPerfectSquare.isPerfectSquare(given);
 
         // then

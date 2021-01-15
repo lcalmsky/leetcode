@@ -16,7 +16,7 @@ class CanPlaceFlowersTest {
 
     private boolean test(int[] given, int n) {
         // when
-        CanPlaceFlowers canPlaceFlowers = new CanPlaceFlowers();
+        Solution canPlaceFlowers = new Solution();
         return canPlaceFlowers.canPlaceFlowers(given, n);
     }
 }

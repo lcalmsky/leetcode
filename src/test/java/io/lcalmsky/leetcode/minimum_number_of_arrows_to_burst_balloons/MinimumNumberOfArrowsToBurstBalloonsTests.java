@@ -15,7 +15,7 @@ public class MinimumNumberOfArrowsToBurstBalloonsTests {
 
     private void test(int[][] given, int expected) {
         // when
-        MinimumNumberOfArrowsToBurstBalloons minimumNumberOfArrowsToBurstBalloons = new MinimumNumberOfArrowsToBurstBalloons();
+        Solution minimumNumberOfArrowsToBurstBalloons = new Solution();
         int actual = minimumNumberOfArrowsToBurstBalloons.findMinArrowShots(given);
 
         // then

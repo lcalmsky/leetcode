@@ -17,7 +17,7 @@ public class ReverseLinkedList2Tests {
 
     private void test(ListNode given, int m, int n, ListNode expected) {
         // when
-        ReverseLinkedList2 reverseLinkedList2 = new ReverseLinkedList2();
+        Solution reverseLinkedList2 = new Solution();
         ListNode actual = reverseLinkedList2.reverseBetween(given, m, n);
 
         // then

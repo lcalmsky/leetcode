@@ -15,7 +15,7 @@ class TwoKeysKeyboardTest {
 
     private void test(int given, int expected) {
         // when
-        TwoKeysKeyboard twoKeysKeyboard = new TwoKeysKeyboard();
+        Solution twoKeysKeyboard = new Solution();
         int actual = twoKeysKeyboard.minSteps(given);
 
         // then

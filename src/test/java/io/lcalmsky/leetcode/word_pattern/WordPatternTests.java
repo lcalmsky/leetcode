@@ -18,7 +18,7 @@ public class WordPatternTests {
 
     private void test(String pattern, String words, boolean expected) {
         // when
-        WordPattern wordPattern = new WordPattern();
+        Solution wordPattern = new Solution();
         boolean actual = wordPattern.wordPattern(pattern, words);
 
         // then

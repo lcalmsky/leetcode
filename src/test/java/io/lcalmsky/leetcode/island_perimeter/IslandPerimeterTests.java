@@ -15,7 +15,7 @@ public class IslandPerimeterTests {
 
     private void test(int[][] given, int expected) {
         // when
-        IslandPerimeter islandPerimeter = new IslandPerimeter();
+        Solution islandPerimeter = new Solution();
         int actual = islandPerimeter.islandPerimeter(given);
 
         // then

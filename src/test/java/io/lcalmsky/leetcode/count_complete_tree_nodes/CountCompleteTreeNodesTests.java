@@ -16,7 +16,7 @@ public class CountCompleteTreeNodesTests {
 
     private void test(TreeNode given, int expected) {
         // when
-        CountCompleteTreeNodes countCompleteTreeNodes = new CountCompleteTreeNodes();
+        Solution countCompleteTreeNodes = new Solution();
         int actual = countCompleteTreeNodes.countNodes(given);
 
         // then

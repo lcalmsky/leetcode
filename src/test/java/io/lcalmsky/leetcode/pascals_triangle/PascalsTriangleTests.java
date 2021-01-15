@@ -25,7 +25,7 @@ public class PascalsTriangleTests {
 
     private void test(int given, List<List<Integer>> expected) {
         // when
-        PascalsTriangle pascalsTriangle = new PascalsTriangle();
+        Solution pascalsTriangle = new Solution();
         List<List<Integer>> actual = pascalsTriangle.generate(given);
 
         // then

@@ -16,7 +16,7 @@ public class PartitionEqualSubsetSumTests {
 
     private void test(int[] given, boolean expected) {
         // when
-        PartitionEqualSubsetSum partitionEqualSubsetSum = new PartitionEqualSubsetSum();
+        Solution partitionEqualSubsetSum = new Solution();
         boolean actual = partitionEqualSubsetSum.canPartition(given);
 
         // then

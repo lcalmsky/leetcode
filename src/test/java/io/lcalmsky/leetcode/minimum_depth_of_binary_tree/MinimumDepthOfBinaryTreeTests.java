@@ -17,7 +17,7 @@ public class MinimumDepthOfBinaryTreeTests {
 
     private void test(TreeNode given, int expected) {
         // when
-        MinimumDepthOfBinaryTree minimumDepthOfBinaryTree = new MinimumDepthOfBinaryTree();
+        Solution minimumDepthOfBinaryTree = new Solution();
         int actual = minimumDepthOfBinaryTree.minDepth(given);
 
         // then

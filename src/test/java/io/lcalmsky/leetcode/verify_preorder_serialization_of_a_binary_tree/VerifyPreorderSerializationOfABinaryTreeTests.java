@@ -17,7 +17,7 @@ public class VerifyPreorderSerializationOfABinaryTreeTests {
 
     private void test(String given, boolean expected) {
         // when
-        VerifyPreorderSerializationOfABinaryTree verifyPreorderSerializationOfABinaryTree = new VerifyPreorderSerializationOfABinaryTree();
+        Solution verifyPreorderSerializationOfABinaryTree = new Solution();
         boolean actual = verifyPreorderSerializationOfABinaryTree.isValidSerialization(given);
 
         // then

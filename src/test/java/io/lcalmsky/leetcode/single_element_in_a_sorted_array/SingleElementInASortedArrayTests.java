@@ -16,7 +16,7 @@ public class SingleElementInASortedArrayTests {
 
     private void test(int[] given, int expected) {
         // when
-        SingleElementInASortedArray singleElementInASortedArray = new SingleElementInASortedArray();
+        Solution singleElementInASortedArray = new Solution();
         int actual = singleElementInASortedArray.singleNonDuplicate(given);
 
         // then

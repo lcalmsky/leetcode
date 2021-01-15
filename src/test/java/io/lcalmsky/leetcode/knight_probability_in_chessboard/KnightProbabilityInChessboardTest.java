@@ -15,7 +15,7 @@ class KnightProbabilityInChessboardTest {
 
     private void test(int n, int k, int x, int y, double expected) {
         // when
-        KnightProbabilityInChessboard knightProbabilityInChessboard = new KnightProbabilityInChessboard();
+        Solution knightProbabilityInChessboard = new Solution();
         double actual = knightProbabilityInChessboard.knightProbability(3, 2, 0, 0);
 
         // then

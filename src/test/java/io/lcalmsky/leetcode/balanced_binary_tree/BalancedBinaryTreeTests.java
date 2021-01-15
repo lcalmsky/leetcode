@@ -23,7 +23,7 @@ public class BalancedBinaryTreeTests {
     //4 4 4 4        5 5
     private void test(TreeNode given, boolean expected) {
         // when
-        BalancedBinaryTree balancedBinaryTree = new BalancedBinaryTree();
+        Solution balancedBinaryTree = new Solution();
         boolean actual = balancedBinaryTree.isBalanced(given);
 
         // then

@@ -27,7 +27,7 @@ class MaxAreaOfIslandTest {
 
     private void test(int[][] given, int expected) {
         // when
-        MaxAreaOfIsland maxAreaOfIsland = new MaxAreaOfIsland();
+        Solution maxAreaOfIsland = new Solution();
         int actual = maxAreaOfIsland.maxAreaOfIsland(given);
 
         // then

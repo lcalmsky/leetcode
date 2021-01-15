@@ -19,7 +19,7 @@ public class MergeIntervalsTests {
 
     public void test(int[][] given, int[][] expected) {
         // when
-        MergeIntervals mergeIntervals = new MergeIntervals();
+        Solution mergeIntervals = new Solution();
         int[][] result = mergeIntervals.merge(given);
 
         System.out.println(Arrays.deepToString(result));

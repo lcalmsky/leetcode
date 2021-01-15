@@ -16,7 +16,7 @@ public class HouseRobber2Tests {
 
     private void test(int[] given, int expected) {
         // when
-        HouseRobber2 houseRobber2 = new HouseRobber2();
+        Solution houseRobber2 = new Solution();
         int actual = houseRobber2.rob(given);
 
         // then

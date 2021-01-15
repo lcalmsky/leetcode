@@ -17,7 +17,7 @@ public class NonOverlappingIntervalsTests {
 
     private void test(int[][] given, int expected) {
         // when
-        NonOverlappingIntervals nonOverlappingIntervals = new NonOverlappingIntervals();
+        Solution nonOverlappingIntervals = new Solution();
         int actual = nonOverlappingIntervals.eraseOverlapIntervals(given);
 
         // then

@@ -15,7 +15,7 @@ public class NextGreaterElement2Tests {
 
     private void test(int[] given, int[] expected) {
         // when
-        NextGreaterElement2 nextGreaterElement2 = new NextGreaterElement2();
+        Solution nextGreaterElement2 = new Solution();
         int[] actual = nextGreaterElement2.nextGreaterElements(given);
 
         // then

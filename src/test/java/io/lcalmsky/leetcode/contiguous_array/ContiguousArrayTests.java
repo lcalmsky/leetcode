@@ -16,7 +16,7 @@ public class ContiguousArrayTests {
 
     private void test(int[] given, int expected) {
         // when
-        ContiguousArray contiguousArray = new ContiguousArray();
+        Solution contiguousArray = new Solution();
         int actual = contiguousArray.findMaxLength(given);
 
         // then

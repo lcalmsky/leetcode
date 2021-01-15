@@ -16,7 +16,7 @@ class PalindromeSubstringsTest {
 
     private void test(String given, int expected) {
         // when
-        PalindromeSubstrings palindromeSubstrings = new PalindromeSubstrings();
+        Solution palindromeSubstrings = new Solution();
         int actual = palindromeSubstrings.countSubstrings(given);
 
         // then

@@ -20,7 +20,7 @@ class TrimABinarySearchTreeTest {
 
     private void test(TreeNode root, int low, int high, TreeNode expected) {
         // when
-        TrimABinarySearchTree trimABinarySearchTree = new TrimABinarySearchTree();
+        Solution trimABinarySearchTree = new Solution();
         TreeNode actual = trimABinarySearchTree.trimBST(root, low, high);
 
         // then

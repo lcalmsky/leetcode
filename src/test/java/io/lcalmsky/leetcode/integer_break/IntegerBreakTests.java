@@ -16,7 +16,7 @@ public class IntegerBreakTests {
 
     private void test(int given, int expected) {
         // when
-        IntegerBreak integerBreak = new IntegerBreak();
+        Solution integerBreak = new Solution();
         int actual = integerBreak.integerBreak(given);
 
         // then

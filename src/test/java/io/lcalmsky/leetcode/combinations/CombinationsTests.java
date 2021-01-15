@@ -31,7 +31,7 @@ public class CombinationsTests {
 
     private void test(int givenN, int givenK, List<List<Integer>> expected) {
         // when
-        Combinations combinations = new Combinations();
+        Solution combinations = new Solution();
         List<List<Integer>> actual = combinations.combine(givenN, givenK);
 
         // then

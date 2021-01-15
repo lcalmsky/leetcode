@@ -17,7 +17,7 @@ public class KthSmallestElementInABstTests {
 
     private void test(TreeNode given, int k, int expected) {
         // when
-        KthSmallestElementInABst kthSmallestElementInABst = new KthSmallestElementInABst();
+        Solution kthSmallestElementInABst = new Solution();
         int actual = kthSmallestElementInABst.kthSmallest(given, k);
 
         // then

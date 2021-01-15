@@ -16,7 +16,7 @@ public class DiameterOfBinaryTreeTests {
 
     private void test(TreeNode given, int expected) {
         // when
-        DiameterOfBinaryTree diameterOfBinaryTree = new DiameterOfBinaryTree();
+        Solution diameterOfBinaryTree = new Solution();
         int actual = diameterOfBinaryTree.diameterOfBinaryTree(given);
 
         // then

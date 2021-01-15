@@ -18,7 +18,7 @@ public class FibonacciNumberTests {
 
     private void test(int given, int expected) {
         // when
-        FibonacciNumber fibonacciNumber = new FibonacciNumber();
+        Solution fibonacciNumber = new Solution();
         int actual = fibonacciNumber.fib(given);
 
         // then

@@ -17,7 +17,7 @@ public class WiggleSubsequenceTests {
 
     private void test(int[] given, int expected) {
         // when
-        WiggleSubsequence wiggleSubsequence = new WiggleSubsequence();
+        Solution wiggleSubsequence = new Solution();
         int actual = wiggleSubsequence.wiggleMaxLength(given);
 
         // then

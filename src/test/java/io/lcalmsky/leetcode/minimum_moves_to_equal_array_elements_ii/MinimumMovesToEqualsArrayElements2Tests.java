@@ -15,7 +15,7 @@ public class MinimumMovesToEqualsArrayElements2Tests {
 
     private void test(int[] given, int expected) {
         // when
-        MinimumMovesToEqualsArrayElements2 minimumMovesToEqualsArrayElements2 = new MinimumMovesToEqualsArrayElements2();
+        Solution minimumMovesToEqualsArrayElements2 = new Solution();
         int actual = minimumMovesToEqualsArrayElements2.minMoves2(given);
 
         // then

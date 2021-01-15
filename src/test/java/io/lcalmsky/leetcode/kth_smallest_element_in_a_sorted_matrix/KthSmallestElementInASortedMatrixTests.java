@@ -15,7 +15,7 @@ public class KthSmallestElementInASortedMatrixTests {
 
     private void test(int[][] given, int k, int expected) {
         // when
-        KthSmallestElementInASortedMatrix kthSmallestElementInASortedMatrix = new KthSmallestElementInASortedMatrix();
+        Solution kthSmallestElementInASortedMatrix = new Solution();
         int actual = kthSmallestElementInASortedMatrix.kthSmallest(given, k);
 
         // then

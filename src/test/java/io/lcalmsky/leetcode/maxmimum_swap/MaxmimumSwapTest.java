@@ -16,7 +16,7 @@ class MaxmimumSwapTest {
 
     private void test(int given, int expected) {
         // when
-        MaxmimumSwap maxmimumSwap = new MaxmimumSwap();
+        Solution maxmimumSwap = new Solution();
         int actual = maxmimumSwap.maximumSwap(given);
 
         // then

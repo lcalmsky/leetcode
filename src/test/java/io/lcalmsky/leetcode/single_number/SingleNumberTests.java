@@ -16,7 +16,7 @@ public class SingleNumberTests {
 
     private void test(int[] given, int expected) {
         // when
-        SingleNumber singleNumber = new SingleNumber();
+        Solution singleNumber = new Solution();
         int actual = singleNumber.singleNumber(given);
 
         // then

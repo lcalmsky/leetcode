@@ -27,7 +27,7 @@ public class Subsets2Tests {
 
     private void test(int[] given, List<List<Integer>> expected) {
         // when
-        Subsets2 subsets2 = new Subsets2();
+        Solution subsets2 = new Solution();
         List<List<Integer>> actual = subsets2.subsetsWithDup(given);
 
         // then

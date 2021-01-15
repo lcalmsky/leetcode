@@ -15,7 +15,7 @@ class MaximumLengthOfNAryTreeTests {
 
     private void test(Node given, int expected) {
         // when
-        MaximumLengthOfNAryTree maximumLengthOfNAryTree = new MaximumLengthOfNAryTree();
+        Solution maximumLengthOfNAryTree = new Solution();
         int actual = maximumLengthOfNAryTree.maxDepth(given);
 
         // then

@@ -17,7 +17,7 @@ public class JumpGameTests {
     public void test(int[] given, boolean expected) {
 
         // when
-        JumpGame jumpGame = new JumpGame();
+        Solution jumpGame = new Solution();
 
         boolean actual = jumpGame.canJump(given);
 

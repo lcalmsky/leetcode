@@ -16,7 +16,7 @@ public class MaximumDepthOfBinaryTreeTests {
 
     public void test(TreeNode given, int expected) {
         // when
-        MaximumDepthOfBinaryTree maximumDepthOfBinaryTree = new MaximumDepthOfBinaryTree();
+        Solution maximumDepthOfBinaryTree = new Solution();
         int actual = maximumDepthOfBinaryTree.maxDepth(given);
 
         // then

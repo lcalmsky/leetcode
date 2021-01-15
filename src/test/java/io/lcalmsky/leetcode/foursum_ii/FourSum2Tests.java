@@ -15,7 +15,7 @@ public class FourSum2Tests {
 
     private void test(int[] a, int[] b, int[] c, int[] d, int expected) {
         // when
-        FourSum2 fourSum2 = new FourSum2();
+        Solution fourSum2 = new Solution();
         int actual = fourSum2.fourSumCount(a, b, c, d);
 
         // then

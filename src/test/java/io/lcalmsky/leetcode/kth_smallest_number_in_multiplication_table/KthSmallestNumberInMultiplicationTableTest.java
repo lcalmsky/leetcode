@@ -16,7 +16,7 @@ class KthSmallestNumberInMultiplicationTableTest {
 
     private void test(int m, int n, int k, int expected) {
         // when
-        KthSmallestNumberInMultiplicationTable kthSmallestNumberInMultiplicationTable = new KthSmallestNumberInMultiplicationTable();
+        Solution kthSmallestNumberInMultiplicationTable = new Solution();
         int actual = kthSmallestNumberInMultiplicationTable.findKthNumber(m, n, k);
 
         // then

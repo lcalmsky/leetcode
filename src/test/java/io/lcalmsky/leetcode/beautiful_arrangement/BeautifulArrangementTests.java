@@ -15,7 +15,7 @@ public class BeautifulArrangementTests {
 
     private void test(int given, int expected) {
         // when
-        BeautifulArrangement beautifulArrangement = new BeautifulArrangement();
+        Solution beautifulArrangement = new Solution();
         int actual = beautifulArrangement.countArrangement(given);
 
         // then

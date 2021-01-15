@@ -21,7 +21,7 @@ public class MinimumHeightTreesTests {
 
     private void test(int n, int[][] edges, List<Integer> expected) {
         // when
-        MinimumHeightTrees minimumHeightTrees = new MinimumHeightTrees();
+        Solution minimumHeightTrees = new Solution();
         List<Integer> actual = minimumHeightTrees.findMinHeightTrees(n, edges);
 
         // then

@@ -16,7 +16,7 @@ public class CoinChangeTests {
 
     private void test(int[] coins, int amount, int expected) {
         // when
-        CoinChange coinChange = new CoinChange();
+        Solution coinChange = new Solution();
         int actual = coinChange.coinChange(coins, amount);
 
         // then

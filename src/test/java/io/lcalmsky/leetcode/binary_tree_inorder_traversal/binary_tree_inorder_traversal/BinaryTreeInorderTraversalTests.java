@@ -1,7 +1,7 @@
 package io.lcalmsky.leetcode.binary_tree_inorder_traversal.binary_tree_inorder_traversal;
 
 import io.lcalmsky.leetcode.TreeNode;
-import io.lcalmsky.leetcode.binary_tree_inorder_traversal.BinaryTreeInorderTraversal;
+import io.lcalmsky.leetcode.binary_tree_inorder_traversal.Solution;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
@@ -25,7 +25,7 @@ public class BinaryTreeInorderTraversalTests {
 
     private void test(TreeNode given, List<Integer> expected) {
         // when
-        BinaryTreeInorderTraversal binaryTreeInorderTraversal = new BinaryTreeInorderTraversal();
+        Solution binaryTreeInorderTraversal = new Solution();
         List<Integer> actual = binaryTreeInorderTraversal.inorderTraversal(given);
 
         // then

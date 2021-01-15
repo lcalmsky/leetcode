@@ -19,7 +19,7 @@ public class SymmetricTreeTests {
 
     private void test(TreeNode given, boolean expected) {
         // when
-        SymmetricTree symmetricTree = new SymmetricTree();
+        Solution symmetricTree = new Solution();
         boolean actual = symmetricTree.isSymmetric(given);
 
         // then

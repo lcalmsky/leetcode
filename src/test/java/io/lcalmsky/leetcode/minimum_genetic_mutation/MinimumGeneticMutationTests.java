@@ -17,7 +17,7 @@ public class MinimumGeneticMutationTests {
 
     private void test(String start, String end, String[] bank, int expected) {
         // when
-        MinimumGeneticMutation minimumGeneticMutation = new MinimumGeneticMutation();
+        Solution minimumGeneticMutation = new Solution();
         int actual = minimumGeneticMutation.minMutation(start, end, bank);
 
         // then

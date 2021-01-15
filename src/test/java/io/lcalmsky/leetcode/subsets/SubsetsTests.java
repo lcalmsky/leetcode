@@ -27,7 +27,7 @@ public class SubsetsTests {
 
     private void test(int[] given, List<List<Integer>> expected) {
         // when
-        Subsets subsets = new Subsets();
+        Solution subsets = new Solution();
         List<List<Integer>> actual = subsets.subsets(given);
 
         // then

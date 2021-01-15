@@ -15,7 +15,7 @@ class MaximumAverageSubarray1Test {
 
     private void test(int[] given, int k, double expected) {
         // when
-        MaximumAverageSubarray1 maximumAverageSubarray1 = new MaximumAverageSubarray1();
+        Solution maximumAverageSubarray1 = new Solution();
         double actual = maximumAverageSubarray1.findMaxAverage(given, k);
 
         // then

@@ -17,7 +17,7 @@ public class HouseRobber3Tests {
 
     private void test(TreeNode given, int expected) {
         // when
-        HouseRobber3 houseRobber3 = new HouseRobber3();
+        Solution houseRobber3 = new Solution();
         int actual = houseRobber3.rob(given);
 
         // then

@@ -15,7 +15,7 @@ public class AddStringsTests {
 
     private void test(String num1, String num2, String expected) {
         // when
-        AddStrings addStrings = new AddStrings();
+        Solution addStrings = new Solution();
         String actual = addStrings.addStrings(num1, num2);
 
         // then

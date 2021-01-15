@@ -17,7 +17,7 @@ public class FindBottomLeftTreeValueTests {
 
     private void test(TreeNode given, int expected) {
         // when
-        FindBottomLeftTreeValue findBottomLeftTreeValue = new FindBottomLeftTreeValue();
+        Solution findBottomLeftTreeValue = new Solution();
         int actual = findBottomLeftTreeValue.findBottomLeftValue(given);
 
         // then

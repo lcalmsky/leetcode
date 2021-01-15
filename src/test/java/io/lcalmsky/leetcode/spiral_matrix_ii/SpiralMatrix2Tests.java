@@ -17,7 +17,7 @@ public class SpiralMatrix2Tests {
 
     private void test(int given, int[][] expected) {
         // when
-        SpiralMatrix2 spiralMatrix2 = new SpiralMatrix2();
+        Solution spiralMatrix2 = new Solution();
         int[][] actual = spiralMatrix2.generateMatrix(given);
 
         // then

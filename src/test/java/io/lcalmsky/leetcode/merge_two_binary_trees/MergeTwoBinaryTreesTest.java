@@ -16,7 +16,7 @@ class MergeTwoBinaryTreesTest {
 
     private void test(TreeNode t1, TreeNode t2, TreeNode expected) {
         // when
-        MergeTwoBinaryTrees mergeTwoBinaryTrees = new MergeTwoBinaryTrees();
+        Solution mergeTwoBinaryTrees = new Solution();
         TreeNode actual = mergeTwoBinaryTrees.mergeTrees(t1, t2);
 
         // then

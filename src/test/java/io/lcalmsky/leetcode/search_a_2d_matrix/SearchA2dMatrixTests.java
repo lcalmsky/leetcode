@@ -16,7 +16,7 @@ public class SearchA2dMatrixTests {
 
     private void test(int[][] givenArray, int givenTarget, boolean expected) {
         // when
-        SearchA2dMatrix searchA2dMatrix = new SearchA2dMatrix();
+        Solution searchA2dMatrix = new Solution();
         boolean actual = searchA2dMatrix.searchMatrix(givenArray, givenTarget);
 
         // then

@@ -27,7 +27,7 @@ class ReshapeTheMatrixTest {
 
     private void test(int[][] given, int r, int c, int[][] expected) {
         // when
-        ReshapeTheMatrix reshapeTheMatrix = new ReshapeTheMatrix();
+        Solution reshapeTheMatrix = new Solution();
         int[][] actual = reshapeTheMatrix.matrixReshape(given, r, c);
 
         // then

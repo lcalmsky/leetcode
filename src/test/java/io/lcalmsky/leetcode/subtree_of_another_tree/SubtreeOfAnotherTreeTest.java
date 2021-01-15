@@ -17,7 +17,7 @@ class SubtreeOfAnotherTreeTest {
 
     private void test(TreeNode s, TreeNode t, boolean expected) {
         // when
-        SubtreeOfAnotherTree subtreeOfAnotherTree = new SubtreeOfAnotherTree();
+        Solution subtreeOfAnotherTree = new Solution();
         boolean actual = subtreeOfAnotherTree.isSubtree(s, t);
 
         // then

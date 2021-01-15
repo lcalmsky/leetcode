@@ -32,7 +32,7 @@ class PrintBinaryTreeTest {
 
     private void test(TreeNode given, List<List<String>> expected) {
         // when
-        PrintBinaryTree printBinaryTree = new PrintBinaryTree();
+        Solution printBinaryTree = new Solution();
         List<List<String>> actual = printBinaryTree.printTree(given);
 
         // then

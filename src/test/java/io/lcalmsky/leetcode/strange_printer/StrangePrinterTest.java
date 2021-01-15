@@ -16,7 +16,7 @@ class StrangePrinterTest {
 
     private void test(String given, int expected) {
         // when
-        StrangePrinter strangePrinter = new StrangePrinter();
+        Solution strangePrinter = new Solution();
         int actual = strangePrinter.strangePrinter(given);
 
         // then

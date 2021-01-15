@@ -20,7 +20,7 @@ public class PalindromePartitioningTests {
 
     private void test(String given, List<List<String>> expected) {
         // when
-        PalindromePartitioning palindromePartitioning = new PalindromePartitioning();
+        Solution palindromePartitioning = new Solution();
         List<List<String>> actual = palindromePartitioning.partition(given);
 
         // then

@@ -15,7 +15,7 @@ public class ProductOfArrayExceptSelfTests {
 
     private void test(int[] given, int[] expected) {
         // when
-        ProductOfArrayExceptSelf productOfArrayExceptSelf = new ProductOfArrayExceptSelf();
+        Solution productOfArrayExceptSelf = new Solution();
         int[] actual = productOfArrayExceptSelf.productExceptSelf(given);
 
         // then

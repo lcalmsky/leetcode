@@ -15,7 +15,7 @@ public class KThSmallestInLexicographicalOrderTests {
 
     private void test(int n, int k, int expected) {
         // when
-        KThSmallestInLexicographicalOrder kThSmallestInLexicographicalOrder = new KThSmallestInLexicographicalOrder();
+        Solution kThSmallestInLexicographicalOrder = new Solution();
         int actual = kThSmallestInLexicographicalOrder.findKthNumber(n, k);
 
         // then

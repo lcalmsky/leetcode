@@ -19,7 +19,7 @@ class FindKClosestElementsTest {
 
     private void test(int[] arr, int k, int x, List<Integer> expected) {
         // when
-        FindKClosestElements findKClosestElements = new FindKClosestElements();
+        Solution findKClosestElements = new Solution();
         List<Integer> actual = findKClosestElements.findClosestElements(arr, k, x);
 
         // then

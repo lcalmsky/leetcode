@@ -24,7 +24,7 @@ public class CombinationSum3Tests {
 
     private void test(int k, int n, List<List<Integer>> expected) {
         // when
-        CombinationSum3 combinationSum3 = new CombinationSum3();
+        Solution combinationSum3 = new Solution();
         List<List<Integer>> actual = combinationSum3.combinationSum3(k, n);
 
         // then

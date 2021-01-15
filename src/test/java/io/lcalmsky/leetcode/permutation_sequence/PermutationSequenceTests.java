@@ -17,7 +17,7 @@ public class PermutationSequenceTests {
 
     private void test(int givenN, int givenK, String expected) {
         // when
-        PermutationSequence permutationSequence = new PermutationSequence();
+        Solution permutationSequence = new Solution();
         String actual = permutationSequence.getPermutation(givenN, givenK);
 
         // then

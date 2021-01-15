@@ -16,7 +16,7 @@ public class NumberComplementTests {
 
     private void test(int given, int expected) {
         // when
-        NumberComplement numberComplement = new NumberComplement();
+        Solution numberComplement = new Solution();
         int actual = numberComplement.findComplement(given);
 
         // then

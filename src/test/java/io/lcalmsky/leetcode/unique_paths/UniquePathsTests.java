@@ -17,7 +17,7 @@ public class UniquePathsTests {
 
     public void test(int givenN, int givenM, int expected) {
         // when
-        UniquePaths uniquePaths = new UniquePaths();
+        Solution uniquePaths = new Solution();
         int actual = uniquePaths.uniquePaths(givenN, givenM);
 
         // then

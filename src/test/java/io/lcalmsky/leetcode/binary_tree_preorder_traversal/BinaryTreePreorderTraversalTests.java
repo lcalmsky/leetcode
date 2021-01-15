@@ -19,7 +19,7 @@ public class BinaryTreePreorderTraversalTests {
 
     private void test(TreeNode given, List<Integer> expected) {
         // when
-        BinaryTreePreorderTraversal binaryTreePreorderTraversal = new BinaryTreePreorderTraversal();
+        Solution binaryTreePreorderTraversal = new Solution();
         List<Integer> actual = binaryTreePreorderTraversal.preorderTraversal(given);
 
         // then

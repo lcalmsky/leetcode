@@ -16,7 +16,7 @@ public class LongestPalindromicSubsequenceTests {
 
     private void test(String given, int expected) {
         // when
-        LongestPalindromicSubsequence longestPalindromicSubsequence = new LongestPalindromicSubsequence();
+        Solution longestPalindromicSubsequence = new Solution();
         int actual = longestPalindromicSubsequence.longestPalindromeSubseq(given);
 
         // then

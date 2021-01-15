@@ -30,7 +30,7 @@ public class WordSearchTests {
 
     private void test(char[][] givenArray, String givenWord, boolean expected) {
         // when
-        WordSearch wordSearch = new WordSearch();
+        Solution wordSearch = new Solution();
         boolean actual = wordSearch.exist(givenArray, givenWord);
 
         // then

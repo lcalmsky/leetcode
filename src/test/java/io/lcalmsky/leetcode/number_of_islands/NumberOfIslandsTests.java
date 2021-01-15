@@ -26,7 +26,7 @@ public class NumberOfIslandsTests {
 
     private void test(char[][] given, int expected) {
         // when
-        NumberOfIslands numberOfIslands = new NumberOfIslands();
+        Solution numberOfIslands = new Solution();
         int actual = numberOfIslands.numIslands(given);
 
         // then

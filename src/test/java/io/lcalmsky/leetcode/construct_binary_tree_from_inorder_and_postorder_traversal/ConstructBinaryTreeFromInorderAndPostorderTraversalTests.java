@@ -16,7 +16,7 @@ public class ConstructBinaryTreeFromInorderAndPostorderTraversalTests {
 
     private void test(int[] inorder, int[] postorder, TreeNode expected) {
         // when
-        ConstructBinaryTreeFromInorderAndPostorderTraversal constructBinaryTreeFromInorderAndPostorderTraversal = new ConstructBinaryTreeFromInorderAndPostorderTraversal();
+        Solution constructBinaryTreeFromInorderAndPostorderTraversal = new Solution();
         TreeNode actual = constructBinaryTreeFromInorderAndPostorderTraversal.buildTree(inorder, postorder);
 
         // then

@@ -16,7 +16,7 @@ public class ConvertBstToGreaterTreeTests {
 
     private void test(TreeNode given, TreeNode expected) {
         // when
-        ConvertBstToGreaterTree convertBstToGreaterTree = new ConvertBstToGreaterTree();
+        Solution convertBstToGreaterTree = new Solution();
         TreeNode actual = convertBstToGreaterTree.convertBST(given);
 
         // then

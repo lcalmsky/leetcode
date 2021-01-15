@@ -37,7 +37,7 @@ class ReplaceWordsTest {
 
     private void test(List<String> dictionary, String sentence, String expected) {
         // when
-        ReplaceWords replaceWords = new ReplaceWords();
+        Solution replaceWords = new Solution();
         String actual = replaceWords.replaceWords(dictionary, sentence);
 
         // then

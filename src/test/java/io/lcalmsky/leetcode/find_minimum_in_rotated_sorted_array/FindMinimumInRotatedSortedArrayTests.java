@@ -17,7 +17,7 @@ public class FindMinimumInRotatedSortedArrayTests {
 
     private void test(int[] given, int expected) {
         // when
-        FindMinimumInRotatedSortedArray findMinimumInRotatedSortedArray = new FindMinimumInRotatedSortedArray();
+        Solution findMinimumInRotatedSortedArray = new Solution();
         int actual = findMinimumInRotatedSortedArray.findMin(given);
 
         // then

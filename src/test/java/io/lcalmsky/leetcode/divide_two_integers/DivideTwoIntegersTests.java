@@ -21,7 +21,7 @@ public class DivideTwoIntegersTests {
 
     public void test(int givenDividend, int givenDivisor, int expected) {
         // when
-        DivideTwoIntegers divideTwoIntegers = new DivideTwoIntegers();
+        Solution divideTwoIntegers = new Solution();
         int actual = divideTwoIntegers.divide(givenDividend, givenDivisor);
 
         // then

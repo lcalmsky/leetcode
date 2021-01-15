@@ -22,7 +22,7 @@ public class PathSum2Tests {
 
     private void test(TreeNode given, int sum, List<List<Integer>> expected) {
         // when
-        PathSum2 pathSum2 = new PathSum2();
+        Solution pathSum2 = new Solution();
         List<List<Integer>> actual = pathSum2.pathSum(given, sum);
 
         // then

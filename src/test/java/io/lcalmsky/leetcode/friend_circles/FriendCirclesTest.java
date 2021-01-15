@@ -24,7 +24,7 @@ class FriendCirclesTest {
 
     private void test(int[][] given, int expected) {
         // when
-        FriendCircles friendCircles = new FriendCircles();
+        Solution friendCircles = new Solution();
         int actual = friendCircles.findCircleNum(given);
 
         // then

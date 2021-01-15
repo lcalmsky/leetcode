@@ -16,7 +16,7 @@ public class NumMatrixTests {
         };
 
         // when
-        NumMatrix numMatrix = new NumMatrix(given);
+        Solution numMatrix = new Solution(given);
 
         // then
         Assertions.assertEquals(numMatrix.sumRegion(2, 1, 4, 3), 8);

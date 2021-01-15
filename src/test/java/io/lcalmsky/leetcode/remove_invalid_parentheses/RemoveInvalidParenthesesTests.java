@@ -21,7 +21,7 @@ public class RemoveInvalidParenthesesTests {
 
     private void test(String given, List<String> expected) {
         // when
-        RemoveInvalidParentheses removeInvalidParentheses = new RemoveInvalidParentheses();
+        Solution removeInvalidParentheses = new Solution();
         List<String> actual = removeInvalidParentheses.removeInvalidParentheses(given);
 
         // then

@@ -16,7 +16,7 @@ public class AddTwoNumber2Tests {
 
     private void test(ListNode l1, ListNode l2, ListNode expected) {
         // when
-        AddTwoNumber2 addTwoNumber2 = new AddTwoNumber2();
+        Solution addTwoNumber2 = new Solution();
         ListNode actual = addTwoNumber2.addTwoNumbers(l1, l2);
 
         // then

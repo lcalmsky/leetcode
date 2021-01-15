@@ -18,7 +18,7 @@ public class MaxSumOfRectangleNoLargerThanKTests {
 
     private void test(int[][] given, int k, int expected) {
         // when
-        MaxSumOfRectangleNoLargerThanK maxSumOfRectangleNoLargerThanK = new MaxSumOfRectangleNoLargerThanK();
+        Solution maxSumOfRectangleNoLargerThanK = new Solution();
         int actual = maxSumOfRectangleNoLargerThanK.maxSumSubmatrix(given, k);
 
         // then

@@ -16,7 +16,7 @@ public class PerfectSquaresTests {
 
     private void test(int given, int expected) {
         // when
-        PerfectSquares perfectSquares = new PerfectSquares();
+        Solution perfectSquares = new Solution();
         int actual = perfectSquares.numSquares(given);
 
         // then

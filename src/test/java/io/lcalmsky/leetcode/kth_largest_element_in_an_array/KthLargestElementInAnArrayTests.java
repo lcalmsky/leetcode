@@ -16,7 +16,7 @@ public class KthLargestElementInAnArrayTests {
 
     private void test(int[] nums, int k, int expected) {
         // when
-        KthLargestElementInAnArray kthLargestElementInAnArray = new KthLargestElementInAnArray();
+        Solution kthLargestElementInAnArray = new Solution();
         int actual = kthLargestElementInAnArray.findKthLargest(nums, k);
 
         // then

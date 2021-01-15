@@ -17,7 +17,7 @@ public class EditDistanceTests {
 
     private void test(String givenWord1, String givenWord2, int expected) {
         // when
-        EditDistance editDistance = new EditDistance();
+        Solution editDistance = new Solution();
         int actual = editDistance.minDistance(givenWord1, givenWord2);
 
         // then

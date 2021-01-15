@@ -25,7 +25,7 @@ public class BinaryTreeLevelOrderTraversal2Tests {
 
     private void test(TreeNode given, List<List<Integer>> expected) {
         // when
-        BinaryTreeLevelOrderTraversal2 binaryTreeLevelOrderTraversal2 = new BinaryTreeLevelOrderTraversal2();
+        Solution binaryTreeLevelOrderTraversal2 = new Solution();
         List<List<Integer>> actual = binaryTreeLevelOrderTraversal2.levelOrderBottom(given);
 
         // then

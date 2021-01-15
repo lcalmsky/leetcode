@@ -17,7 +17,7 @@ class SplitArrayIntoConsecutiveSubsequenceTest {
 
     private void test(int[] given, boolean expected) {
         // when
-        SplitArrayIntoConsecutiveSubsequence splitArrayIntoConsecutiveSubsequence = new SplitArrayIntoConsecutiveSubsequence();
+        Solution splitArrayIntoConsecutiveSubsequence = new Solution();
         boolean actual = splitArrayIntoConsecutiveSubsequence.isPossible(given);
 
         // then

@@ -17,7 +17,7 @@ class TwoSum4InputIsABstTest {
 
     private void test(TreeNode given, int k, boolean expected) {
         // when
-        TwoSum4InputIsABst twoSum4InputIsABst = new TwoSum4InputIsABst();
+        Solution twoSum4InputIsABst = new Solution();
         boolean actual = twoSum4InputIsABst.findTarget(given, k);
 
         // then

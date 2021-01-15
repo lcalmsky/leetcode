@@ -18,7 +18,7 @@ public class RemoveKDigitsTests {
 
     private void test(String num, int k, String expected) {
         // when
-        RemoveKDigits removeKDigits = new RemoveKDigits();
+        Solution removeKDigits = new Solution();
         String actual = removeKDigits.removeKDigits(num, k);
 
         // then

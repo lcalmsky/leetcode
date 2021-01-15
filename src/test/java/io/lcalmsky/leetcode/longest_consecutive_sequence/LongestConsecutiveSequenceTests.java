@@ -15,7 +15,7 @@ public class LongestConsecutiveSequenceTests {
 
     private void test(int[] given, int expected) {
         // when
-        LongestConsecutiveSequence longestConsecutiveSequence = new LongestConsecutiveSequence();
+        Solution longestConsecutiveSequence = new Solution();
         int actual = longestConsecutiveSequence.longestConsecutive(given);
 
         // then

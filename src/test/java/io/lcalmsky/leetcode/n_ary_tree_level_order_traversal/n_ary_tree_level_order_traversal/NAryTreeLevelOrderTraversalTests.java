@@ -1,7 +1,7 @@
 package io.lcalmsky.leetcode.n_ary_tree_level_order_traversal.n_ary_tree_level_order_traversal;
 
-import io.lcalmsky.leetcode.n_ary_tree_level_order_traversal.NAryTreeLevelOrderTraversal;
 import io.lcalmsky.leetcode.n_ary_tree_level_order_traversal.Node;
+import io.lcalmsky.leetcode.n_ary_tree_level_order_traversal.Solution;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -24,7 +24,7 @@ public class NAryTreeLevelOrderTraversalTests {
 
     private void test(Node given, List<List<Integer>> expected) {
         // when
-        NAryTreeLevelOrderTraversal nAryTreeLevelOrderTraversal = new NAryTreeLevelOrderTraversal();
+        Solution nAryTreeLevelOrderTraversal = new Solution();
         List<List<Integer>> actual = nAryTreeLevelOrderTraversal.levelOrder(given);
 
         // then

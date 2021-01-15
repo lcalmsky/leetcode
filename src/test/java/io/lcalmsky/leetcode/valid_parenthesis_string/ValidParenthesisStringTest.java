@@ -17,7 +17,7 @@ class ValidParenthesisStringTest {
 
     private void test(String given, boolean expected) {
         // when
-        ValidParenthesisString validParenthesisString = new ValidParenthesisString();
+        Solution validParenthesisString = new Solution();
         boolean actual = validParenthesisString.checkValidString(given);
 
         // then

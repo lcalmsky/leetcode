@@ -19,7 +19,7 @@ public class QueueReconstructionByHeightTests {
 
     private void test(int[][] given, int[][] expected) {
         // when
-        QueueReconstructionByHeight queueReconstructionByHeight = new QueueReconstructionByHeight();
+        Solution queueReconstructionByHeight = new Solution();
         int[][] actual = queueReconstructionByHeight.reconstructQueue(given);
 
         // then

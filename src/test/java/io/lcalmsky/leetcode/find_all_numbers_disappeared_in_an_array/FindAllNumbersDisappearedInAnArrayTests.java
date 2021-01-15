@@ -18,7 +18,7 @@ public class FindAllNumbersDisappearedInAnArrayTests {
 
     private void test(int[] given, List<Integer> expected) {
         // when
-        FindAllNumbersDisappearedInAnArray findAllNumbersDisappearedInAnArray = new FindAllNumbersDisappearedInAnArray();
+        Solution findAllNumbersDisappearedInAnArray = new Solution();
         List<Integer> actual = findAllNumbersDisappearedInAnArray.findDisappearedNumbers(given);
 
         // then

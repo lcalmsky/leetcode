@@ -38,7 +38,7 @@ public class TopKFrequentElementsTests {
 
     private void test(int[] given, int k, List<Integer> expected) {
         // when
-        TopKFrequentElements topKFrequentElements = new TopKFrequentElements();
+        Solution topKFrequentElements = new Solution();
         List<Integer> actual = topKFrequentElements.topKFrequent(given, k);
 
         // then

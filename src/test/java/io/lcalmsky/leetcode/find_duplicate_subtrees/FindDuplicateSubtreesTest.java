@@ -31,7 +31,7 @@ class FindDuplicateSubtreesTest {
 
     private void test(TreeNode given, List<TreeNode> expected) {
         // when
-        FindDuplicateSubtrees findDuplicateSubtrees = new FindDuplicateSubtrees();
+        Solution findDuplicateSubtrees = new Solution();
         List<TreeNode> actual = findDuplicateSubtrees.findDuplicateSubtrees(given);
 
         // then

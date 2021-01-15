@@ -15,7 +15,7 @@ class LongestHarmoniousSubsequenceTest {
 
     private void test(int[] given, int expected) {
         // when
-        LongestHarmoniousSubsequence longestHarmoniousSubsequence = new LongestHarmoniousSubsequence();
+        Solution longestHarmoniousSubsequence = new Solution();
         int actual = longestHarmoniousSubsequence.findLHS(given);
 
         // then

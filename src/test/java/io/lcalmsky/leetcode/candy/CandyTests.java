@@ -16,7 +16,7 @@ public class CandyTests {
 
     private void test(int[] given, int expected) {
         // when
-        Candy candy = new Candy();
+        Solution candy = new Solution();
         int actual = candy.candy(given);
 
         // then

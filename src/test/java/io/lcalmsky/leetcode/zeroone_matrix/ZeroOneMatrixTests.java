@@ -35,7 +35,7 @@ public class ZeroOneMatrixTests {
 
     private void test(int[][] given, int[][] expected) {
         // when
-        ZeroOneMatrix zeroOneMatrix = new ZeroOneMatrix();
+        Solution zeroOneMatrix = new Solution();
         int[][] actual = zeroOneMatrix.updateMatrix(given);
 
         // then

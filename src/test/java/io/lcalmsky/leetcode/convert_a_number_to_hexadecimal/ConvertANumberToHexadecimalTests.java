@@ -16,7 +16,7 @@ public class ConvertANumberToHexadecimalTests {
 
     private void test(int given, String expected) {
         // when
-        ConvertANumberToHexadecimal convertANumberToHexadecimal = new ConvertANumberToHexadecimal();
+        Solution convertANumberToHexadecimal = new Solution();
         String actual = convertANumberToHexadecimal.toHex(given);
 
         // then

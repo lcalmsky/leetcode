@@ -16,7 +16,7 @@ public class ClimbingStairsTests {
 
     private void test(int given, int expected) {
         // when
-        ClimbingStairs climbingStairs = new ClimbingStairs();
+        Solution climbingStairs = new Solution();
         int actual = climbingStairs.climbStairs(given);
 
         // then

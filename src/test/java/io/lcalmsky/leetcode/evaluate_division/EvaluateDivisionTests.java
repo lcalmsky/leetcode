@@ -30,7 +30,7 @@ public class EvaluateDivisionTests {
 
     private void test(List<List<String>> equations, double[] values, List<List<String>> queries, double[] expected) {
         // when
-        EvaluateDivision evaluateDivision = new EvaluateDivision();
+        Solution evaluateDivision = new Solution();
         double[] actual = evaluateDivision.calcEquation(equations, values, queries);
 
         // then

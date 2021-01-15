@@ -26,7 +26,7 @@ public class IncreasingSubsequencesTests {
 
     private void test(int[] given, List<List<Integer>> expected) {
         // when
-        IncreasingSubsequences increasingSubsequences = new IncreasingSubsequences();
+        Solution increasingSubsequences = new Solution();
         List<List<Integer>> actual = increasingSubsequences.findSubsequences(given);
 
         // then

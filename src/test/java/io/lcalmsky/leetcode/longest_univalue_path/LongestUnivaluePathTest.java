@@ -17,7 +17,7 @@ class LongestUnivaluePathTest {
 
     private void test(TreeNode given, int expected) {
         // when
-        LongestUnivaluePath longestUnivaluePath = new LongestUnivaluePath();
+        Solution longestUnivaluePath = new Solution();
         int actual = longestUnivaluePath.longestUnivaluePath(given);
 
         // then

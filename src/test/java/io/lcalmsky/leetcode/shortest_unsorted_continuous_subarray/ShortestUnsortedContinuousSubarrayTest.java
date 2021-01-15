@@ -16,7 +16,7 @@ class ShortestUnsortedContinuousSubarrayTest {
 
     private void test(int[] given, int expected) {
         // when
-        ShortestUnsortedContinuousSubarray shortestUnsortedContinuousSubarray = new ShortestUnsortedContinuousSubarray();
+        Solution shortestUnsortedContinuousSubarray = new Solution();
         int actual = shortestUnsortedContinuousSubarray.findUnsortedSubarray(given);
 
         // then

@@ -16,7 +16,7 @@ public class RotateArrayTests {
 
     private void test(int[] actual, int k, int[] expected) {
         // when
-        RotateArray rotateArray = new RotateArray();
+        Solution rotateArray = new Solution();
         rotateArray.rotate(actual, k);
 
         // then

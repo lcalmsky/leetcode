@@ -18,7 +18,7 @@ public class SameTreeTests {
 
     private void test(TreeNode p, TreeNode q, boolean expected) {
         // when
-        SameTree sameTree = new SameTree();
+        Solution sameTree = new Solution();
         boolean actual = sameTree.isSameTree(p, q);
 
         // then

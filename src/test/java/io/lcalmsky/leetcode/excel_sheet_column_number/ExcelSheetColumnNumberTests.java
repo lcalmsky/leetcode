@@ -18,7 +18,7 @@ public class ExcelSheetColumnNumberTests {
 
     private void test(String given, int expected) {
         // when
-        ExcelSheetColumnNumber excelSheetColumnNumber = new ExcelSheetColumnNumber();
+        Solution excelSheetColumnNumber = new Solution();
         int actual = excelSheetColumnNumber.titleToNumber(given);
 
         // then

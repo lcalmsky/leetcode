@@ -16,7 +16,7 @@ public class PredictTheWinnerTests {
 
     private void test(int[] given, boolean expected) {
         // when
-        PredictTheWinner predictTheWinner = new PredictTheWinner();
+        Solution predictTheWinner = new Solution();
         boolean actual = predictTheWinner.predictTheWinner(given);
 
         // then

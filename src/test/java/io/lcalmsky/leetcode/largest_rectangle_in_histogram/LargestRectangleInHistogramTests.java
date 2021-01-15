@@ -20,7 +20,7 @@ public class LargestRectangleInHistogramTests {
 
     private void test(int[] given, int expected) {
         // when
-        LargestRectangleInHistogram largestRectangleInHistogram = new LargestRectangleInHistogram();
+        Solution largestRectangleInHistogram = new Solution();
         int actual = largestRectangleInHistogram.largestRectangleArea(given);
 
         // then

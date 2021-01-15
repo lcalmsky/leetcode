@@ -16,7 +16,7 @@ public class MinimumAbsoluteDifferentInABstTests {
 
     private void test(TreeNode given, int expected) {
         // when
-        MinimumAbsoluteDifferentInABst minimumAbsoluteDifferentInABst = new MinimumAbsoluteDifferentInABst();
+        Solution minimumAbsoluteDifferentInABst = new Solution();
         int actual = minimumAbsoluteDifferentInABst.getMinimumDifference(given);
 
         // then

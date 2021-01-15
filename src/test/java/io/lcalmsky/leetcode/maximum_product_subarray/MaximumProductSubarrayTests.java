@@ -16,7 +16,7 @@ public class MaximumProductSubarrayTests {
 
     private void test(int[] given, int expected) {
         // when
-        MaximumProductSubarray maximumProductSubarray = new MaximumProductSubarray();
+        Solution maximumProductSubarray = new Solution();
         int actual = maximumProductSubarray.maxProduct(given);
 
         // then

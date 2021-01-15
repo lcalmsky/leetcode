@@ -17,7 +17,7 @@ class TaskSchedulerTest {
 
     private void test(char[] given, int n, int expected) {
         // when
-        TaskScheduler taskScheduler = new TaskScheduler();
+        Solution taskScheduler = new Solution();
         int actual = taskScheduler.leastInterval(given, n);
 
         // then

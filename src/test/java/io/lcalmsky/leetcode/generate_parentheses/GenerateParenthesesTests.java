@@ -22,7 +22,7 @@ public class GenerateParenthesesTests {
 
     private void test(int given, List<String> expected) {
         // when
-        GenerateParentheses generateParentheses = new GenerateParentheses();
+        Solution generateParentheses = new Solution();
         List<String> actual = generateParentheses.generateParenthesis(given);
 
         // then

@@ -15,7 +15,7 @@ class StudentAttendanceRecord2Test {
 
     private void test(int given, int expected) {
         // when
-        StudentAttendanceRecord2 studentAttendanceRecord2 = new StudentAttendanceRecord2();
+        Solution studentAttendanceRecord2 = new Solution();
         int actual = studentAttendanceRecord2.checkRecord(given);
 
         // then

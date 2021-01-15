@@ -15,7 +15,7 @@ class NonNegativeIntegersWithoutConsecutiveOnesTest {
 
     private void test(int given, int expected) {
         // when
-        NonNegativeIntegersWithoutConsecutiveOnes nonNegativeIntegersWithoutConsecutiveOnes = new NonNegativeIntegersWithoutConsecutiveOnes();
+        Solution nonNegativeIntegersWithoutConsecutiveOnes = new Solution();
         int actual = nonNegativeIntegersWithoutConsecutiveOnes.findIntegers(given);
 
         // then

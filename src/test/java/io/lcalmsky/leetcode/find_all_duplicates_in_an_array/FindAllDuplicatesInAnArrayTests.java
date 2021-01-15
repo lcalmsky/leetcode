@@ -18,7 +18,7 @@ public class FindAllDuplicatesInAnArrayTests {
 
     private void test(int[] given, List<Integer> expected) {
         // when
-        FindAllDuplicatesInAnArray findAllDuplicatesInAnArray = new FindAllDuplicatesInAnArray();
+        Solution findAllDuplicatesInAnArray = new Solution();
         List<Integer> actual = findAllDuplicatesInAnArray.findDuplicates(given);
 
         // then

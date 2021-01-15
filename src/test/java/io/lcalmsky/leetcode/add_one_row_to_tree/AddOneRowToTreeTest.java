@@ -17,7 +17,7 @@ class AddOneRowToTreeTest {
 
     private void test(TreeNode given, int v, int d, TreeNode expected) {
         // when
-        AddOneRowToTree addOneRowToTree = new AddOneRowToTree();
+        Solution addOneRowToTree = new Solution();
         TreeNode actual = addOneRowToTree.addOneRow(given, v, d);
 
         // then

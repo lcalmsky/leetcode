@@ -19,7 +19,7 @@ public class DeleteNodeInABstTests {
 
     private void test(TreeNode given, int key, List<TreeNode> expected) {
         // when
-        DeleteNodeInABst deleteNodeInABst = new DeleteNodeInABst();
+        Solution deleteNodeInABst = new Solution();
         TreeNode actual = deleteNodeInABst.deleteNode(given, key);
 
         // then

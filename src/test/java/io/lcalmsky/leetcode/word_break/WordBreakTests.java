@@ -20,7 +20,7 @@ public class WordBreakTests {
 
     private void test(String s, List<String> wordDict, boolean expected) {
         // when
-        WordBreak wordBreak = new WordBreak();
+        Solution wordBreak = new Solution();
         boolean actual = wordBreak.wordBreak(s, wordDict);
 
         // then

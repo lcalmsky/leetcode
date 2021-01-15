@@ -19,7 +19,7 @@ class MaximumLengthOfPairChainTest {
 
     private void test(int[][] given, int expected) {
         // when
-        MaximumLengthOfPairChain maximumLengthOfPairChain = new MaximumLengthOfPairChain();
+        Solution maximumLengthOfPairChain = new Solution();
         int actual = maximumLengthOfPairChain.findLongestChain(given);
 
         // then

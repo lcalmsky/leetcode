@@ -23,7 +23,7 @@ public class MaximalSquareTests {
 
     private void test(char[][] matrix, int expected) {
         // when
-        MaximalSquare maximalSquare = new MaximalSquare();
+        Solution maximalSquare = new Solution();
         int actual = maximalSquare.maximalSquare(matrix);
 
         // then

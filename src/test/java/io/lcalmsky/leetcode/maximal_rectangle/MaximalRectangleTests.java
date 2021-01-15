@@ -20,7 +20,7 @@ public class MaximalRectangleTests {
 
     private void test(char[][] given, int expected) {
         // when
-        MaximalRectangle maximalRectangle = new MaximalRectangle();
+        Solution maximalRectangle = new Solution();
         int actual = maximalRectangle.maximalRectangle(given);
 
         // then

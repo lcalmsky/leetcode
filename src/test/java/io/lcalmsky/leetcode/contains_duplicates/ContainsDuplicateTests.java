@@ -17,7 +17,7 @@ public class ContainsDuplicateTests {
 
     private void test(int[] given, boolean expected) {
         // when
-        ContainsDuplicate containsDuplicate = new ContainsDuplicate();
+        Solution containsDuplicate = new Solution();
         boolean actual = containsDuplicate.containsDuplicate(given);
 
         // then

@@ -16,7 +16,7 @@ class LongestContinuousIncreasingSubsequenceTest {
 
     private void test(int[] given, int expected) {
         // when
-        LongestContinuousIncreasingSubsequence longestContinuousIncreasingSubsequence = new LongestContinuousIncreasingSubsequence();
+        Solution longestContinuousIncreasingSubsequence = new Solution();
         int actual = longestContinuousIncreasingSubsequence.findLengthOfLCIS(given);
 
         // then

@@ -19,7 +19,7 @@ public class MaximumProductOfWordLengthTests {
 
     private void test(String[] given, int expected) {
         // when
-        MaximumProductOfWordLength maximumProductOfWordLength = new MaximumProductOfWordLength();
+        Solution maximumProductOfWordLength = new Solution();
         int actual = maximumProductOfWordLength.maxProduct(given);
 
         // then

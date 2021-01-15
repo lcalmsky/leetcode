@@ -20,7 +20,7 @@ public class PowerOfFourTests {
 
     private void test(int given, boolean expected) {
         // when
-        PowerOfFour powerOfFour = new PowerOfFour();
+        Solution powerOfFour = new Solution();
         boolean actual = powerOfFour.isPowerOfFour(given);
 
         // then

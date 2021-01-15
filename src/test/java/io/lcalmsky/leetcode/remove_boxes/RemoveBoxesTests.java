@@ -15,7 +15,7 @@ class RemoveBoxesTests {
 
     private void test(int[] given, int expected) {
         // when
-        RemoveBoxes removeBoxes = new RemoveBoxes();
+        Solution removeBoxes = new Solution();
         int actual = removeBoxes.removeBoxes(given);
 
         // then

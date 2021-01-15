@@ -27,7 +27,7 @@ public class PalindromePairsTests {
 
     private void test(String[] given, List<List<Integer>> expected) {
         // when
-        PalindromePairs palindromePairs = new PalindromePairs();
+        Solution palindromePairs = new Solution();
         List<List<Integer>> actual = palindromePairs.palindromePairs(given);
 
         // then

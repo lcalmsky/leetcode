@@ -15,7 +15,7 @@ public class TargetSumTests {
 
     private void test(int[] given, int target, int expected) {
         // when
-        TargetSum targetSum = new TargetSum();
+        Solution targetSum = new Solution();
         int actual = targetSum.findTargetSumWays(given, target);
 
         // then

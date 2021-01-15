@@ -17,7 +17,7 @@ public class OddEvenLinkedListTests {
 
     private void test(ListNode given, ListNode expected) {
         // when
-        OddEvenLinkedList oddEvenLinkedList = new OddEvenLinkedList();
+        Solution oddEvenLinkedList = new Solution();
         ListNode actual = oddEvenLinkedList.oddEvenList(given);
 
         // then

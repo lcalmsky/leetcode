@@ -17,7 +17,7 @@ public class DecodeStringTests {
 
     private void test(String given, String expected) {
         // when
-        DecodeString decodeString = new DecodeString();
+        Solution decodeString = new Solution();
         String actual = decodeString.decodeString(given);
 
         // then

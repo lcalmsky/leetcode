@@ -16,7 +16,7 @@ public class LongestSubstringWithAtLeastKRepeatingCharactersTests {
 
     private void test(String given, int k, int expected) {
         // when
-        LongestSubstringWithAtLeastKRepeatingCharacters longestSubstringWithAtLeastKRepeatingCharacters = new LongestSubstringWithAtLeastKRepeatingCharacters();
+        Solution longestSubstringWithAtLeastKRepeatingCharacters = new Solution();
         int actual = longestSubstringWithAtLeastKRepeatingCharacters.longestSubstring(given, k);
 
         // then

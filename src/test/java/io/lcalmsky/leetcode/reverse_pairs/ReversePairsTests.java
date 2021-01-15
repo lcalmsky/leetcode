@@ -16,7 +16,7 @@ public class ReversePairsTests {
 
     private void test(int[] given, int expected) {
         // when
-        ReversePairs reversePairs = new ReversePairs();
+        Solution reversePairs = new Solution();
         int actual = reversePairs.reversePairs(given);
 
         // then

@@ -19,7 +19,7 @@ public class DiagonalTraverseTests {
 
     private void test(int[][] given, int[] expected) {
         // when
-        DiagonalTraverse diagonalTraverse = new DiagonalTraverse();
+        Solution diagonalTraverse = new Solution();
         int[] actual = diagonalTraverse.findDiagonalOrder(given);
 
         // then

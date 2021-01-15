@@ -15,7 +15,7 @@ class ValidTriangleNumberTest {
 
     private void test(int[] given, int expected) {
         // when
-        ValidTriangleNumber validTriangleNumber = new ValidTriangleNumber();
+        Solution validTriangleNumber = new Solution();
         int actual = validTriangleNumber.triangleNumber(given);
 
         // then

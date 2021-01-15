@@ -19,7 +19,7 @@ public class FindLargestValueInEachTreeRowTests {
 
     private void test(TreeNode given, List<Integer> expected) {
         // when
-        FindLargestValueInEachTreeRow findLargestValueInEachTreeRow = new FindLargestValueInEachTreeRow();
+        Solution findLargestValueInEachTreeRow = new Solution();
         List<Integer> actual = findLargestValueInEachTreeRow.largestValues(given);
 
         // then

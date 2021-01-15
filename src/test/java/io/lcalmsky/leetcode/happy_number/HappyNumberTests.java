@@ -15,7 +15,7 @@ public class HappyNumberTests {
 
     private void test(int given, boolean expected) {
         // when
-        HappyNumber happyNumber = new HappyNumber();
+        Solution happyNumber = new Solution();
         boolean actual = happyNumber.isHappy(given);
 
         // then

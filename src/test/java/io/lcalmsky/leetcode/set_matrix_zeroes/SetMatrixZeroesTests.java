@@ -17,7 +17,7 @@ public class SetMatrixZeroesTests {
 
     private void test(int[][] given, int[][] expected) {
         // when
-        SetMatrixZeroes setMatrixZeroes = new SetMatrixZeroes();
+        Solution setMatrixZeroes = new Solution();
         setMatrixZeroes.setZeroes(given);
 
         // then

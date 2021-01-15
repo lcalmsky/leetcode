@@ -15,7 +15,7 @@ public class HammingDistanceTests {
 
     private void test(int x, int y, int expected) {
         // when
-        HammingDistance hammingDistance = new HammingDistance();
+        Solution hammingDistance = new Solution();
         int actual = hammingDistance.hammingDistance(x, y);
 
         // then

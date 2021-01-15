@@ -19,7 +19,7 @@ public class FirstMissingPositiveTests {
 
     private void test(int[] given, int expected) {
         // when
-        FirstMissingPositives firstMissingPositives = new FirstMissingPositives();
+        Solution firstMissingPositives = new Solution();
         int actual = firstMissingPositives.firstMissingPositive(given);
 
         // then

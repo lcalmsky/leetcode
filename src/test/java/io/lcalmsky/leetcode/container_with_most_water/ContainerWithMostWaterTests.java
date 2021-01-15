@@ -14,7 +14,7 @@ public class ContainerWithMostWaterTests {
 
     public void test(int[] given, int expected) {
         // when
-        ContainerWithMostWater containerWithMostWater = new ContainerWithMostWater();
+        Solution containerWithMostWater = new Solution();
         int result = containerWithMostWater.maxArea(given);
 
         // then

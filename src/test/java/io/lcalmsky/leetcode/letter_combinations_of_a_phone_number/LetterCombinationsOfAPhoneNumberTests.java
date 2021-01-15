@@ -21,7 +21,7 @@ public class LetterCombinationsOfAPhoneNumberTests {
 
     private void test(String given, List<String> expected) {
         // when
-        LetterCombinationsOfAPhoneNumbers letterCombinationsOfAPhoneNumbers = new LetterCombinationsOfAPhoneNumbers();
+        Solution letterCombinationsOfAPhoneNumbers = new Solution();
         List<String> actual = letterCombinationsOfAPhoneNumbers.letterCombinations(given);
 
         // then

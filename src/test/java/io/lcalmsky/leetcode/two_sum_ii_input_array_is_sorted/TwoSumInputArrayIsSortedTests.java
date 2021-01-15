@@ -15,7 +15,7 @@ public class TwoSumInputArrayIsSortedTests {
 
     private void test(int[] given, int target, int[] expected) {
         // when
-        TwoSumInputArrayIsSorted twoSumInputArrayIsSorted = new TwoSumInputArrayIsSorted();
+        Solution twoSumInputArrayIsSorted = new Solution();
         int[] actual = twoSumInputArrayIsSorted.twoSum(given, target);
 
         // then

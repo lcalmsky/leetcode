@@ -17,7 +17,7 @@ public class ImplementStrstrTests {
 
     private void test(String givenHaystack, String givenNeedle, int expected) {
         // when
-        ImplementStrstr implementStrstr = new ImplementStrstr();
+        Solution implementStrstr = new Solution();
         int actual = implementStrstr.strStr(givenHaystack, givenNeedle);
 
         // then

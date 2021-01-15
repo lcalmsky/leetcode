@@ -15,7 +15,7 @@ public class AddDigitsTests {
 
     private void test(int given, int expected) {
         // when
-        AddDigits addDigits = new AddDigits();
+        Solution addDigits = new Solution();
         int actual = addDigits.addDigits(given);
 
         // then

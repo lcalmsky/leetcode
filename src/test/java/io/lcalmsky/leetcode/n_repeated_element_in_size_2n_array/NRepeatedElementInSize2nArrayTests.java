@@ -17,7 +17,7 @@ public class NRepeatedElementInSize2nArrayTests {
 
     private void test(int[] given, int expected) {
         // when
-        NRepeatedElementInSize2nArray nRepeatedElementInSize2nArray = new NRepeatedElementInSize2nArray();
+        Solution nRepeatedElementInSize2nArray = new Solution();
         int actual = nRepeatedElementInSize2nArray.repeatedNTimes(given);
 
         // then

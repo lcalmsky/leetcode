@@ -16,7 +16,7 @@ public class InvertBinaryTreeTests {
 
     private void test(TreeNode given, TreeNode expected) {
         // when
-        InvertBinaryTree invertBinaryTree = new InvertBinaryTree();
+        Solution invertBinaryTree = new Solution();
         TreeNode actual = invertBinaryTree.invertTree(given);
 
         // then

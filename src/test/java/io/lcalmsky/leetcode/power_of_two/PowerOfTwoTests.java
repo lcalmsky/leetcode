@@ -17,7 +17,7 @@ public class PowerOfTwoTests {
 
     private void test(int given, boolean expected) {
         // when
-        PowerOfTwo powerOfTwo = new PowerOfTwo();
+        Solution powerOfTwo = new Solution();
         boolean actual = powerOfTwo.isPowerOfTwo(given);
 
         // then

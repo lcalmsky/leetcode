@@ -17,7 +17,7 @@ public class PatternOf132Tests {
 
     private void test(int[] given, boolean expected) {
         // when
-        PatternOf132 patternOf132 = new PatternOf132();
+        Solution patternOf132 = new Solution();
         boolean actual = patternOf132.find132pattern(given);
 
         // then

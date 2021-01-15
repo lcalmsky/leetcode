@@ -16,7 +16,7 @@ public class IntersectionOfTwoArrays2Tests {
 
     private void test(int[] given1, int[] given2, int[] expected) {
         // when
-        IntersectionOfTwoArrays2 intersectionOfTwoArrays2 = new IntersectionOfTwoArrays2();
+        Solution intersectionOfTwoArrays2 = new Solution();
         int[] actual = intersectionOfTwoArrays2.intersect(given1, given2);
 
         // then

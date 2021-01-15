@@ -18,7 +18,7 @@ class RobotReturnToOriginTest {
 
     private void test(String given, boolean expected) {
         // when
-        RobotReturnToOrigin robotReturnToOrigin = new RobotReturnToOrigin();
+        Solution robotReturnToOrigin = new Solution();
         boolean actual = robotReturnToOrigin.judgeCircle(given);
 
         // then

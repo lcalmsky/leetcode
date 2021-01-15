@@ -16,7 +16,7 @@ class StickersToSpellWordTest {
 
     private void test(String[] stickers, String target, int expected) {
         // when
-        StickersToSpellWord stickersToSpellWord = new StickersToSpellWord();
+        Solution stickersToSpellWord = new Solution();
         int actual = stickersToSpellWord.minStickers(stickers, target);
 
         // then

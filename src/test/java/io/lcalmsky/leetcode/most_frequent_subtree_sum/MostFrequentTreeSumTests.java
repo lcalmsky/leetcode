@@ -17,7 +17,7 @@ public class MostFrequentTreeSumTests {
 
     private void test(TreeNode given, int[] expected) {
         // when
-        MostFrequentTreeSum mostFrequentTreeSum = new MostFrequentTreeSum();
+        Solution mostFrequentTreeSum = new Solution();
         int[] actual = mostFrequentTreeSum.findFrequentTreeSum(given);
 
         // then

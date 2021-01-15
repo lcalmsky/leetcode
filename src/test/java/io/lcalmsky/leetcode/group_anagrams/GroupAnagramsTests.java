@@ -10,7 +10,7 @@ public class GroupAnagramsTests {
     public void givenStringArray_whenGroupingByAnagram_thenCorrect() {
         // given
         String[] strs = new String[]{"eat", "tea", "tan", "ate", "nat", "bat"};
-        GroupAnagrams groupAnagrams = new GroupAnagrams();
+        Solution groupAnagrams = new Solution();
 
         // when
         List<List<String>> result = groupAnagrams.groupAnagrams(strs);

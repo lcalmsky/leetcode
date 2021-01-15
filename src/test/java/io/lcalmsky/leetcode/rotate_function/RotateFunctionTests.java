@@ -15,7 +15,7 @@ public class RotateFunctionTests {
 
     private void test(int[] given, int expected) {
         // when
-        RotateFunction rotateFunction = new RotateFunction();
+        Solution rotateFunction = new Solution();
         int actual = rotateFunction.maxRotateFunction(given);
 
         // then

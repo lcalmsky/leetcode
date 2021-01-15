@@ -23,7 +23,7 @@ public class InsertIntervalTests {
 
     public void test(int[][] given, int[] interval, int[][] expected) {
         // when
-        InsertInterval insertInterval = new InsertInterval();
+        Solution insertInterval = new Solution();
         int[][] actual = insertInterval.insert(given, interval);
 
         // then

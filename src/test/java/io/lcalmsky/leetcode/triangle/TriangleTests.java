@@ -24,7 +24,7 @@ public class TriangleTests {
 
     private void test(List<List<Integer>> given, int expected) {
         // when
-        Triangle triangle = new Triangle();
+        Solution triangle = new Solution();
         int actual = triangle.minimumTotal(given);
 
         // then

@@ -20,7 +20,7 @@ public class MajorityElement2Tests {
 
     private void test(int[] given, List<Integer> expected) {
         // when
-        MajorityElement2 majorityElement2 = new MajorityElement2();
+        Solution majorityElement2 = new Solution();
         List<Integer> actual = majorityElement2.majorityElement(given);
 
         // then

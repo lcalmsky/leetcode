@@ -16,7 +16,7 @@ public class InterleavingStringTests {
 
     private void test(String s1, String s2, String s3, boolean expected) {
         // when
-        InterleavingString interleavingString = new InterleavingString();
+        Solution interleavingString = new Solution();
         boolean actual = interleavingString.isInterleave(s1, s2, s3);
 
         // then

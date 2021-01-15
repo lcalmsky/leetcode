@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LFUCacheTests {
     @Test
     public void givenLFUCache_whenPutAndGet_thenWorkCorrectly() {
-        LFUCache lfuCache = new LFUCache(2);
+        Solution lfuCache = new Solution(2);
         lfuCache.put(1, 1);
         lfuCache.put(2, 2);
         assertEquals(1, lfuCache.get(1));

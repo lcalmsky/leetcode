@@ -16,7 +16,7 @@ class PermutationInStringTest {
 
     private void test(String s1, String s2, boolean expected) {
         // when
-        PermutationInString permutationInString = new PermutationInString();
+        Solution permutationInString = new Solution();
         boolean actual = permutationInString.checkInclusion(s1, s2);
 
         // then

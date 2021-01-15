@@ -16,7 +16,7 @@ public class DetectCapitalTests {
 
     private void test(String given, boolean expected) {
         // when
-        DetectCapital detectCapital = new DetectCapital();
+        Solution detectCapital = new Solution();
         boolean actual = detectCapital.detectCapitalUse(given);
 
         // then

@@ -16,7 +16,7 @@ class ValidPalindrome2Test {
 
     private void test(String given, boolean expected) {
         // when
-        ValidPalindrome2 validPalindrome2 = new ValidPalindrome2();
+        Solution validPalindrome2 = new Solution();
         boolean actual = validPalindrome2.validPalindrome(given);
 
         // then

@@ -29,7 +29,7 @@ public class BinaryTreeZigzagLevelOrderTraversalTests {
 
     private void test(TreeNode given, List<List<Integer>> expected) {
         // when
-        BinaryTreeZigzagLevelOrderTraversal binaryTreeZigzagLevelOrderTraversal = new BinaryTreeZigzagLevelOrderTraversal();
+        Solution binaryTreeZigzagLevelOrderTraversal = new Solution();
         List<List<Integer>> actual = binaryTreeZigzagLevelOrderTraversal.zigzagLevelOrder(given);
 
         // then

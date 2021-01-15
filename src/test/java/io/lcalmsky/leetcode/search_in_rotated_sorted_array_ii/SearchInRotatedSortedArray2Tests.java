@@ -16,7 +16,7 @@ public class SearchInRotatedSortedArray2Tests {
 
     private void test(int[] givenArray, int givenTarget, boolean expected) {
         // when
-        SearchInRotatedSortedArray2 searchInRotatedSortedArray2 = new SearchInRotatedSortedArray2();
+        Solution searchInRotatedSortedArray2 = new Solution();
         boolean actual = searchInRotatedSortedArray2.search(givenArray, givenTarget);
 
         // then

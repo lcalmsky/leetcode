@@ -15,7 +15,7 @@ public class UglyNumber2Tests {
 
     private void test(int given, int expected) {
         // when
-        UglyNumber2 uglyNumber2 = new UglyNumber2();
+        Solution uglyNumber2 = new Solution();
         int actual = uglyNumber2.nthUglyNumber(given);
 
         // then

@@ -15,7 +15,7 @@ public class CombinationSum4Tests {
 
     private void test(int[] given, int target, int expected) {
         // when
-        CombinationSum4 combinationSum4 = new CombinationSum4();
+        Solution combinationSum4 = new Solution();
         int actual = combinationSum4.combinationSUm4(given, target);
 
         // then

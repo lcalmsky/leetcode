@@ -19,7 +19,7 @@ public class IntegerToRomanTest {
 
     private void test(int given, String expected) {
         // when
-        IntegerToRoman integerToRoman = new IntegerToRoman();
+        Solution integerToRoman = new Solution();
         String actual = integerToRoman.intToRoman(given);
 
         // then

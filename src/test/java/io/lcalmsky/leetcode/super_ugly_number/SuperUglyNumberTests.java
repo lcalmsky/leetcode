@@ -22,7 +22,7 @@ public class SuperUglyNumberTests {
 
     private void test(int n, int[] primes, int expected) {
         // when
-        SuperUglyNumber superUglyNumber = new SuperUglyNumber();
+        Solution superUglyNumber = new Solution();
         int actual = superUglyNumber.nthSuperUglyNumber(n, primes);
 
         // then

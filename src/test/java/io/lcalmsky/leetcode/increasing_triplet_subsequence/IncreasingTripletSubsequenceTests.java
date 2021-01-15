@@ -16,7 +16,7 @@ public class IncreasingTripletSubsequenceTests {
 
     private void test(int[] given, boolean expected) {
         // when
-        IncreasingTripletSubsequence increasingTripletSubsequence = new IncreasingTripletSubsequence();
+        Solution increasingTripletSubsequence = new Solution();
         boolean actual = increasingTripletSubsequence.increasingTriplet(given);
 
         // then

@@ -17,7 +17,7 @@ class CountBinaryStringsTest {
 
     private void test(String given, int expected) {
         // when
-        CountBinaryStrings countBinaryStrings = new CountBinaryStrings();
+        Solution countBinaryStrings = new Solution();
         int actual = countBinaryStrings.countBinarySubstrings(given);
 
         // then

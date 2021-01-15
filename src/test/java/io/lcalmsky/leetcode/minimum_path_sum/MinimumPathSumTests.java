@@ -21,7 +21,7 @@ public class MinimumPathSumTests {
 
     private void test(int[][] given, int expected) {
         // when
-        MinimumPathSum minimumPathSum = new MinimumPathSum();
+        Solution minimumPathSum = new Solution();
         int actual = minimumPathSum.minPathSum(given);
 
         // then

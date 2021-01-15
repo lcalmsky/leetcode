@@ -17,7 +17,7 @@ class SumOfSquareNumbersTest {
 
     private void test(int given, boolean expected) {
         // when
-        SumOfSquareNumbers sumOfSquareNumbers = new SumOfSquareNumbers();
+        Solution sumOfSquareNumbers = new Solution();
         boolean actual = sumOfSquareNumbers.judgeSquareSum(given);
 
         // then

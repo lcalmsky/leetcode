@@ -16,7 +16,7 @@ public class CountingBitsTests {
 
     private void test(int given, int[] expected) {
         // when
-        CountingBits countingBits = new CountingBits();
+        Solution countingBits = new Solution();
         int[] actual = countingBits.countBits(given);
 
         // expected
