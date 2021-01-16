@@ -198,6 +198,7 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 - [minimum path sum](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/minimum_path_sum)
 - [minimum size subarray sum](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/minimum_size_subarray_sum)
 - [minimum time difference](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/minimum_time_difference)
+- [monotone increasing digits](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/monotone_increasing_digits)
 - [most frequent subtree sum](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/most_frequent_subtree_sum)
 - [move zeroes](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/move_zeroes)
 - [multiply strings](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/multiply_strings)
@@ -336,7 +337,3 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 - [word search](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/word_search)
 - [zeroone matrix](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zeroone_matrix)
 - [zigzag conversion](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zigzag_conversion)
-(https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/word_search)
-- [zeroone matrix](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zeroone_matrix)
-- [zigzag conversion](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/zigzag_conversion)
-
