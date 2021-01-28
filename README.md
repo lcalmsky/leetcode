@@ -14,7 +14,6 @@ The conventions used in the project are:
 - class: Solution.java
 - test: SolutionTest.java
 
-
 ex)
 <pre><code>url     https://leetcode.com/problems/<b>wildcard-matching</b>
 branch  feature/<b>wildcard-matching</b>
@@ -81,6 +80,7 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 - [count primes](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/count_primes)
 - [counting bits](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/counting_bits)
 - [course schedule iii](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/course_schedule_iii)
+- [daily temparatures](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/daily_temparatures)
 - [decode string](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/decode_string)
 - [delete node in a bst](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/delete_node_in_a_bst)
 - [delete operation for two strings](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/delete_operation_for_two_strings)
