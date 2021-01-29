@@ -82,6 +82,7 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 - [course schedule iii](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/course_schedule_iii)
 - [daily temparatures](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/daily_temparatures)
 - [decode string](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/decode_string)
+- [delete and earn](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/delete_and_earn)
 - [delete node in a bst](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/delete_node_in_a_bst)
 - [delete operation for two strings](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/delete_operation_for_two_strings)
 - [detect capital](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/detect_capital)
