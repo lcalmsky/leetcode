@@ -57,6 +57,7 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 - [burst balloons](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/burst_balloons)
 - [can place flowers](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/can_place_flowers)
 - [candy](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/candy)
+- [cherry pickup](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/cherry_pickup)
 - [climbing stairs](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/climbing_stairs)
 - [coin change](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/coin_change)
 - [coin change 2](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/coin_change_2)
