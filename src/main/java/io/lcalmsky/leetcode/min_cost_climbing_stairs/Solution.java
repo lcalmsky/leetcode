@@ -2,12 +2,14 @@ package io.lcalmsky.leetcode.min_cost_climbing_stairs;
 
 public class Solution {
     public int minCostClimbingStairs(int[] cost) {
-        int[] dp = new int[cost.length];
-        dp[0] = cost[0];
-        dp[1] = cost[1];
-        for (int i = 2; i < dp.length; i++) {
-            dp[i] = cost[i] + Math.min(dp[i - 1], dp[i - 2]);
+        int n = cost.length;
+        int first = cost[0];
+        int second = cost[1];
+        for (int i = 2; i < n; i++) {
+            int current = cost[i] + Math.min(first, second);
+            first = second;
+            second = current;
         }
-        return Math.min(dp[cost.length - 1], dp[cost.length - 2]);
+        return Math.min(first, second);
     }
 }
