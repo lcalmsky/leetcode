@@ -191,6 +191,7 @@ test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
 - [merge k sorted lists](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/merge_k_sorted_lists)
 - [merge two binary trees](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/merge_two_binary_trees)
 - [merge two sorted lists](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/merge_two_sorted_lists)
+- [min cost climbing stairs](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/min_cost_climbing_stairs)
 - [minimum absolute different in a bst](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/minimum_absolute_different_in_a_bst)
 - [minimum ascii delete sum for two strings](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/minimum_ascii_delete_sum_for_two_strings)
 - [minimum depth of binary tree](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/minimum_depth_of_binary_tree)
