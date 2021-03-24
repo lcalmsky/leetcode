@@ -2,17 +2,17 @@
 
 ```java
 List<int[]>all=new ArrayList<>();
-        for(int[]rectangle:rectangles)helper(all,rectangle,0);
+for(int[]rectangle:rectangles)helper(all,rectangle,0);
 ```
 
 모든 직사각형을 첫 번 째 직사각형부터 순차적으로 비교합니다.
 
 ```java
 private void helper(List<int[]>all,int[]current,int start){
-        if(start>=all.size()){
+    if(start>=all.size()){
         all.add(current);
         return;
-        }
+    }
 // ...
 ```
 
