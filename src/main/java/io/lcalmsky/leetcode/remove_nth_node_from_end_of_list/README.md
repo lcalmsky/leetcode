@@ -135,3 +135,50 @@ Memory Usage: 38.9 MB, less than 15.12% of Java online submissions for Remove Nt
 결과가 너무 아쉽습니다.
 
 사실 `Stack`을 두 개나 사용하였고 끝까지 탐색한 뒤에 기존 포인터 정보는 전혀 활용하지 않은채로 진행했기 때문에 어떻게 보면 당연한 결과라고 할 수 있으나 그나마 `ListNode` 문제를 혼자 힘으로 풀었다는데 위안 삼고 더 나은 답을 검색해보았습니다.
+
+```java
+public class Solution {
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        ListNode current = head, previous = head;
+        while (n-- > 0) { // (1)
+            current = current.next;
+        }
+        if (current == null) { // (2)
+            return head.next;
+        }
+        while (current.next != null) { // (3)
+            current = current.next;
+            previous = previous.next;
+        }
+        previous.next = previous.next.next; // (4)
+        return head;
+    }
+}
+```
+
+이럴수가..
+
+당연히 이런 방식이 있을 거라고는 생각했지만 처음부터 이 방법이 어려울 거라고 지레 겁먹은 제 자신이 너무 부끄럽네요 🥲
+
+> (1) `head` 에서 `N` 번 이동합니다.    
+> (2) 현재 `Node`가 `null`이면 head의 다음 `Node`를 반환합니다.    
+> 예를 들어 2개의 `Node`중 뒤에서 2번째 `Node`를 제거해야 한다고하면 1, 2 이후 `null`이므로 1이 없어져야하고 1은 현재 `head`이므로 `head.next`를 반환하면 됩니다.  
+> (3) 현재 `Node`가 `null`이 아니면 현재 `Node`가 `null`이 될 때까지 다음 `Node`를 탐색합니다. 이 때 다른 `Node`가 동시에 `head`에서 출발해 동일한 `Node` 갯수만큼 탐색하게 됩니다.    
+> (4) 현재 `Node`가 `null`이 됐을 때 다른 `Node`(previous)는 뒤에 `N`개의 `Node`를 남기게 됩니다.  
+> (5) 답은 `N` 번 째 `Node`를 제거한 `head` `Node`를 반환하는 것이므로, `previous` `Node`의 다음 `Node`인 `N` 번 째 `Node`와의 연결을 끊어주고 그 다음 `Node`로 할당해 줍니다.
+
+이렇게 수정해서 제출했더니
+
+```text
+Runtime: 0 ms, faster than 100.00% of Java online submissions for Remove Nth Node From End of List.
+Memory Usage: 39.1 MB, less than 9.36% of Java online submissions for Remove Nth Node From End of List.
+```
+
+메모리는 조금 더 사용하지만 거의 의미 없는 수치 차이였고, 수행 시간은 매우매우 빨라졌습니다.
+
+---
+
+결과적으로는 허무한 마음도 들었지만 직접 시도해서 풀긴(?) 풀었고, 그 이후 새로운 방법을 찾아보는 과정에서 얻은 지식이다보니 조금 더 머리속에 오래 남아있지 않을까 싶습니다.
+
+한편으로는 언제 쯤 머리가 저렇게 비상하게 굴러갈까(사실 대단한 것도 아니지만 두 개의 노드를 이동시켜서 뒤에서 N 번 째를 확인한다는 건 제 머리로는 평생을 소모해도 떠올리지 못했을 거 같은..)하는 마음에 속상하기도 하네요 😭
+
