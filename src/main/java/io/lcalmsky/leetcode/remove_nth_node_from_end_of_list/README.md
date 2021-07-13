@@ -5,7 +5,9 @@
 Given the head of a linked list, remove the nth node from the end of the list and return its head.
 
 Example 1:
+
 ![](https://raw.githubusercontent.com/lcalmsky/leetcode/master/src/main/java/io/lcalmsky/leetcode/remove_nth_node_from_end_of_list/remove_ex1.jpeg)
+
 ```text
 Input: head = [1,2,3,4,5], n = 2
 Output: [1,2,3,5]
