@@ -1,3 +1,6 @@
+> 모든 소스 코드는 [여기](https://github.com/lcalmsky/leetcode) 서 확인 가능합니다.  
+> 문제 링크는 [여기](https://leetcode.com/explore/challenge/card/july-leetcoding-challenge-2021/609/week-2-july-8th-july-14th/3812/) 있습니다.
+
 ## Problem
 
 A peak element is an element that is strictly greater than its neighbors.
@@ -47,7 +50,7 @@ Constraints:
 
 (당연히 제출하더라도 실패할 거구요)
 
-따라서, 이진 탐색으로 무조건 `O(log n)`의 시간 복잡도가 소요되게 구현하시면 됩니다.
+따라서, 이진 탐색으로 `O(log n)`의 시간 복잡도가 소요되게 구현하시면 됩니다.
 
 ```java
 public class Solution {
