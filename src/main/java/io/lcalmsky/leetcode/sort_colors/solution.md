@@ -1,3 +1,6 @@
+> 소스 코드는 [여기](https://github.com/lcalmsky/leetcode) 있습니다.  
+> 문제는 [여기](https://leetcode.com/problems/sort-colors/) 있습니다.
+
 ## Problem
 
 Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.
