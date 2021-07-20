@@ -210,14 +210,16 @@ class SolutionTest {
 }
 ```
 
-제출한 결과는
+테스트는 성공했고 제출해보았습니다.
+
+그 결과..
 
 ```text
 Runtime: 0 ms, faster than 100.00% of Java online submissions for Populating Next Right Pointers in Each Node.
 Memory Usage: 39.3 MB, less than 41.00% of Java online submissions for Populating Next Right Pointers in Each Node.
 ```
 
-좋은 결과를 받았습니다 😁
+좋은 성적을 받았습니다 😁
 
 ---
 
