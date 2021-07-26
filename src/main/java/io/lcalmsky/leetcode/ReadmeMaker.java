@@ -35,10 +35,12 @@ public class ReadmeMaker {
                 "</code></pre>\n" +
                 "\n" +
                 "### List of problems\n");
-        File file = new File("/Users/a1101243/git-repo/leetcode/src/main/java/io/lcalmsky/leetcode");
+        File file = new File("src/main/java/io/lcalmsky/leetcode");
         String[] list = file.list();
+        assert list != null;
         Arrays.sort(list);
         for (String f : list) {
+            if (f.endsWith(".md")) continue;
             if (!f.endsWith(".java")) {
                 String title = f.replace('_', ' ').trim();
                 sb.append(String.format("- [%s](https://github.com/lcalmsky/leetcode/tree/master/src/main/java/io/lcalmsky/leetcode/%s)\n", title, f));
