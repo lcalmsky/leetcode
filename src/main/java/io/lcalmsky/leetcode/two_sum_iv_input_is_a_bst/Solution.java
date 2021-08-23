@@ -41,9 +41,15 @@ public class Solution {
     private final Set<Integer> set = new HashSet<>();
 
     public boolean findTarget(TreeNode root, int k) {
-        if (root == null) return false;
-        if (findTarget(root.left, k)) return true;
-        if (set.contains(k - root.val)) return true;
+        if (root == null) {
+            return false;
+        }
+        if (findTarget(root.left, k)) {
+            return true;
+        }
+        if (set.contains(k - root.val)) {
+            return true;
+        }
         set.add(root.val);
         return findTarget(root.right, k);
     }
