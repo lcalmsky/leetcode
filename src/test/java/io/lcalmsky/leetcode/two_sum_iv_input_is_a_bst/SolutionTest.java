@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class TwoSum4InputIsABstTest {
+class SolutionTest {
     @Test
     public void givenBinaryTree_whenFindTwoSum_thenCorrect() {
         assertAll(
@@ -23,5 +23,4 @@ class TwoSum4InputIsABstTest {
         // then
         assertEquals(expected, actual);
     }
-
 }

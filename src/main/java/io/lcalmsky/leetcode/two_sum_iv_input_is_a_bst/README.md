@@ -83,3 +83,36 @@ public class Solution {
     }
 }
 ```
+
+## Test
+
+```java
+package io.lcalmsky.leetcode.two_sum_iv_input_is_a_bst;
+
+import io.lcalmsky.leetcode.TreeNode;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class SolutionTest {
+    @Test
+    public void givenBinaryTree_whenFindTwoSum_thenCorrect() {
+        assertAll(
+                () -> test(TreeNode.of(5, 3, 6, 2, 4, 7), 9, true),
+                () -> test(TreeNode.of(5, 3, 6, 2, 4, 7), 28, false)
+        );
+    }
+
+    private void test(TreeNode given, int k, boolean expected) {
+        // when
+        Solution solution = new Solution();
+        boolean actual = solution.findTarget(given, k);
+
+        // then
+        assertEquals(expected, actual);
+    }
+}
+```
+
+> `TreeNode` 클래스 소스 코드는 [여기](https://github.com/lcalmsky/leetcode/blob/master/src/main/java/io/lcalmsky/leetcode/TreeNode.java) 있습니다.
