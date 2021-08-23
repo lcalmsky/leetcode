@@ -1,23 +1,59 @@
-# 풀이
+> 소스 코드는 [여기]() 있습니다.  
+> 문제는 [여기](https://leetcode.com/explore/challenge/card/august-leetcoding-challenge-2021/616/week-4-august-22nd-august-28th/3907/) 있습니다.
+
+## Problem
+
+We are given a list of (axis-aligned) rectangles. Each rectangle[i] = [xi1, yi1, xi2, yi2] , where (xi1, yi1) are the coordinates of the bottom-left corner, and (xi2, yi2) are the coordinates of the top-right corner of the ith rectangle.
+
+Find the total area covered by all rectangles in the plane. Since the answer may be too large, return it modulo 109 + 7.
+
+![](https://s3-lc-upload.s3.amazonaws.com/uploads/2018/06/06/rectangle_area_ii_pic.png)
+
+**Example 1:**
+
+```text
+Input: rectangles = [[0,0,2,2],[1,0,2,3],[1,0,3,1]]
+Output: 6
+Explanation: As illustrated in the picture.
+```
+
+**Example 2:**
+
+```text
+Input: rectangles = [[0,0,1000000000,1000000000]]
+Output: 49
+Explanation: The answer is 1018 modulo (109 + 7), which is (109)2 = (-7)2 = 49.
+```
+
+**Constraints:**
+
+* 1 <= rectangles.length <= 200
+* rectanges[i].length = 4
+* 0 <= rectangles[i][j] <= 109
+* The total area covered by all rectangles will never exceed 263 - 1 and thus will fit in a 64-bit signed integer.
+
+## Solution
 
 ```java
-List<int[]>all=new ArrayList<>();
-for(int[]rectangle:rectangles)helper(all,rectangle,0);
+List<int[]> all = new ArrayList<>();
+for (int[] rectangle : rectangles) {
+    helper(all, rectangle, 0);
+}
 ```
 
 모든 직사각형을 첫 번 째 직사각형부터 순차적으로 비교합니다.
 
 ```java
-private void helper(List<int[]>all,int[]current,int start){
-    if(start>=all.size()){
+private void helper(List<int[]> all, int[] current, int start) {
+    if (start >= all.size()) {
         all.add(current);
         return;
     }
 // ...
+}
 ```
 
-직사각형을 담을 리스트의 크기와 비교할 인덱스가 동일할 경우 현재 직사각형을 리스트에 추가하고 메서드를 종료합니다. 즉, 첫 번 째로 추가 된 직사각형의 경우 바로 리스트에 추가됩니다. 위의 부분을 제외한 나머지
-부분이 수행되지 않는다고 가정하면 자기 자신과 비교하게 될 때 리스트에 추가됩니다.
+직사각형을 담을 리스트의 크기와 비교할 인덱스가 동일할 경우 현재 직사각형을 리스트에 추가하고 메서드를 종료합니다. 즉, 첫 번째로 추가된 직사각형의 경우 바로 리스트에 추가되고, 다음 직사각형부터 자기 자신과 비교할 때 추가됩니다.
 
 예제로 주어진 직사각형 배열을 살펴보면
 
@@ -38,14 +74,18 @@ private void helper(List<int[]>all,int[]current,int start){
         helper(all, current, start + 1);
         return;
     }
-    if (current[LEFT] < rectangle[LEFT])
+    if (current[LEFT] < rectangle[LEFT]) {
         helper(all, new int[]{current[LEFT], current[TOP], rectangle[LEFT], current[BOTTOM]}, start + 1);
-    if (current[RIGHT] > rectangle[RIGHT])
+    }
+    if (current[RIGHT] > rectangle[RIGHT]) {
         helper(all, new int[]{rectangle[RIGHT], current[TOP], current[RIGHT], current[BOTTOM]}, start + 1);
-    if (current[TOP] < rectangle[TOP])
+    }
+    if (current[TOP] < rectangle[TOP]) {
         helper(all, new int[]{Math.max(rectangle[LEFT], current[LEFT]), current[TOP], Math.min(rectangle[RIGHT], current[RIGHT]), rectangle[TOP]}, start + 1);
-    if (current[BOTTOM] > rectangle[BOTTOM])
+    }
+    if (current[BOTTOM] > rectangle[BOTTOM]) {
         helper(all, new int[]{Math.max(rectangle[LEFT], current[LEFT]), rectangle[BOTTOM], Math.min(rectangle[RIGHT], current[RIGHT]), current[BOTTOM]}, start + 1);
+    }
 }
 ```
 
@@ -79,8 +119,98 @@ private void helper(List<int[]>all,int[]current,int start){
 4. 1~3의 작업이 순서대로 반복되면서 직사각형이 순차적으로 추가됩니다.
 
 ```java
-for (int[] subRectangle : all)
-            result = (result + (long) (subRectangle[RIGHT] - subRectangle[LEFT]) * (long) (subRectangle[BOTTOM] - subRectangle[TOP])) % MODULO;
+for (int[] subRectangle : all) {
+    result = (result + (long) (subRectangle[RIGHT] - subRectangle[LEFT]) * (long) (subRectangle[BOTTOM] - subRectangle[TOP])) % MODULO;
+}
 ```
 
 추가된 직사각형을 순차적으로 참조하면서 각 넓이를 구해 `modulo` 값으로 나눠 결과에 더해줍니다.
+
+## Source Code
+
+```java
+package io.lcalmsky.leetcode.rectangle_area_ii;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Solution {
+    public static final int LEFT = 0;
+    public static final int TOP = 1;
+    public static final int RIGHT = 2;
+    public static final int BOTTOM = 3;
+    private static final int MODULO = 1000000000 + 7;
+
+    public int rectangleArea(int[][] rectangles) {
+        long result = 0;
+        List<int[]> all = new ArrayList<>();
+        for (int[] rectangle : rectangles) {
+            helper(all, rectangle, 0);
+        }
+        for (int[] subRectangle : all) {
+            result = (result + (long) (subRectangle[RIGHT] - subRectangle[LEFT]) * (long) (subRectangle[BOTTOM] - subRectangle[TOP])) % MODULO;
+        }
+        return (int) result;
+    }
+
+    private void helper(List<int[]> all, int[] current, int start) {
+        if (start >= all.size()) {
+            all.add(current);
+            return;
+        }
+        int[] rectangle = all.get(start);
+        if (current[RIGHT] <= rectangle[LEFT] || current[BOTTOM] <= rectangle[TOP] || current[LEFT] >= rectangle[RIGHT] || current[TOP] >= rectangle[BOTTOM]) {
+            helper(all, current, start + 1);
+            return;
+        }
+        if (current[LEFT] < rectangle[LEFT]) {
+            helper(all, new int[]{current[LEFT], current[TOP], rectangle[LEFT], current[BOTTOM]}, start + 1);
+        }
+        if (current[RIGHT] > rectangle[RIGHT]) {
+            helper(all, new int[]{rectangle[RIGHT], current[TOP], current[RIGHT], current[BOTTOM]}, start + 1);
+        }
+        if (current[TOP] < rectangle[TOP]) {
+            helper(all, new int[]{Math.max(rectangle[LEFT], current[LEFT]), current[TOP], Math.min(rectangle[RIGHT], current[RIGHT]), rectangle[TOP]}, start + 1);
+        }
+        if (current[BOTTOM] > rectangle[BOTTOM]) {
+            helper(all, new int[]{Math.max(rectangle[LEFT], current[LEFT]), rectangle[BOTTOM], Math.min(rectangle[RIGHT], current[RIGHT]), current[BOTTOM]}, start + 1);
+        }
+    }
+}
+```
+
+## Test
+
+```java
+package io.lcalmsky.leetcode.rectangle_area_ii;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class SolutionTest {
+    @Test
+    public void givenRectangles_whenFindTotalArea_thenCorrect() {
+        assertAll(
+                () -> test(new int[][]{
+                        {0, 0, 2, 2},
+                        {1, 0, 2, 3},
+                        {1, 0, 3, 1}
+                }, 6),
+                () -> test(new int[][]{
+                        {0, 0, 1000000000, 1000000000}
+                }, 49)
+        );
+    }
+
+    private void test(int[][] given, int expected) {
+        // when
+        Solution solution = new Solution();
+        int actual = solution.rectangleArea(given);
+
+        // then
+        assertEquals(expected, actual);
+    }
+}
+```

@@ -13,9 +13,12 @@ public class Solution {
     public int rectangleArea(int[][] rectangles) {
         long result = 0;
         List<int[]> all = new ArrayList<>();
-        for (int[] rectangle : rectangles) helper(all, rectangle, 0);
-        for (int[] subRectangle : all)
+        for (int[] rectangle : rectangles) {
+            helper(all, rectangle, 0);
+        }
+        for (int[] subRectangle : all) {
             result = (result + (long) (subRectangle[RIGHT] - subRectangle[LEFT]) * (long) (subRectangle[BOTTOM] - subRectangle[TOP])) % MODULO;
+        }
         return (int) result;
     }
 
@@ -29,13 +32,17 @@ public class Solution {
             helper(all, current, start + 1);
             return;
         }
-        if (current[LEFT] < rectangle[LEFT])
+        if (current[LEFT] < rectangle[LEFT]) {
             helper(all, new int[]{current[LEFT], current[TOP], rectangle[LEFT], current[BOTTOM]}, start + 1);
-        if (current[RIGHT] > rectangle[RIGHT])
+        }
+        if (current[RIGHT] > rectangle[RIGHT]) {
             helper(all, new int[]{rectangle[RIGHT], current[TOP], current[RIGHT], current[BOTTOM]}, start + 1);
-        if (current[TOP] < rectangle[TOP])
+        }
+        if (current[TOP] < rectangle[TOP]) {
             helper(all, new int[]{Math.max(rectangle[LEFT], current[LEFT]), current[TOP], Math.min(rectangle[RIGHT], current[RIGHT]), rectangle[TOP]}, start + 1);
-        if (current[BOTTOM] > rectangle[BOTTOM])
+        }
+        if (current[BOTTOM] > rectangle[BOTTOM]) {
             helper(all, new int[]{Math.max(rectangle[LEFT], current[LEFT]), rectangle[BOTTOM], Math.min(rectangle[RIGHT], current[RIGHT]), current[BOTTOM]}, start + 1);
+        }
     }
 }
