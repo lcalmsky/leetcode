@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class SumOfSquareNumbersTest {
+class SolutionTest {
     @Test
     public void givenNonNegativeInteger_whenDecideSumOfSquareNumbers_thenCorrect() {
         assertAll(
@@ -17,8 +17,8 @@ class SumOfSquareNumbersTest {
 
     private void test(int given, boolean expected) {
         // when
-        Solution sumOfSquareNumbers = new Solution();
-        boolean actual = sumOfSquareNumbers.judgeSquareSum(given);
+        Solution solution = new Solution();
+        boolean actual = solution.judgeSquareSum(given);
 
         // then
         assertEquals(expected, actual);

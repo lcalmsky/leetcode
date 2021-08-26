@@ -22,9 +22,14 @@ public class Solution {
         int left = 0, right = (int) Math.sqrt(c);
         while (left <= right) {
             int sum = left * left + right * right;
-            if (sum == c) return true;
-            if (sum < c) left++;
-            else right--;
+            if (sum == c) {
+                return true;
+            }
+            if (sum < c) {
+                left++;
+            } else {
+                right--;
+            }
         }
         return false;
     }
