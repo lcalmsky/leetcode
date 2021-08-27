@@ -23,22 +23,23 @@ import java.util.Stack;
  */
 public class Solution {
     public boolean isValidSerialization(String preorder) {
-        String[] arr = preorder.split(",");
-
+        String[] preorderArray = preorder.split(",");
         Stack<String> stack = new Stack<>();
-        for (String s : arr) {
-            if (stack.isEmpty() || !s.equals("#")) {
-                stack.push(s);
+        for (String node : preorderArray) {
+            if (!node.equals("#")) {
+                stack.push(node);
                 continue;
             }
             while (!stack.isEmpty() && stack.peek().equals("#")) {
                 stack.pop();
-                if (stack.isEmpty()) return false;
-                else stack.pop();
+                if (stack.isEmpty()) {
+                    return false;
+                } else {
+                    stack.pop();
+                }
             }
-            stack.push("#");
+            stack.push(node);
         }
-
         return stack.size() == 1 && stack.peek().equals("#");
     }
 }

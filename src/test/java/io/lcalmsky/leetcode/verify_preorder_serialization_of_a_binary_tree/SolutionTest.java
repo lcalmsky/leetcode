@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class VerifyPreorderSerializationOfABinaryTreeTests {
+class SolutionTest {
     @Test
-    public void givenPreorderSerializedString_whenCheckIsValid_thenCorrect() {
+    void givenPreorderSerializedString_whenCheckIsValid_thenCorrect() {
         assertAll(
                 () -> test("9,3,4,#,#,1,#,#,2,#,6,#,#", true),
                 () -> test("1, #", false),
