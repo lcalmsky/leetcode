@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FindMinimumInRotatedSortedArrayTests {
+public class SolutionTest {
     @Test
     public void givenArray_whenFindMinimum_thenCorrect() {
         assertAll(
@@ -17,8 +17,8 @@ public class FindMinimumInRotatedSortedArrayTests {
 
     private void test(int[] given, int expected) {
         // when
-        Solution findMinimumInRotatedSortedArray = new Solution();
-        int actual = findMinimumInRotatedSortedArray.findMin(given);
+        Solution solution = new Solution();
+        int actual = solution.findMin(given);
 
         // then
         assertEquals(expected, actual);
