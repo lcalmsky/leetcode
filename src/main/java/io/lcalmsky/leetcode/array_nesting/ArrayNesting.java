@@ -35,15 +35,14 @@ class AnotherSolution extends ArrayNesting {
     public int arrayNesting(int[] nums) {
         int max = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != Integer.MAX_VALUE) {
-                int start = nums[i], count = 0;
-                while (nums[start] != Integer.MAX_VALUE) {
-                    int temp = start;
-                    start = nums[start];
+            if (nums[i] != -1) {
+                int next = nums[i], count = 0;
+                while (nums[next] != -1) {
+                    int previous = next;
+                    next = nums[next];
                     count++;
-                    nums[temp] = Integer.MAX_VALUE;
+                    nums[previous] = -1;
                 }
-
                 max = Math.max(max, count);
             }
         }
