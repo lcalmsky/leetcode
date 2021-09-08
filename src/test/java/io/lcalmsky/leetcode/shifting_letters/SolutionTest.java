@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SolutionTest {
     @Test
-    public void givenStringAndShifts_whenShiftString_thenCorrect() {
+    void givenStringAndShifts_whenShiftString_thenCorrect() {
         assertAll(
                 () -> test("abc", new int[]{3, 5, 9}, "rpl"),
                 () -> test("ruu", new int[]{26, 9, 17}, "rul"),
