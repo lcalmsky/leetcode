@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ReverseLinkedListTests {
+class SolutionTest {
     @Test
-    public void givenListNode_whenReverse_thenCorrect() {
+    void givenListNode_whenReverse_thenCorrect() {
         assertAll(
                 () -> test(ListNode.of(1, 2, 3, 4, 5), ListNode.of(5, 4, 3, 2, 1))
         );
