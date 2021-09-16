@@ -1,5 +1,5 @@
-> 소스 코드는 [여기](https://github.com/lcalmsky/leetcode/blob/master/src/main/java/io/lcalmsky/leetcode/reverse_only_letters/Solution.java) 있습니다.  
-> 문제는 [여기](https://leetcode.com/explore/challenge/card/september-leetcoding-challenge-2021/637/week-2-september-8th-september-14th/3974/) 있습니다.
+> 소스 코드는 [여기](https://github.com/lcalmsky/leetcode/blob/master/src/main/java/io/lcalmsky/leetcode/longest_turbulent_subarray/Solution.java) 있습니다.  
+> 문제는 [여기](https://leetcode.com/explore/challenge/card/september-leetcoding-challenge-2021/638/week-3-september-15th-september-21st/3976/) 있습니다.
 
 ## Problem
 
