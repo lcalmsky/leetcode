@@ -46,7 +46,9 @@ class BetterMemorySolution extends Solution {
     @Override
     public int maxTurbulenceSize(int[] arr) {
         int length = arr.length;
-        if (length < 2) return length;
+        if (length < 2) {
+            return length;
+        }
         int count = 1;
         int[] increase = new int[length];
         int[] decrease = new int[length];
