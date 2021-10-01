@@ -18,45 +18,33 @@ package io.lcalmsky.leetcode.partition_to_k_equal_sum_subsets;
  */
 public class Solution {
     public boolean canPartitionKSubsets(int[] nums, int k) {
-        long sum = 0;
-        for (int num : nums) sum += num;
-        if (sum % k == 0) {
-            boolean[] visited = new boolean[nums.length];
-            return canPartition(nums, 0, 0, 0, sum / k, k, visited);
+        int sum = 0;
+        for (int num : nums) {
+            sum += num;
         }
-        return false;
+        if (sum % k != 0) {
+            return false;
+        }
+        return dfs(nums, 0, 0, 0, sum / k, k, new boolean[nums.length]);
     }
 
-    private boolean canPartition(int[] nums, int index, int currSum, int currCount, long target, int k, boolean[] visited) {
-        if (k == 1) return true;
-        if (currSum == target && currCount > 0) return canPartition(nums, 0, 0, 0, target, k - 1, visited);
+    private boolean dfs(int[] nums, int index, int sum, int count, int target, int k, boolean[] visited) {
+        if (k == 1) {
+            return true;
+        }
+        if (sum == target && count > 0) {
+            return dfs(nums, 0, 0, 0, target, k - 1, visited);
+        }
 
         for (int i = index; i < nums.length; i++) {
             if (!visited[i]) {
                 visited[i] = true;
-                if (canPartition(nums, i + 1, currSum + nums[i], currCount + 1, target, k, visited)) return true;
+                if (dfs(nums, i + 1, sum + nums[i], count + 1, target, k, visited)) {
+                    return true;
+                }
                 visited[i] = false;
             }
         }
         return false;
     }
 }
-
-//class AnotherSolution {
-//    public boolean canPartitionKSubsets(int[] nums, int k) {
-//        int sum = 0;
-//        Map<Integer, Integer> countMap = new HashMap<>();
-//        for (int num : nums) {
-//            sum += num;
-//            countMap.put(num, countMap.getOrDefault(num, 0) + 1);
-//        }
-//        if (sum % k != 0) return false;
-//        int target = sum / k;
-//        int count = 0;
-//        Arrays.sort(nums);
-//        for (int i = nums.length - 1; i >= 0; i--) {
-//        }
-//
-//        return false;
-//    }
-//}
