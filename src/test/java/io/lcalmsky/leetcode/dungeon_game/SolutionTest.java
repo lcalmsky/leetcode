@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class DungeonGameTests {
+class SolutionTest {
     @Test
-    public void givenArray_whenFindMinimumHp_thenCorrect() {
+    void givenArray_whenFindMinimumHp_thenCorrect() {
         assertAll(
                 () -> test(new int[][]{
                         {-2, -3, 3},
@@ -19,8 +19,8 @@ public class DungeonGameTests {
 
     private void test(int[][] given, int expected) {
         // when
-        Solution dungeonGame = new Solution();
-        int actual = dungeonGame.calculateMinimumHp(given);
+        Solution solution = new Solution();
+        int actual = solution.calculateMinimumHp(given);
 
         // then
         assertEquals(expected, actual);
