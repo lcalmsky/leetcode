@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ClimbingStairsTests {
+class SolutionTest {
     @Test
-    public void givenInteger_whenClimbStairs_thenCorrect() {
+    void givenInteger_whenClimbStairs_thenCorrect() {
         assertAll(
                 () -> test(2, 2),
                 () -> test(3, 3)
@@ -16,13 +16,10 @@ public class ClimbingStairsTests {
 
     private void test(int given, int expected) {
         // when
-        Solution climbingStairs = new Solution();
-        int actual = climbingStairs.climbStairs(given);
+        Solution solution = new Solution();
+        int actual = solution.climbStairs(given);
 
         // then
         assertEquals(expected, actual);
-
-        // log
-        System.out.println(actual);
     }
 }
