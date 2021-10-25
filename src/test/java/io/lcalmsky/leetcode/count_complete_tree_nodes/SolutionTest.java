@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class CountCompleteTreeNodesTests {
+class SolutionTest {
     @Test
-    public void givenCompleteTree_whenCount_thenCorrect() {
+    void givenCompleteTree_whenCount_thenCorrect() {
         assertAll(
                 () -> test(TreeNode.of(1, 2, 3, 4, 5, 6), 6)
         );
@@ -18,7 +18,6 @@ public class CountCompleteTreeNodesTests {
         // when
         Solution countCompleteTreeNodes = new Solution();
         int actual = countCompleteTreeNodes.countNodes(given);
-
         // then
         assertEquals(expected, actual);
     }
