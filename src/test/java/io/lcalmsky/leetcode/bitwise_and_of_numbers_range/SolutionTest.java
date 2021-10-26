@@ -5,12 +5,14 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class BitwiseAndOfNumbersRangeTests {
+class SolutionTest {
+
     @Test
-    public void givenNumbers_whenGetBitwiseAndOfNumbersRange_thenCorrect() {
+    void givenNumbers_whenGetBitwiseAndOfNumbersRange_thenCorrect() {
         assertAll(
                 () -> test(5, 7, 4),
-                () -> test(0, 1, 0)
+                () -> test(0, 1, 0),
+                () -> test(1, 2147483647, 0)
         );
 
     }

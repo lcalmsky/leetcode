@@ -35,30 +35,21 @@ import java.util.Map;
  * </pre>
  */
 public class Solution {
-    public int pathSum(TreeNode root, int sum) {
+    public int pathSum(TreeNode root, int targetSum) {
         Map<Integer, Integer> map = new HashMap<>();
         map.put(0, 1);
-        return recursive(root, 0, sum, map);
+        return dfs(root, 0, targetSum, map);
     }
 
-    public int recursive(TreeNode node, int accumulateSum, int sum, Map<Integer, Integer> map) {
-        if (node == null) return 0;
+    public int dfs(TreeNode node, int accumulateSum, int targetSum, Map<Integer, Integer> map) {
+        if (node == null) {
+            return 0;
+        }
         accumulateSum += node.val;
-        int count = map.getOrDefault(accumulateSum - sum, 0);
+        int count = map.getOrDefault(accumulateSum - targetSum, 0);
         map.put(accumulateSum, map.getOrDefault(accumulateSum, 0) + 1);
-        count += recursive(node.left, accumulateSum, sum, map) + recursive(node.right, accumulateSum, sum, map);
+        count += dfs(node.left, accumulateSum, targetSum, map) + dfs(node.right, accumulateSum, targetSum, map);
         map.put(accumulateSum, map.get(accumulateSum) - 1);
         return count;
     }
 }
-//    public int pathSum(TreeNode root, int sum) {
-//        if (root == null) return 0;
-//        return pathSequenceSum(root, sum) + pathSum(root.left, sum) + pathSum(root.right, sum);
-//    }
-//
-//    private int pathSequenceSum(TreeNode node, int sum) {
-//        if (node == null) return 0;
-//        int count = (sum == node.val) ? 1 : 0;
-//        count += pathSequenceSum(node.left, sum - node.val) + pathSequenceSum(node.right, sum - node.val);
-//        return count;
-//    }

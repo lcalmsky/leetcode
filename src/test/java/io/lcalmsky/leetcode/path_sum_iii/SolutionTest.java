@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class PathSum3Tests {
+class SolutionTest {
     @Test
-    public void givenTreeNode_whenSum_thenCorrect() {
+    void givenTreeNode_whenSum_thenCorrect() {
         assertAll(
                 () -> test(TreeNode.of(10, 5, -3, 3, 2, null, 11, 3, -2, null, 1), 8, 3)
         );
@@ -22,5 +22,4 @@ public class PathSum3Tests {
         // then
         assertEquals(expected, actual);
     }
-
 }

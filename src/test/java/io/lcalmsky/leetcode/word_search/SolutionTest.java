@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class WordSearchTests {
+class SolutionTest {
     @Test
-    public void givenCharacters_whenSearchWord_thenCorrect() {
+    void givenCharacters_whenSearchWord_thenCorrect() {
         char[][] givenArray = {
                 {'A', 'B', 'C', 'E'},
                 {'S', 'F', 'C', 'S'},
@@ -30,8 +30,8 @@ public class WordSearchTests {
 
     private void test(char[][] givenArray, String givenWord, boolean expected) {
         // when
-        Solution wordSearch = new Solution();
-        boolean actual = wordSearch.exist(givenArray, givenWord);
+        Solution solution = new Solution();
+        boolean actual = solution.exist(givenArray, givenWord);
 
         // then
         assertEquals(expected, actual);
