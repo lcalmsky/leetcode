@@ -10,10 +10,14 @@ public class Solution {
 
     private void invert(TreeNode root) {
         if (root == null) return;
+        swap(root);
+        invert(root.left);
+        invert(root.right);
+    }
+
+    private void swap(TreeNode root) {
         TreeNode tempNode = root.left;
         root.left = root.right;
         root.right = tempNode;
-        invert(root.left);
-        invert(root.right);
     }
 }
