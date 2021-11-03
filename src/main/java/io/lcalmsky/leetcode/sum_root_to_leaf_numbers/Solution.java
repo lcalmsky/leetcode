@@ -43,3 +43,25 @@ public class Solution {
     }
 
 }
+
+class AnotherSolution extends Solution {
+
+    public int sumNumbers(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return dfs(root, 0, 0);
+    }
+
+    private int dfs(TreeNode node, int value, int sum) {
+        if (node == null) {
+            return 0;
+        }
+        value = value * 10 + node.val;
+        if (node.left == null && node.right == null) {
+            sum += value;
+            return sum;
+        }
+        return dfs(node.left, value, sum) + dfs(node.right, value, sum);
+    }
+}

@@ -103,6 +103,35 @@ public class Solution {
 3. 현재 노드의 right 노드를 추가하고 재귀호출을 합니다. 끝나면 마지막에 추가한 노드를 리스트에서 제거합니다.
 4. 중첩 리스트에서 안쪽에 리스트를 문자열로 바꾼 뒤 다시 숫자로 바꿔 전체 합을 구해 반환합니다.
 
+---
+
+제출하고 보니 훨씬 더 간단한 답을 발견해서 소개합니다.
+
+기존 값에 10배씩 곱해 앞 자리 수가 되도록 해주고 현재 노드의 value 값을 더해주면서 leaf 노드가 될 때까지 탐색하는 방법입니다.
+
+```java
+class Solution {
+    public int sumNumbers(TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        return dfs(root, 0, 0);
+    }
+
+    private int dfs(TreeNode node, int value, int sum) {
+        if (node == null) {
+            return 0;
+        }
+        value = value * 10 + node.val;
+        if (node.left == null && node.right == null) {
+            sum += value;
+            return sum;
+        }
+        return dfs(node.left, value, sum) + dfs(node.right, value, sum);
+    }
+}
+```
+
 ## Test
 
 ```java
