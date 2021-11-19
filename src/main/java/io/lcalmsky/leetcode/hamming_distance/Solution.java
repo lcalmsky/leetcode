@@ -24,13 +24,16 @@ package io.lcalmsky.leetcode.hamming_distance;
  * </pre>
  */
 public class Solution {
-    public int hammingDistance(int x, int y) {
-        int cnt = 0;
-        int z = x ^ y;
-        while (z != 0) {
-            if ((z & 1) == 1) cnt++;
-            z >>= 1;
-        }
-        return cnt;
+
+  public int hammingDistance(int x, int y) {
+    int count = 0;
+    int exclusiveOr = x ^ y;
+    while (exclusiveOr != 0) {
+      if ((exclusiveOr & 1) == 1) {
+        count++;
+      }
+      exclusiveOr >>= 1;
     }
+    return count;
+  }
 }
