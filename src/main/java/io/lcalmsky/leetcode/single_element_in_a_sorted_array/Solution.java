@@ -25,13 +25,17 @@ package io.lcalmsky.leetcode.single_element_in_a_sorted_array;
  * </pre>
  */
 public class Solution {
-    public int singleNonDuplicate(int[] nums) {
-        int left = 0, right = nums.length - 1;
-        while (left < right) {
-            int mid = left + (right - left) / 2;
-            if (nums[mid] == nums[mid ^ 1]) left = mid + 1;
-            else right = mid;
+
+  public int singleNonDuplicate(int[] nums) {
+    int left = 0, right = nums.length - 1;
+    while (left < right) {
+      int mid = left + (right - left) / 2;
+        if (nums[mid] == nums[mid ^ 1]) {
+            left = mid + 1;
+        } else {
+            right = mid;
         }
-        return nums[left];
     }
+    return nums[left];
+  }
 }
