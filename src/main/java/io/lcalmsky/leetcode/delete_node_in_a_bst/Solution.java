@@ -44,30 +44,33 @@ import io.lcalmsky.leetcode.TreeNode;
  */
 public class Solution {
 
-    public TreeNode deleteNode(TreeNode root, int key) {
-        if (root == null) return root;
-        TreeNode temp;
-        if (key < root.val) root.left = deleteNode(root.left, key);
-        else if (key > root.val) root.right = deleteNode(root.right, key);
-        else {
-            if (root.left == null) {
-                temp = root.right;
-                root.right = null;
-                return temp;
-            } else if (root.right == null) {
-                temp = root.left;
-                root.left = null;
-                return temp;
-            }
-            temp = successor(root.right);
-            root.val = temp.val;
-            root.right = deleteNode(root.right, temp.val);
-        }
-        return root;
+  public TreeNode deleteNode(TreeNode root, int key) {
+    if (root == null) {
+      return root;
     }
+    if (key < root.val) {
+      root.left = deleteNode(root.left, key);
+      return root;
+    }
+    if (key > root.val) {
+      root.right = deleteNode(root.right, key);
+      return root;
+    }
+    if (root.left == null) {
+      return root.right;
+    }
+    if (root.right == null) {
+      return root.left;
+    }
+    TreeNode node = findNode(root.right);
+    node.left = root.left;
+    return root.right;
+  }
 
-    private TreeNode successor(TreeNode cur) {
-        while (cur.left != null) cur = cur.left;
-        return cur;
+  private TreeNode findNode(TreeNode node) {
+    while (node.left != null) {
+      node = node.left;
     }
+    return node;
+  }
 }
