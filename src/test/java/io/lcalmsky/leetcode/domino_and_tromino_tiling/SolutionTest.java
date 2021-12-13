@@ -18,7 +18,7 @@ class SolutionTest {
 
   private void test(int given, int expected) {
     // when
-    Solution solution = new Solution();
+    Solution solution = new EnhancedSolution();
     int actual = solution.numTilings(given);
     // then
     assertEquals(expected, actual);

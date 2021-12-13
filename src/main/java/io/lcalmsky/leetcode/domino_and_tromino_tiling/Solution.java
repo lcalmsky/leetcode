@@ -15,3 +15,32 @@ public class Solution {
     return (int) dp[n][0];
   }
 }
+
+class EnhancedSolution extends Solution {
+
+  private static final int MOD = (int) (1e9 + 7);
+
+  public int numTilings(int n) {
+    if (n == 1) {
+      return 1;
+    }
+    if (n == 2) {
+      return 2;
+    }
+    if (n == 3) {
+      return 5;
+    }
+    int a = 1;
+    int b = 2;
+    int c = 5;
+    for (int i = 4; i <= n; i++) {
+      int tmp = (2 * c) % MOD + a;
+      a = b;
+      b = c;
+      c = tmp;
+      b %= MOD;
+      c %= MOD;
+    }
+    return c;
+  }
+}
