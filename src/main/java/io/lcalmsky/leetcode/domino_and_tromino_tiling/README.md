@@ -93,6 +93,82 @@ public class Solution {
 }
 ```
 
+---
+
+문제 제출하는 것을 깜빡했다가 뒤늦게 제출하고 다른 사람들의 답을 확인해봤는데 훨씬 더 간단히 해결한 게 있어서 추가로 첨부합니다.
+
+```java
+class Solution {
+
+  private static final int MOD = (int) (1e9 + 7);
+
+  public int numTilings(int n) {
+    if (n == 1) {
+      return 1;
+    }
+    if (n == 2) {
+      return 2;
+    }
+    if (n == 3) {
+      return 5;
+    }
+    int a = 1;
+    int b = 2;
+    int c = 5;
+    for (int i = 4; i <= n; i++) {
+      int tmp = (2 * c) % MOD + a;
+      a = b;
+      b = c;
+      c = tmp;
+      a %= MOD;
+      b %= MOD;
+      c %= MOD;
+    }
+    return c;
+  }
+}
+```
+
+설명도 더 알기 쉽게 되어있네요.
+
+dp[i]는 2 * (i + 1) 보드에 타일링하는 방법의 수를 나타내고, dpa[i]는 2 * i 보드에 하나의 정사각형이 추가된 경우 타일링하는 방법의 수를 나타낸다고 하면 아래와 같이 초기값을 설정할 수 있습니다.
+
+```text
+⬜⬜⬜⬜ ⬜⬜⬜⬛
+⬜⬜⬜⬜ ⬜⬜⬜⬛
+        
+⬜⬜⬜⬜ ⬜⬜⬛⬛
+⬜⬜⬜⬜ ⬜⬜⬛⬛
+        
+⬜⬜⬜⬜ ⬜⬜⬜⬛
+⬜⬜⬜⬜ ⬜⬜⬛⬛
+        
+⬜⬜⬜⬜ ⬜⬜⬛⬛
+⬜⬜⬜⬜ ⬜⬜⬜⬛
+```
+
+```text
+            ⬜⬜⬜   dpa[i-1]
+dpa[i]      ⬜⬜⬛⬛
+⬜⬜⬜    /
+⬜⬜⬜⬜  \
+            ⬜⬜⬛   dpa[i-2]
+            ⬜⬜⬛⬛
+```
+
+```text
+dpa[i] = dpa[i-1] + dp[i-2] => dpa[i] - dpa[i-1] = dp[i - 2] => dpa[i-1] - dpa[i-2] = dp[i-3]
+dp[i] = dp[i-1] + dp[i-2] + 2dpa[i-1]   // (1)
+dp[i-1] = dp[i-2] + dp[i-3] + 2dpa[i-2] // (2)
+
+위의 (1)번 식에서 (2)번 식을 빼주면,
+dp[i] - dp[i-1] = dp[i-1] + dp[i-2] - dp[i-2] - dp[i-3] + 2(dpa[i-1] - dpa[i-2])
+                = dp[i-1] - dp[i-3] + 2dp[i-3]
+이 되고 다시 dp[i]를 기준으로 식을 정리하면,
+dp[i] = 2dp[i-1] + dp[i-3]
+가 됩니다.
+```
+
 ## Test
 
 ```java
