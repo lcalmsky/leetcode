@@ -14,36 +14,35 @@ import java.util.Stack;
  * </pre>
  */
 public class Solution {
-    public String decodeString(String s) {
-        String res = "";
-        Stack<Integer> countStack = new Stack<>();
-        Stack<String> resStack = new Stack<>();
-        int idx = 0;
-        while (idx < s.length()) {
-            if (Character.isDigit(s.charAt(idx))) {
-                int count = 0;
-                while (Character.isDigit(s.charAt(idx))) {
-                    count = 10 * count + (s.charAt(idx) - '0');
-                    idx++;
-                }
-                countStack.push(count);
-            } else if (s.charAt(idx) == '[') {
-                resStack.push(res);
-                res = "";
-                idx++;
-            } else if (s.charAt(idx) == ']') {
-                StringBuilder temp = new StringBuilder(resStack.pop());
-                int repeatTimes = countStack.pop();
-                for (int i = 0; i < repeatTimes; i++) {
-                    temp.append(res);
-                }
-                res = temp.toString();
-                idx++;
-            } else {
-                res += s.charAt(idx);
-                idx++;
-            }
+
+  public String decodeString(String s) {
+    StringBuilder result = new StringBuilder();
+    Stack<Integer> countStack = new Stack<>();
+    Stack<String> resultStack = new Stack<>();
+    int index = 0;
+    while (index < s.length()) {
+      if (Character.isDigit(s.charAt(index))) {
+        int count = 0;
+        while (Character.isDigit(s.charAt(index))) {
+          count = 10 * count + (s.charAt(index) - '0');
+          index++;
         }
-        return res;
+        countStack.push(count);
+      } else if (s.charAt(index) == '[') {
+        resultStack.push(result.toString());
+        result = new StringBuilder();
+        index++;
+      } else if (s.charAt(index) == ']') {
+        StringBuilder temp = new StringBuilder(resultStack.pop());
+        int repeatTimes = countStack.pop();
+        temp.append(result.toString().repeat(Math.max(0, repeatTimes)));
+        result = new StringBuilder(temp.toString());
+        index++;
+      } else {
+        result.append(s.charAt(index));
+        index++;
+      }
     }
+    return result.toString();
+  }
 }
