@@ -1,8 +1,8 @@
 package io.lcalmsky.leetcode.minimum_absolute_difference;
 
+
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.util.List;
 import org.junit.jupiter.api.Test;
 
