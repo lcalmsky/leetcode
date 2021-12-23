@@ -1,6 +1,7 @@
 package io.lcalmsky.leetcode.course_schedule_ii;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.LinkedList;
@@ -47,5 +48,63 @@ public class Solution {
       answer[i] = result.get(i);
     }
     return answer;
+  }
+}
+
+class AnotherSolution {
+
+  boolean hasCycle = false;
+  boolean[] visited;
+  boolean[] onPath;
+  List<Integer> result;
+
+  public int[] findOrder(int numCourses, int[][] prerequisites) {
+    List<Integer>[] map = buildGraph(numCourses, prerequisites);
+    visited = new boolean[numCourses];
+    onPath = new boolean[numCourses];
+    result = new ArrayList<>();
+    int[] res = new int[numCourses];
+    for (int i = 0; i < numCourses; i++) {
+      traverse(map, i);
+    }
+    if (hasCycle) {
+      return new int[]{};
+    }
+    Collections.reverse(result);
+    for (int i = 0; i < numCourses; i++) {
+      res[i] = result.get(i);
+    }
+    return res;
+  }
+
+  public void traverse(List<Integer>[] map, int current) {
+    if (hasCycle) {
+      return;
+    }
+    if (onPath[current]) {
+      hasCycle = true;
+      return;
+    }
+    if (visited[current]) {
+      return;
+    }
+    visited[current] = true;
+    onPath[current] = true;
+    for (int next : map[current]) {
+      traverse(map, next);
+    }
+    result.add(current);
+    onPath[current] = false;
+  }
+
+  public List<Integer>[] buildGraph(int numCourses, int[][] prerequisites) {
+    List<Integer>[] arrayLists = new ArrayList[numCourses];
+    for (int i = 0; i < numCourses; i++) {
+      arrayLists[i] = new ArrayList<>();
+    }
+    for (int[] pair : prerequisites) {
+      arrayLists[pair[1]].add(pair[0]);
+    }
+    return arrayLists;
   }
 }
