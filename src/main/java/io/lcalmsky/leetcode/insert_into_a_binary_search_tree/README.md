@@ -1,3 +1,126 @@
+> 소스 코드는 [여기](https://github.com/lcalmsky/leetcode/blob/master/src/main/java/io/lcalmsky/leetcode/insert_into_a_binary_search_tree/Solution.java) 있습니다.  
+> 문제는 [여기](https://leetcode.com/problems/insert-into-a-binary-search-tree/) 있습니다.
+
+## Problem
+
+You are given the root node of a binary search tree (BST) and a value to insert into the tree. Return the root node of the BST after the insertion. It is guaranteed that the new value does not exist in the original BST.
+
+Notice that there may exist multiple valid ways for the insertion, as long as the tree remains a BST after insertion. You can return any of them.
+
+**Example 1:**
+
+![](https://assets.leetcode.com/uploads/2020/10/05/insertbst.jpg)
+
+```text
+Input: root = [4,2,7,1,3], val = 5
+Output: [4,2,7,1,3,5]
+Explanation: Another accepted tree is:
+```
+
+![](https://assets.leetcode.com/uploads/2020/10/05/bst.jpg)
+
+**Example 2:**
+
+```text
+Input: root = [40,20,60,10,30,50,70], val = 25
+Output: [40,20,60,10,30,50,70,null,null,25]
+```
+
+**Example 3:**
+
+```text
+Input: root = [4,2,7,1,3,null,null,null,null,null,null], val = 5
+Output: [4,2,7,1,3,5]
+```
+
+**Constraints:**
+
+* The number of nodes in the tree will be in the range [0, 10^4].
+* -10^8 <= Node.val <= 10^8
+* All the values Node.val are unique.
+* -10^8 <= val <= 10^8
+* It's guaranteed that val does not exist in the original BST.
+
+## Solution
+
+BST와 특정 값이 주어질 때 특정 값을 BST에 추가한 뒤 root 노드를 반환하는 문제입니다.
+
+```java
+public class Solution {
+
+  public TreeNode insertIntoBST(TreeNode root, int val) {
+    if (root == null) { // (1)
+      return new TreeNode(val);
+    }
+    traverse(root, val);
+    return root;
+  }
+
+  private void traverse(TreeNode node, int val) {
+    if (node == null) {
+      return;
+    }
+    if (val > node.val) { // (2) 
+      if (node.right == null) {
+        node.right = new TreeNode(val);
+        return;
+      }
+      traverse(node.right, val);
+    } else { // (3)
+      if (node.left == null) {
+        node.left = new TreeNode(val);
+        return;
+      }
+      traverse(node.left, val);
+    }
+  }
+}
+```
+
+1. root 노드가 null이면 새로운 노드를 생성해 반환합니다.
+2. 현재 노드의 값보다 추가할 값이 더 클 때, 현재 노드의 right 노드로 추가해야 합니다. right 노드가 null이면 추가한 뒤 종료하고, 그렇지 않을 땐 right 노드를 기준으로 다시 같은 과정을 진행합니다.
+3. 현재 노드의 값보다 추가할 값이 더 작을 때, 현재 노드의 left 노드로 추가해야 합니다. left 노드가 null이면 추가한 뒤 종료하고, 그렇지 않을 땐 left 노드를 기준으로 다시 같은 과정을 진행합니다.
+
+## Test
+
+```java
+package io.lcalmsky.leetcode.insert_into_a_binary_search_tree;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import io.lcalmsky.leetcode.TreeNode;
+import org.junit.jupiter.api.Test;
+
+class SolutionTest {
+
+  @Test
+  void givenBinarySearchTree_whenInsertTreeNode_thenCorrect() {
+    assertAll(
+        () -> test(null, 5, TreeNode.of(5)),
+        () -> test(TreeNode.of(4, 2, 7, 1, 3), 5, TreeNode.of(4, 2, 7, 1, 3, 5)),
+        () -> test(TreeNode.of(40, 20, 60, 10, 30, 50, 70), 25,
+            TreeNode.of(40, 20, 60, 10, 30, 50, 70, null, null, 25)),
+        () -> test(TreeNode.of(4, 2, 7, 1, 3, null, null, null, null, null, null), 5,
+            TreeNode.of(4, 2, 7, 1, 3, 5))
+    );
+  }
+
+  private void test(TreeNode root, int k, TreeNode expected) {
+    // when
+    Solution solution = new Solution();
+    TreeNode actual = solution.insertIntoBST(root, k);
+
+    // then
+    assertEquals(expected, actual);
+  }
+}
+```
+
+<details>
+<summary>풀이에 사용된 TreeNode.java 클래스 보기</summary>
+
+```java
 package io.lcalmsky.leetcode;
 
 import java.util.ArrayList;
@@ -163,3 +286,5 @@ public class TreeNode {
     }
   }
 }
+```
+</details>
