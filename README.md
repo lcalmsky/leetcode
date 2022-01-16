@@ -9,14 +9,12 @@
 Solve the algorithm problems <a href="leetcode.com">leetcode.com</a> provides.
 
 The conventions used in the project are:
-- branch: last path of leetcode problem url
 - package: converting last path of leetcode problem url to snake case
 - class: Solution.java
 - test: SolutionTest.java
 
 ex)
 <pre><code>url     https://leetcode.com/problems/<b>wildcard-matching</b>
-branch  feature/<b>wildcard-matching</b>
 package io.lcalmsky.leetcode.<b>wildcard_matching</b>
 class   io.lcalmsky.leetcode.<b>wildcard_matching.Solution</b>
 test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>
