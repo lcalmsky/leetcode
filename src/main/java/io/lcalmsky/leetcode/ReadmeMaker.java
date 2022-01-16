@@ -20,7 +20,6 @@ public class ReadmeMaker {
                 "Solve the algorithm problems <a href=\"leetcode.com\">leetcode.com</a> provides.\n" +
                 "\n" +
                 "The conventions used in the project are:\n" +
-                "- branch: last path of leetcode problem url\n" +
                 "- package: converting last path of leetcode problem url to snake case\n" +
                 "- class: Solution.java\n" +
                 "- test: SolutionTest.java\n" +
@@ -28,7 +27,6 @@ public class ReadmeMaker {
                 "ex)\n" +
                 "<pre><code>" +
                 "url     https://leetcode.com/problems/<b>wildcard-matching</b>\n" +
-                "branch  feature/<b>wildcard-matching</b>\n" +
                 "package io.lcalmsky.leetcode.<b>wildcard_matching</b>\n" +
                 "class   io.lcalmsky.leetcode.<b>wildcard_matching.Solution</b>\n" +
                 "test    io.lcalmsky.leetcode.<b>wildcard_matching.SolutionTest</b>\n" +
