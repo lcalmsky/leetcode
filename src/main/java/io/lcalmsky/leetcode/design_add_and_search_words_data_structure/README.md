@@ -50,7 +50,7 @@ wordDictionary.search("b.."); // return True
 * void addWord(word): 단어 추가
 * boolean search(word): 일치하는 단어가 있는지 확인, '.'이 포함될 수 있고 어떤 문자와도 매칭될 수 있음
 
-![트라이(trie) 구조](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%9D%BC%EC%9D%B4_(%EC%BB%B4%ED%93%A8%ED%8C%85))를
+[트라이(trie) 구조](https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%9D%BC%EC%9D%B4_(%EC%BB%B4%ED%93%A8%ED%8C%85))를
 이용해 풀 수 있습니다.
 
 ```java
