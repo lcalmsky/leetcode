@@ -3,20 +3,22 @@ package io.lcalmsky.leetcode.remove_duplicates_from_sorted_list_ii;
 import io.lcalmsky.leetcode.ListNode;
 
 public class Solution {
-    public ListNode deleteDuplicates(ListNode head) {
-        ListNode temp = new ListNode(0);
-        temp.next = head;
 
-        ListNode p = temp;
-        int duplicated;
-        while (p.next != null && p.next.next != null) {
-            if (p.next.val == p.next.next.val) {
-                duplicated = p.next.val;
-                while (p.next != null && p.next.val == duplicated) {
-                    p.next = p.next.next;
-                }
-            } else p = p.next;
+  public ListNode deleteDuplicates(ListNode head) {
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+    ListNode current = dummy;
+    int duplicated;
+    while (current.next != null && current.next.next != null) {
+      if (current.next.val == current.next.next.val) {
+        duplicated = current.next.val;
+        while (current.next != null && current.next.val == duplicated) {
+          current.next = current.next.next;
         }
-        return temp.next;
+      } else {
+        current = current.next;
+      }
     }
+    return dummy.next;
+  }
 }
