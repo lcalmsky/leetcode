@@ -1,37 +1,125 @@
-# 풀이
+> 소스 코드는 [여기](https://github.com/lcalmsky/leetcode/blob/master/src/main/java/io/lcalmsky/leetcode/score_of_parentheses/Solution.java) 있습니다.  
+> 문제는 [여기](https://leetcode.com/problems/score_of_parentheses/) 있습니다.
+
+## Problem
+
+Given a balanced parentheses string s, return the score of the string.
+
+The score of a balanced parentheses string is based on the following rule:
+
+"()" has score 1.
+AB has score A + B, where A and B are balanced parentheses strings.
+(A) has score 2 * A, where A is a balanced parentheses string.
+
+**Example 1:**
+```text
+Input: s = "()"
+Output: 1
+```
+**Example 2:**
+```text
+Input: s = "(())"
+Output: 2
+```
+**Example 3:**
+```text
+Input: s = "()()"
+Output: 2
+```
+
+
+**Constraints:**
+
+* 2 <= s.length <= 50
+* s consists of only '(' and ')'.
+* s is a balanced parentheses string.
+
+## Solution
+
+괄호가 주어질 때 점수를 매기는데 일반 괄호는 1점을, 중첩된 괄호는 2배의 점수를 얻을 수 있을 때 점수를 구하는 문제입니다.
 
 ```java
-import java.util.Stack;
+package io.lcalmsky.leetcode.score_of_parentheses;
 
 public class Solution {
-    public int scoreOfParentheses(String S) {
-        Stack<Integer> stack = new Stack<>();
+
+  public int scoreOfParentheses(String s) {
+    Stack<Integer> stack = new Stack<>();
+    stack.push(0);
+    for (int i = 0; i < s.length(); i++) {
+      if (s.charAt(i) == '(') {
         stack.push(0);
-        for (int i = 0; i < S.length(); i++) {
-            if (S.charAt(i) == '(') stack.push(0);
-            else {
-                int x = stack.pop();
-                int y = stack.pop();
-                stack.push(y + Math.max(2 * x, 1));
-            }
-        }
-        return stack.pop();
+      } else {
+        int x = stack.pop();
+        int y = stack.pop();
+        stack.push(y + Math.max(2 * x, 1));
+      }
     }
+    return stack.pop();
+  }
 }
 ```
 
-이 문제의 핵심은 (1)괄호가 바로 닫힐 때 1을 더해주고, (2)중첩될 때 2를 곱하는 것 입니다. 괄호가 바로 닫히는 것이 연속으로 나타나는 케이스는 (1)케이스와 동일하므로 고려할 필요가 없습니다.
+스택으로 점수를 계산하는데 처음에 초기 값인 0을 먼저 push하고, 괄호가 열릴 때마다 0을 push 합니다.
 
-괄호 문제 해결을 위해선 `Stack`을 사용합니다.
+괄호가 닫힐 때마다 스택에서 두 개의 원소를 pop 해준 뒤 가장 최근 값에 두 배를 한 것과 1중 더 높은 값과 그 다음 최근 값을 반복해서 더해주면 괄호의 점수를 계산할 수 있습니다.
 
-먼저 stack 객체 생성 후 0을 넣어 초기화합니다.
+위 방법이 이해하기는 쉬운데 성능은 매우 저조하게 나와서 다른 답을 찾아보았습니다.
 
-문자열(괄호)을 순차적으로 탐색하면서 괄호가 열리는 시점에 스택에 0을 추가하고 괄호가 닫히는 시점에 마지막에 입력된 두 개의 괄호에 대한 값을 꺼내 연산을 수행합니다.
+```java
+class Solution {
 
-(1)번 케이스의 경우 '(', ')'를 순차적으로 탐색하기 때문에 스택에 [0, 0]이 입력되고 ')' 시점에 `Math.max(2 * 0, 1)`을 수행해 1의 값을 얻게 됩니다.
+  public int scoreOfParentheses(String s) {
+    int score = 0;
+    int depth = 0;
+    for (int i = 0; i < s.length(); i++) {
+      if (s.charAt(i) == '(') {
+        depth++;
+      } else {
+        depth--;
+      }
+      if (s.charAt(i) == ')' && s.charAt(i - 1) == '(') {
+        score += Math.pow(2, depth);
+      }
+    }
+    return score;
+  }
+}
+```
 
-(2)번 케이스의 경우 스택에서 값을 꺼내는 시점만 고려하면 됩니다. 중첩되려면 괄호가 '))' 이런식으로 표현되어야 하지만 else 부분이 호출되는 시점은 ')'가 처음 나타났을 경우이기 때문에 앞서 계산된 결과를
-다음 연산에 적용하여 두 배 씩 값이 증가하게 됩니다.
+여기선 depth로 괄호의 중첩 정도를 계산하였습니다.
 
-(1), (2)번 케이스가 복합적으로 나타나더라도 '(' 괄호를 탐색하는 시점에 스택에 '0' 값을 넣어주기 때문에 기존 값에서 곱해지는 게 아닌 기본 값 1이 추가되고 연산한 결과를 다시 스택에 넣어주어 연산이
-정확하게 동작하게 됩니다. 
+depth가 0일 때 중첩된 괄호가 없으므로 2^0인 1이 되고, 중첩된 괄호가 많을 수록 2^n이 더해지게 됩니다.
+
+## Test
+
+```java
+package io.lcalmsky.leetcode.score_of_parentheses;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+class SolutionTest {
+
+  @Test
+  void givenParentheses_whenCompute_thenCorrect() {
+    assertAll(
+        () -> test("()", 1),
+        () -> test("(())", 2),
+        () -> test("()()", 2),
+        () -> test("(()(()))", 6)
+    );
+  }
+
+  private void test(String given, int expected) {
+    // when
+    Solution solution = new Solution();
+    int actual = solution.scoreOfParentheses(given);
+
+    // then
+    assertEquals(expected, actual);
+  }
+}
+```
