@@ -1,28 +1,26 @@
 package io.lcalmsky.leetcode.partition_labels;
 
-import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import java.util.List;
+import org.junit.jupiter.api.Test;
+
 class SolutionTest {
-    @Test
-    public void givenString_whenPartitionString_thenEachLetterAppearsMost() {
-        assertAll(
-                () -> test("ababcbacadefegdehijhklij", Arrays.asList(9, 7, 8))
-        );
-    }
 
-    private void test(String given, List<Integer> expected) {
-        // when
-        Solution solution = new Solution();
-        List<Integer> actual = solution.partitionLabels(given);
+  @Test
+  void givenString_whenPartitionString_thenEachLetterAppearsMost() {
+    assertAll(
+        () -> test("ababcbacadefegdehijhklij", List.of(9, 7, 8)),
+        () -> test("eccbbbbdec", List.of(10))
+    );
+  }
 
-        // then
-        assertEquals(expected, actual);
-    }
-
+  private void test(String given, List<Integer> expected) {
+    // when
+    Solution solution = new Solution();
+    List<Integer> actual = solution.partitionLabels(given);
+    // then
+    assertEquals(expected, actual);
+  }
 }
