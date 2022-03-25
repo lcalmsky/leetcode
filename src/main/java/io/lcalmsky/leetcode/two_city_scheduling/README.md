@@ -68,6 +68,26 @@ public class Solution {
 2. 모두 도시 A로 간다고 가정하고 cost를 계산합니다.
 3. 큐는 cost의 차이로 정렬되어있으므로 가작 작은 cost가 큐의 top에 위치하게 됩니다. 따라서 큐의 처음 반 부분에 해당하는 사람들이 B 도시로 가면 됩니다.
 
+성능 개선을 위해 배열을 그대로 사용해도 동일한 방식으로 구현할 수 있습니다.
+
+```java
+class AnotherSolution {
+
+  public int twoCitySchedCost(int[][] costs) {
+    Arrays.sort(costs, Comparator.comparingInt(a -> (a[0] - a[1])));
+    int sum = 0;
+    for (int i = 0; i < costs.length; ++i) {
+      if (i < costs.length / 2) {
+        sum += costs[i][0];
+      } else {
+        sum += costs[i][1];
+      }
+    }
+    return sum;
+  }
+}
+```
+
 ## Test
 
 ```java
