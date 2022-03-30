@@ -1,21 +1,27 @@
 package io.lcalmsky.leetcode.search_a_2d_matrix;
 
 public class Solution {
-    public boolean searchMatrix(int[][] matrix, int target) {
 
-        if (matrix == null || matrix.length == 0 || matrix[0] == null || matrix[0].length == 0) return false;
-
-        if (target < matrix[0][0] || matrix[matrix.length - 1][matrix[matrix.length - 1].length - 1] < target)
-            return false;
-
-        int[] array;
-        for (int[] ints : matrix) {
-            array = ints;
-            if (array[0] <= target && array[array.length - 1] >= target) {
-                for (int value : array) if (value == target) return true;
-                return false;
-            }
+  public boolean searchMatrix(int[][] matrix, int target) {
+    int m = matrix.length;
+    int n = matrix[0].length;
+    for (int[] row : matrix) {
+      if (target <= row[n - 1]) {
+        int low = 0;
+        int high = n - 1;
+        while (low <= high) {
+          int mid = low + (high - low) / 2;
+          if (target == row[mid]) {
+            return true;
+          }
+          if (target < row[mid]) {
+            high = mid - 1;
+          } else {
+            low = mid + 1;
+          }
         }
-        return false;
+      }
     }
+    return false;
+  }
 }
