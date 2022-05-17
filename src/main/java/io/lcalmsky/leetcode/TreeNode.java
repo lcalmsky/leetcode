@@ -8,7 +8,7 @@ import java.util.Objects;
 import java.util.Queue;
 import java.util.StringJoiner;
 
-public class TreeNode {
+public class TreeNode implements Cloneable{
 
   public int val;
   public TreeNode left;
@@ -82,6 +82,15 @@ public class TreeNode {
   @Override
   public int hashCode() {
     return Objects.hash(val, left, right);
+  }
+
+  @Override
+  public TreeNode clone() {
+    try {
+      return (TreeNode) super.clone();
+    } catch (CloneNotSupportedException e) {
+      throw new AssertionError();
+    }
   }
 
   static class BTreePrinter {
