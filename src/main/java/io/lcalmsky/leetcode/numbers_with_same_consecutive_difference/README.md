@@ -1,5 +1,5 @@
-> 소스 코드는 [여기](https  
-> 문제는 [여기](https
+> 소스 코드는 [여기](https://github.com/lcalmsky/leetcode/blob/master/src/main/java/io/lcalmsky/leetcode/numbers_with_same_consecutive_differences/Solution.java) 있습니다.  
+> 문제는 [여기](https://leetcode.com/problems/numbers-with-same-consecutive-differences/) 있습니다.
 
 ## Problem
 
