@@ -43,7 +43,59 @@ Constraints:
 공격과 방어가 다른 캐릭터에 비해 둘 다 낮은 캐릭터를 weak 캐릭터라고 할 때 weak 캐릭터가 모두 몇 개인지 구하는 문제입니다.
 
 ```java
+package io.lcalmsky.leetcode.the_number_of_week_characters_in_the_game;
+
+import java.util.Arrays;
+
+public class Solution {
+
+  public int numberOfWeakCharacters(int[][] properties) {
+    Arrays.sort(properties, (o1, o2) -> o1[0] == o2[0] ? o1[1] - o2[1] : o2[0] - o1[0]);
+    int maxDefence = 0;
+    int count = 0;
+    for (int[] property : properties) {
+      if (property[1] < maxDefence) {
+        count++;
+        continue;
+      }
+      maxDefence = property[1];
+    }
+    return count;
+  }
+}
 
 ```
 
+캐릭터들을 정렬할 때 공격력이 같으면 방어력을 오름차순으로, 그렇지 않으면 공격력을 내림 차순으로 정렬한 뒤, 최대 방어력을 갱신하면서 현재 방어력이 더 낮은 경우 카운트 개수를 증가시키면 됩니다. 
+
 ## Test
+
+```java
+package io.lcalmsky.leetcode.the_number_of_week_characters_in_the_game;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import org.junit.jupiter.api.Test;
+
+class SolutionTest {
+
+  @Test
+  void testAll() {
+    assertAll(
+        () -> test(new int[][]{{5, 5}, {6, 3}, {3, 6}}, 0),
+        () -> test(new int[][]{{2, 2}, {3, 3}}, 1),
+        () -> test(new int[][]{{1, 5}, {10, 4}, {4, 3}}, 1)
+    );
+  }
+
+  private void test(int[][] given, int expected) {
+    // when
+    Solution solution = new Solution();
+    int actual = solution.numberOfWeakCharacters(given);
+    // then
+    assertEquals(expected, actual);
+  }
+
+}
+```
