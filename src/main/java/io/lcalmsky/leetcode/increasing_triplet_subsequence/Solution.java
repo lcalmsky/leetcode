@@ -2,19 +2,17 @@ package io.lcalmsky.leetcode.increasing_triplet_subsequence;
 
 public class Solution {
     public boolean increasingTriplet(int[] nums) {
-        int small = Integer.MAX_VALUE;
-        int big = Integer.MAX_VALUE;
-
+        int min = Integer.MAX_VALUE;
+        int mid = Integer.MAX_VALUE;
         for (int num : nums) {
-            if (num <= small) {
-                small = num;// update x to be a smaller value
-            } else if (num <= big) {
-                big = num; // update y to be a smaller value
+            if (num <= min) {
+                min = num;
+            } else if (num <= mid) {
+                mid = num;
             } else {
                 return true;
             }
         }
-
         return false;
     }
 }
