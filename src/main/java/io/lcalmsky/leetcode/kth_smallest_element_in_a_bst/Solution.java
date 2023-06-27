@@ -5,25 +5,22 @@ import io.lcalmsky.leetcode.TreeNode;
 import java.util.Stack;
 
 public class Solution {
-    public int kthSmallest(TreeNode treeNode, int k) {
+    public int kthSmallest(TreeNode root, int k) {
         Stack<TreeNode> stack = new Stack<>();
-
-        TreeNode p = treeNode;
-        int result = 0;
-
-        while (!stack.isEmpty() || p != null) {
-            if (p != null) {
-                stack.push(p);
-                p = p.left;
+        TreeNode node = root;
+        while (node != null || !stack.isEmpty()) {
+            if (node != null) {
+                stack.push(node);
+                node = node.left;
             } else {
-                TreeNode t = stack.pop();
+                TreeNode pop = stack.pop();
                 k--;
-                if (k == 0)
-                    result = t.val;
-                p = t.right;
+                if (k == 0) {
+                    return pop.val;
+                }
+                node = pop.right;
             }
         }
-
-        return result;
+        return -1;
     }
 }
