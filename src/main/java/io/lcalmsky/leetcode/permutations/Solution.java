@@ -4,17 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Solution {
-    public static void main(String[] args) {
-        System.out.println(new Solution().permute(new int[]{1, 2, 3}));
-    }
 
     public List<List<Integer>> permute(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
-        helper(0, nums, result);
+        dfs(0, nums, result);
         return result;
     }
 
-    private void helper(int start, int[] nums, List<List<Integer>> result) {
+    private void dfs(int start, int[] nums, List<List<Integer>> result) {
         if (start == nums.length - 1) {
             List<Integer> list = new ArrayList<>();
             for (int num : nums) {
@@ -25,7 +22,7 @@ public class Solution {
         }
         for (int i = start; i < nums.length; i++) {
             swap(nums, i, start);
-            helper(start + 1, nums, result);
+            dfs(start + 1, nums, result);
             swap(nums, i, start);
         }
     }
