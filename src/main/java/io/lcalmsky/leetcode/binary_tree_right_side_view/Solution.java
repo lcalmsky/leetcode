@@ -6,44 +6,28 @@ import java.util.*;
 
 public class Solution {
     public List<Integer> rightSideView(TreeNode root) {
-        if (root == null) return Collections.emptyList();
-
-        List<Integer> values = new ArrayList<>();
-
-        Queue<TreeNode> treeNodeQueue = new LinkedList<>();
-        treeNodeQueue.add(root);
-
-        TreeNode top;
-        while (!treeNodeQueue.isEmpty()) {
-            int size = treeNodeQueue.size();
-            for (int i = 0; i < size; i++) {
-                top = treeNodeQueue.poll();
-                if (i == 0) values.add(top.val);
-                if (top.right != null) treeNodeQueue.add(top.right);
-                if (top.left != null) treeNodeQueue.add(top.left);
-            }
-        }
-
-        return values;
-    }
-
-    public boolean isValidBST(TreeNode root) {
         if (root == null) {
-            return true;
+            return Collections.emptyList();
         }
-
-        if (root.left != null) {
-            if (root.left.val >= root.val) {
-                return false;
+        List<Integer> values = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        TreeNode node;
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                node = queue.remove();
+                if (i == 0) {
+                    values.add(node.val);
+                }
+                if (node.right != null) {
+                    queue.add(node.right);
+                }
+                if (node.left != null) {
+                    queue.add(node.left);
+                }
             }
         }
-
-        if (root.right != null) {
-            if (root.right.val <= root.val) {
-                return false;
-            }
-        }
-
-        return isValidBST(root.left) && isValidBST(root.right);
+        return values;
     }
 }
