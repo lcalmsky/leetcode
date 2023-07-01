@@ -10,22 +10,20 @@ public class Solution {
     }
 
     private TreeNode construct(int[] preorder, int[] inorder, int pStart, int pEnd, int iStart, int iEnd) {
-        if (pStart > pEnd || iStart > iEnd) return null;
-
-        int val = preorder[pStart];
-        TreeNode p = new TreeNode(val);
-
+        if (pStart > pEnd || iStart > iEnd) {
+            return null;
+        }
+        int value = preorder[pStart];
+        TreeNode node = new TreeNode(value);
         int parentIndex = 0;
         for (int i = 0; i < inorder.length; i++) {
-            if (val == inorder[i]) {
+            if (value == inorder[i]) {
                 parentIndex = i;
                 break;
             }
         }
-
-        p.left = construct(preorder, inorder, pStart + 1, pStart + parentIndex - iStart, iStart, parentIndex - 1);
-        p.right = construct(preorder, inorder, pStart + parentIndex - iStart + 1, pEnd, parentIndex + 1, iEnd);
-
-        return p;
+        node.left = construct(preorder, inorder, pStart + 1, pStart + parentIndex - iStart, iStart, parentIndex - 1);
+        node.right = construct(preorder, inorder, pStart + parentIndex - iStart + 1, pEnd, parentIndex + 1, iEnd);
+        return node;
     }
 }
