@@ -1,34 +1,23 @@
 package io.lcalmsky.leetcode.group_anagrams;
 
-import java.util.ArrayList;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Solution {
 
     public List<List<String>> groupAnagrams(String[] strs) {
-
-        Map<String, List<String>> listMap = new LinkedHashMap<>();
-        char[] charArray, arr;
-        List<String> list;
-        String s;
+        Map<String, List<String>> map = new HashMap<>();
         for (String str : strs) {
-            arr = new char[26];
-            charArray = str.toCharArray();
+            char[] array = new char[26];
+            char[] charArray = str.toCharArray();
             for (char c : charArray) {
-                arr[c - 'a']++;
+                array[c - 'a']++;
             }
-            s = new String(arr);
-            if (!listMap.containsKey(s)) {
-                list = new ArrayList<>();
-                list.add(str);
-                listMap.put(s, list);
-            } else {
-                listMap.get(s).add(str);
+            String newStr = new String(array);
+            if (!map.containsKey(newStr)) {
+                map.put(newStr, new ArrayList<>());
             }
+            map.get(newStr).add(str);
         }
-
-        return new ArrayList<>(listMap.values());
+        return new ArrayList<>(map.values());
     }
 }
