@@ -16,8 +16,8 @@ class SolutionTest {
         assertAll(
             () -> test(new int[]{-1, 0, 1, 2, -1, 4},
                 List.of(List.of(-1, -1, 2), List.of(-1, 0, 1))),
-            () -> test(new int[]{}, Collections.emptyList()),
-            () -> test(new int[]{0}, Collections.emptyList())
+            () -> test(new int[]{0, 1, 1}, Collections.emptyList()),
+            () -> test(new int[]{0, 0, 0}, List.of(List.of(0, 0, 0)))
         );
     }
 
