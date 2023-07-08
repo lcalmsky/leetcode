@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class RandomizedSetTests {
     @Test
     public void givenTests_whenDoTest_thenWork() {
-        Solution randomizedSet = new Solution();
+        RandomizedSet randomizedSet = new RandomizedSet();
         assertTrue(randomizedSet.insert(1));
         assertFalse(randomizedSet.remove(2));
         assertTrue(randomizedSet.insert(2));
