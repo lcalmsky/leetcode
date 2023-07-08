@@ -10,7 +10,8 @@ class SolutionTest {
     void testAll() {
         assertAll(
                 () -> test(2, new int[][]{{1, 0}}, true),
-                () -> test(2, new int[][]{{1, 0}, {0, 1}}, false)
+                () -> test(2, new int[][]{{1, 0}, {0, 1}}, false),
+                () -> test(5, new int[][]{{1, 4}, {2, 4}, {3, 1}, {3, 2}}, true)
         );
     }
 
