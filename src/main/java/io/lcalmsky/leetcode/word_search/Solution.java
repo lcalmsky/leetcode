@@ -3,15 +3,12 @@ package io.lcalmsky.leetcode.word_search;
 public class Solution {
 
     public boolean exist(char[][] board, String word) {
-        if (word.length() == 0) {
-            return true;
-        }
         int m = board.length;
         int n = board[0].length;
         boolean[][] visited = new boolean[m][n];
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (search(board, word, 0, i, j, visited)) {
+                if (exist(board, word, 0, i, j, visited)) {
                     return true;
                 }
             }
@@ -19,8 +16,8 @@ public class Solution {
         return false;
     }
 
-    private boolean search(char[][] board, String word, int n, int i, int j, boolean[][] visited) {
-        if (n == word.length()) {
+    private boolean exist(char[][] board, String word, int count, int i, int j, boolean[][] visited) {
+        if (count == word.length()) {
             return true;
         }
         if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) {
@@ -29,15 +26,15 @@ public class Solution {
         if (visited[i][j]) {
             return false;
         }
-        if (word.charAt(n) != board[i][j]) {
+        if (board[i][j] != word.charAt(count)) {
             return false;
         }
         visited[i][j] = true;
-        boolean result = search(board, word, n + 1, i - 1, j, visited)
-                || search(board, word, n + 1, i + 1, j, visited)
-                || search(board, word, n + 1, i, j - 1, visited)
-                || search(board, word, n + 1, i, j + 1, visited);
+        boolean exist = exist(board, word, count + 1, i, j + 1, visited) ||
+                exist(board, word, count + 1, i, j - 1, visited) ||
+                exist(board, word, count + 1, i + 1, j, visited) ||
+                exist(board, word, count + 1, i - 1, j, visited);
         visited[i][j] = false;
-        return result;
+        return exist;
     }
 }
