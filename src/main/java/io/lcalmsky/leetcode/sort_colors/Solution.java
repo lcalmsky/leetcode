@@ -5,7 +5,7 @@ public class Solution {
         int zeroIndex = 0, current = 0, twoIndex = nums.length - 1;
         while (current <= twoIndex) {
             if (nums[current] == 0) {
-                swap(nums, current, zeroIndex++);
+                swap(nums, current++, zeroIndex++);
             } else if (nums[current] == 2) {
                 swap(nums, current++, twoIndex--);
             } else {
