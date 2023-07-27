@@ -36,4 +36,84 @@ Explanation: "lee", "eet" and "ode" contain 2 vowels.
 
 ## Solution
 
+```java
+public class Solution {
+
+    private static final Set<Character> VOWELS = Set.of('a', 'e', 'i', 'o', 'u');
+
+    public int maxVowels(String s, int k) {
+        int maxVowels = 0;
+        int currentVowels = 0;
+        char[] charArray = s.toCharArray();
+        for (int i = 0; i < charArray.length; i++) {
+            if (VOWELS.contains(charArray[i])) {
+                currentVowels++;
+            }
+            int diff = (i + 1) - k;
+            if (diff >= 0) {
+                maxVowels = Math.max(maxVowels, currentVowels);
+                if (VOWELS.contains(charArray[diff])) {
+                    currentVowels--;
+                }
+            }
+        }
+        return maxVowels;
+    }
+}
+```
+
+```java
+public class Solution2 {
+    public int maxVowels(String s, int k) {
+        int[] vowels = new int[26];
+        vowels[0] = 1;
+        vowels['e' - 'a'] = 1;
+        vowels['i' - 'a'] = 1;
+        vowels['o' - 'a'] = 1;
+        vowels['u' - 'a'] = 1;
+        int vowelCount = 0;
+        for (int i = 0; i < k; i++) {
+            vowelCount += vowels[s.charAt(i) - 'a'];
+        }
+        int maxVowels = vowelCount;
+        for (int i = k; i < s.length(); i++) {
+            vowelCount += vowels[s.charAt(i) - 'a'] - vowels[s.charAt(i - k) - 'a'];
+            maxVowels = Math.max(maxVowels, vowelCount);
+            if (maxVowels == k) {
+                return maxVowels;
+            }
+        }
+        return maxVowels;
+    }
+}
+```
+
 ## Test
+
+```java
+package io.lcalmsky.leetcode.maximum_number_of_vowels_in_a_substring_of_given_length;
+
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertAll;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+class SolutionTest {
+    @Test
+    void testAll() {
+        assertAll(
+                () -> test("abciiidef", 3, 3),
+                () -> test("aeiou", 2, 2),
+                () -> test("leetcode", 3, 2)
+        );
+    }
+
+    private void test(String s, int k, int expected) {
+        // when
+        Solution solution = new Solution();
+        int actual = solution.maxVowels(s, k);
+        // then
+        assertEquals(expected, actual);
+    }
+}
+```
