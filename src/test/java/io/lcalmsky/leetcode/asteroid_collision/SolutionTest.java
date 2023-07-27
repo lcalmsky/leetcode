@@ -20,7 +20,6 @@ class SolutionTest {
         // when
         Solution solution = new Solution();
         int[] actual = solution.asteroidCollision(given);
-
         // then
         assertArrayEquals(expected, actual);
     }
