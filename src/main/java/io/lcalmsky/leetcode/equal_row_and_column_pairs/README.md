@@ -9,6 +9,8 @@ A row and column pair is considered equal if they contain the same elements in t
 
 **Example 1:**
 
+![](https://assets.leetcode.com/uploads/2022/06/01/ex1.jpg)
+
 ```text
 Input: grid = [[3,2,1],[1,7,6],[2,7,7]]
 Output: 1
@@ -17,6 +19,8 @@ Explanation: There is 1 equal row and column pair:
 ```
 
 **Example 2:**
+
+![](https://assets.leetcode.com/uploads/2022/06/01/ex2.jpg)
 
 ```text
 Input: grid = [[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]]
