@@ -6,9 +6,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class FlattenBinaryTreeToLinkedListTests {
+public class SolutionTest {
     @Test
-    public void givenBinaryTree_whenFlatten_thenBecomeLinkedList() {
+    public void testAll() {
         assertAll(
                 () -> test(
                         TreeNode.of(1, 2, 5, 3, 4, null, 6),
@@ -19,8 +19,8 @@ public class FlattenBinaryTreeToLinkedListTests {
 
     private void test(TreeNode given, TreeNode expected) {
         // when
-        Solution flattenBinaryTreeToLinkedList = new Solution();
-        flattenBinaryTreeToLinkedList.flatten(given);
+        Solution solution = new Solution();
+        solution.flatten(given);
 
         // then
         assertEquals(expected, given);
