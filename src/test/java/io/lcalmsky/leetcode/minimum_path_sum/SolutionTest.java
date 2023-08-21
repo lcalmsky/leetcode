@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class MinimumPathSumTests {
+class SolutionTest {
     @Test
     @DisplayName("주어진 grid 에서 왼쪽위부터 오른쪽 아래로 이동하는 경로 중 최소 합 구하기")
     public void givenGrid_whenFindMinimumPath_thenCorrect() {
